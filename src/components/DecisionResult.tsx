@@ -43,24 +43,13 @@ function optionLabel(factor: FactorKey, value: ScoreValue): string {
 }
 
 function factorLabel(factor: FactorKey): string {
-  const headings: Record<FactorKey, string> = {
-    urgency: "Urgency",
-    commitment: "Commitment to others",
-    desire: "Genuine desire",
-    energyCost: "Energy cost",
-    dayLoad: "Today’s load",
-    recoveryNeed: "Recovery need",
-    tomorrowFlexibility: "Ability to wait",
-  };
-  return headings[factor];
+  return QUESTIONS.find((question) => question.key === factor)?.heading ?? factor;
 }
 
 function CounterfactualCard({
   alternative,
-  originalScore,
 }: {
   alternative: CounterfactualAlternative;
-  originalScore: number;
 }) {
   return (
     <li className="counterfactual-card">
@@ -75,8 +64,8 @@ function CounterfactualCard({
         ))}
       </ul>
       <p>
-        The score moves from {originalScore} to {alternative.targetScore} and reaches{" "}
-        <strong>{verdictHeading[alternative.verdict]}</strong>
+        With {alternative.changes.length === 1 ? "this change" : "these changes"},
+        the result would be <strong>{verdictHeading[alternative.verdict]}</strong>
       </p>
     </li>
   );
@@ -88,19 +77,14 @@ function CostOfYes({ decision }: { decision: Decision }) {
     () => findCounterfactuals(decision.inputs),
     [decision.inputs],
   );
-  const protectiveDirection = decision.verdict === "proceed";
-
   return (
     <section className="cost-of-yes" aria-labelledby="cost-heading">
       <div>
-        <div className="eyebrow">COUNTERFACTUAL, NOT ADVICE</div>
-        <h2 id="cost-heading">
-          {protectiveDirection ? "What would make this wait?" : "The cost of yes"}
-        </h2>
+        <div className="eyebrow">POSSIBLE CHANGES, NOT ADVICE</div>
+        <h2 id="cost-heading">What would need to change?</h2>
         <p>
-          {protectiveDirection
-            ? "The nearest facts that would produce a more protective answer."
-            : `The nearest facts that would reach “${verdictHeading[result.targetVerdict]}”`}
+          See the smallest changes that would lead to
+          {` “${verdictHeading[result.targetVerdict]}”`}. Your answers stay as they are.
         </p>
       </div>
       <button
@@ -110,20 +94,19 @@ function CostOfYes({ decision }: { decision: Decision }) {
         aria-controls="counterfactual-details"
         onClick={() => setOpen((current) => !current)}
       >
-        {open ? "Hide the arithmetic" : "Show the arithmetic"}
+        {open ? "Hide possible changes" : "Show possible changes"}
       </button>
       {open ? (
         <div id="counterfactual-details" className="counterfactual-details">
           <p className="math-note">
-            Deterministic search: all {result.searchedStates.toLocaleString()} possible
-            answer combinations, including every scoring guardrail. Your original
+            The app checked all {result.searchedStates.toLocaleString()} possible
+            sets of answers using the same fixed rules as your result. Your original
             answers remain unchanged.
           </p>
           <ol className="counterfactual-list">
             {result.alternatives.map((alternative, index) => (
               <CounterfactualCard
                 alternative={alternative}
-                originalScore={result.originalScore}
                 key={`${index}-${alternative.changes.map((change) => change.factor).join("-")}`}
               />
             ))}
@@ -151,9 +134,9 @@ function formatTime(ms: number): string {
 
 function operationSentence(operation: ReplacementPlan["operations"][number]): string {
   if (operation.kind === "postpone") {
-    return `Postpone “${operation.title}” (${formatMinutes(operation.changedMinutes)} released).`;
+    return `Postpone “${operation.title}” to free up ${formatMinutes(operation.changedMinutes)}.`;
   }
-  return `Keep the first half of “${operation.title}” and release ${formatMinutes(operation.changedMinutes)}.`;
+  return `Shorten “${operation.title}” by ${formatMinutes(operation.changedMinutes)}, keeping its first half.`;
 }
 
 function PlanOptions({
@@ -170,10 +153,10 @@ function PlanOptions({
     return (
       <section className="replacement-section replacement-fits" aria-labelledby="replacement-heading">
         <div className="eyebrow">THE DAY, AS IT IS</div>
-        <h2 id="replacement-heading">There is already one honest opening.</h2>
+        <h2 id="replacement-heading">There is already enough open time.</h2>
         <p>
           {slot
-            ? `${formatTime(slot.startMs)}–${formatTime(slot.endMs)} is open in the 7 AM–9 PM planning window.`
+            ? `${formatTime(slot.startMs)}–${formatTime(slot.endMs)} is open between 7 AM and 9 PM.`
             : "No calendar change is needed."}
           {" "}That is a fact about time, not a command to use it.
         </p>
@@ -183,11 +166,12 @@ function PlanOptions({
 
   return (
     <section className="replacement-section" aria-labelledby="replacement-heading">
-      <div className="eyebrow">REPLACEMENT SOLVER</div>
-      <h2 id="replacement-heading">Another way to make room</h2>
+      <div className="eyebrow">WAYS TO MAKE ROOM</div>
+      <h2 id="replacement-heading">See what would have to move</h2>
       <p>
-        These are previews, not calendar edits. Fixed commitments and recovery
-        are protected. The solver uses only times and labels you supplied.
+        Nothing here edits your calendar. Only events marked “Can move” or
+        “Can be shorter” are considered. “Must stay” events and protected
+        recovery are left alone.
       </p>
       {solver.plans.length > 0 ? (
         <div className="plan-grid">
@@ -207,7 +191,7 @@ function PlanOptions({
                   ))}
                 </ul>
                 <p className="plan-slot">
-                  Opens {formatTime(plan.availableSlot.startMs)}–{formatTime(plan.availableSlot.endMs)}.
+                  Leaves {formatTime(plan.availableSlot.startMs)}–{formatTime(plan.availableSlot.endMs)} open.
                 </p>
                 <button
                   className={selected ? "button button-primary" : "button button-secondary"}
@@ -215,13 +199,15 @@ function PlanOptions({
                   aria-pressed={selected}
                   onClick={() => onSelectPlan(plan.id)}
                 >
-                  {selected ? "Chosen for the journal" : "Choose this preview"}
+                  {selected
+                    ? "This option will be saved"
+                    : "Save this option with my decision"}
                 </button>
               </article>
             );
           })}
           <article className={`plan-card keep-plan ${selectedPlanId === null ? "is-selected" : ""}`}>
-            <span className="plan-number">NO TRADE-OFF</span>
+            <span className="plan-number">LEAVE THE DAY AS IS</span>
             <h3>Keep the day exactly as it is</h3>
             <p>It is valid to accept the verdict without rearranging anything.</p>
             <button
@@ -230,19 +216,24 @@ function PlanOptions({
               aria-pressed={selectedPlanId === null}
               onClick={() => onSelectPlan(null)}
             >
-              {selectedPlanId === null ? "Day left unchanged" : "Choose no change"}
+              {selectedPlanId === null
+                ? "The day will stay as it is"
+                : "Leave the day as it is"}
             </button>
           </article>
         </div>
       ) : (
         <div className="no-plan-note">
-          <h3>No small trade-off creates a large enough block.</h3>
+          <h3>
+            None of the allowed changes creates an uninterrupted
+            {` ${formatMinutes(solver.requiredMinutes)} block.`}
+          </h3>
           <p>{solver.noPlanReason?.message}</p>
         </div>
       )}
       <p className="solver-proof">
-        Checked {solver.searchedSubsetCount.toLocaleString()} allowed combinations;
-        ranked by fewest changed events, then least changed time.
+        The app checked {solver.searchedSubsetCount.toLocaleString()} allowed
+        combinations and shows the smallest changes first.
       </p>
     </section>
   );
@@ -305,7 +296,7 @@ export function DecisionResult({
             onSelectPlan={planner.onSelectPlan}
           />
           <button className="text-action return-to-day" type="button" onClick={planner.onReturnToDay}>
-            <span aria-hidden="true">←</span> Return to Today Map
+            <span aria-hidden="true">←</span> Return to this day
           </button>
         </>
       ) : null}
@@ -315,7 +306,7 @@ export function DecisionResult({
           {saved ? "Decision saved locally" : "Save to the local journal"}
         </button>
         <button className="button button-secondary" type="button" onClick={onTryAnother}>
-          {planner ? "Question another addition" : "Try another"}
+          {planner ? "Check another thing" : "Try another"}
         </button>
       </div>
     </div>

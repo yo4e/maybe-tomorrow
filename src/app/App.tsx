@@ -90,8 +90,8 @@ function snapshotFromResult(
     id: createLocalId("snapshot"),
     name:
       source === "demo"
-        ? "Yoshie’s fictional overfull Tuesday"
-        : names.slice(0, 2).join(" + ") || "Imported calendar snapshot",
+        ? "Yoshie’s fictional Tuesday"
+        : names.slice(0, 2).join(" + ") || "Imported calendar",
     source,
     importedAt: new Date().toISOString(),
     window,
@@ -157,7 +157,7 @@ function Header({
       <button className="wordmark" type="button" onClick={onHome}>
         Maybe Tomorrow.
       </button>
-      <span className="header-tagline">A local-first anti-planner</span>
+      <span className="header-tagline">An anti-productivity decision app</span>
       <nav aria-label="Primary navigation">
         {hasSnapshot ? (
           <button className="quiet-button" type="button" onClick={onMap}>
@@ -177,7 +177,7 @@ function Principles() {
   return (
     <section className="principles-section section-block" aria-labelledby="principles-heading">
       <div>
-        <div className="eyebrow">EXPLAINABLE BY CONSTRUCTION</div>
+        <div className="eyebrow">HOW THE APP DECIDES</div>
         <h2 id="principles-heading">No AI is judging your life.</h2>
       </div>
       <div className="principle-grid">
@@ -188,8 +188,8 @@ function Principles() {
         </article>
         <article>
           <span>02</span>
-          <h3>The arithmetic is visible</h3>
-          <p>Scoring, counterfactuals, and replacement plans are deterministic and tested.</p>
+          <h3>The rules are visible</h3>
+          <p>Every result and room-making option follows the same fixed, tested rules.</p>
         </article>
         <article>
           <span>03</span>
@@ -219,6 +219,7 @@ function Footer() {
 export function App() {
   const [view, setView] = useState<AppView>("home");
   const [flowKey, setFlowKey] = useState(0);
+  const [quickStartActivity, setQuickStartActivity] = useState("");
   const [snapshot, setSnapshot] = useState<PlannerSnapshot | null>(null);
   const [selectedDate, setSelectedDate] = useState(DEMO_CALENDAR_DATE);
   const [classifications, setClassifications] = useState<ClassificationMap>({});
@@ -262,7 +263,8 @@ export function App() {
     setStorageMessage(warning ? warningCopy[warning] : null);
   };
 
-  const resetDecision = () => {
+  const resetDecision = (activity = "") => {
+    setQuickStartActivity(activity);
     setCandidate(null);
     setDecision(null);
     setSolver(null);
@@ -275,12 +277,12 @@ export function App() {
     setView("home");
   };
 
-  const openQuickCheck = () => {
-    resetDecision();
+  const openQuickCheck = (activity = "") => {
+    resetDecision(activity);
     setView("quick-check");
   };
 
-  const loadDemo = () => {
+  const loadDemo = (activity = "") => {
     const window = createLocalCalendarWindow(DEMO_CALENDAR_DATE, 7);
     const result = importDemoCalendar(window);
     const nextSnapshot = snapshotFromResult(result, "demo", window);
@@ -292,7 +294,7 @@ export function App() {
     setSnapshot(nextSnapshot);
     setClassifications(nextClassifications);
     setSelectedDate(DEMO_CALENDAR_DATE);
-    resetDecision();
+    resetDecision(activity);
     setImportError(null);
     setView("triage");
   };
@@ -311,17 +313,17 @@ export function App() {
       const result = importCalendarFiles(inputs, { window });
       if (!result.ok) {
         const message = result.warnings.find((warning) => warning.severity === "error")?.message;
-        setImportError(message ?? "This calendar snapshot could not be read.");
+        setImportError(message ?? "This calendar file could not be read.");
         return;
       }
       setSnapshot(snapshotFromResult(result, "import", window));
       setClassifications({});
       setSelectedDate(startDate);
-      resetDecision();
+      resetDecision(quickStartActivity);
       setView("triage");
     } catch (error) {
       setImportError(
-        error instanceof Error ? error.message : "This calendar snapshot could not be read.",
+        error instanceof Error ? error.message : "This calendar file could not be read.",
       );
     } finally {
       setImportBusy(false);
@@ -398,7 +400,7 @@ export function App() {
 
   const changeSelectedDate = (date: string) => {
     setSelectedDate(date);
-    resetDecision();
+    resetDecision(quickStartActivity);
   };
 
   const showMap = () => {
@@ -413,7 +415,7 @@ export function App() {
           hasSnapshot={Boolean(snapshot)}
           onHome={openHome}
           onMap={showMap}
-          onQuickCheck={openQuickCheck}
+          onQuickCheck={() => openQuickCheck()}
         />
         {storageMessage ? (
           <div className="storage-warning" role="status">{storageMessage}</div>
@@ -422,8 +424,10 @@ export function App() {
         <main id="main-content">
           {view === "home" ? (
             <Home
-              onTryDemo={loadDemo}
-              onImport={() => {
+              initialActivity={quickStartActivity}
+              onTryDemo={(activity) => loadDemo(activity)}
+              onImport={(activity) => {
+                setQuickStartActivity(activity);
                 setImportError(null);
                 setView("import");
               }}
@@ -436,7 +440,7 @@ export function App() {
               busy={importBusy}
               error={importError}
               onBack={openHome}
-              onLoadDemo={loadDemo}
+              onLoadDemo={() => loadDemo(quickStartActivity)}
               onImport={importFiles}
             />
           ) : null}
@@ -464,7 +468,7 @@ export function App() {
               onDateChange={changeSelectedDate}
               onEditLabels={() => setView("triage")}
               onAddActivity={() => {
-                resetDecision();
+                resetDecision(quickStartActivity);
                 setView("candidate");
               }}
               onChangeSnapshot={() => setView("import")}
@@ -473,8 +477,10 @@ export function App() {
 
           {view === "candidate" && snapshot ? (
             <CandidateSetup
+              initialActivity={quickStartActivity}
               onBack={() => setView("map")}
               onContinue={(activity, minutes) => {
+                setQuickStartActivity(activity);
                 setCandidate({ activity, minutes });
                 setFlowKey((key) => key + 1);
                 setView("planner-check");
@@ -486,7 +492,7 @@ export function App() {
             <QuickCheckFlow
               key={`planner-${flowKey}`}
               initialActivity={candidate.activity}
-              contextLabel={`${candidate.minutes} MINUTES · CALENDAR-AWARE CHECK`}
+              contextLabel={`${candidate.minutes} MINUTES · WITH CALENDAR CONTEXT`}
               onBack={() => setView("candidate")}
               onComplete={completePlannerDecision}
             />
@@ -495,6 +501,7 @@ export function App() {
           {view === "quick-check" ? (
             <QuickCheckFlow
               key={`quick-${flowKey}`}
+              initialActivity={quickStartActivity}
               onBack={openHome}
               onComplete={(nextDecision) => {
                 setDecision(nextDecision);
@@ -509,7 +516,7 @@ export function App() {
               decision={decision}
               saved={saved}
               onSave={saveCurrentDecision}
-              onTryAnother={openQuickCheck}
+              onTryAnother={() => openQuickCheck()}
             />
           ) : null}
 

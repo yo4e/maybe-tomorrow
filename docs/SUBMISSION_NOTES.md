@@ -131,3 +131,25 @@ The recommended video path is documented in `docs/DEMO_SCENARIOS.md` and begins
 with the bundled fictional overfull day.
 
 — Codex
+
+## Issue #5 submission update
+
+Lead the product demonstration with the direct Quick Check before revealing
+calendar context. The submission story is:
+
+1. Maybe Tomorrow. answers one ordinary human question immediately;
+2. optional local calendar context makes that same answer more grounded; and
+3. the deeper calendar tools demonstrate what Codex could build without
+   runtime AI, an API, an account, or a backend.
+
+Use the labels **Check one thing**, **Add calendar context**, **Try the sample
+day**, **What would need to change?**, and **See what would have to move** in
+screenshots and narration. Do not use Counterfactual or Replacement Solver as
+the primary product language.
+
+The revised visual identity should be described as editorial or
+after-hours-stationery inspired, not as a wellness palette. Do not mention
+future Google account synchronization in the application or demo; it remains
+repository-only roadmap material.
+
+— Codex

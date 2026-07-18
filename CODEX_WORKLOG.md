@@ -195,4 +195,73 @@ Browser verification covered:
 - No medical benefit, accessibility certification, or calendar-service
   integration is claimed.
 
+## Issue #5 refinement: Quick Check first
+
+After Templex Tsukino reviewed Yoshie Yamada's feedback in Issue #5, the app
+was refined without changing the deterministic engine or privacy boundary.
+
+### Product hierarchy and guidance
+
+- Rebuilt the first viewport around a direct activity field and the primary
+  **Check one thing** action. The activity survives a Back navigation from the
+  first question and follows the user into optional calendar context.
+- Moved calendar import into clearly optional context and kept the fictional
+  sample day as a tertiary path. Quick Check remains fully useful without a
+  file.
+- Added an always-visible explanation of supported `.ics` and Google Calendar
+  `.zip` files, followed by a progressive desktop export guide based on the
+  official Google Calendar help flow. The interface states that files stay in
+  the browser, are not synchronized, and must be imported again to refresh.
+- Kept Google sign-in, live synchronization, APIs, authentication, and calendar
+  writeback out of this version and out of the product interface.
+
+### Language and visual system
+
+- Replaced implementation-facing labels such as “Solver”, “Counterfactual”,
+  internal event grades, and terse classification values with plain control
+  copy. The more poetic voice now appears mainly in verdicts and supporting
+  explanation.
+- Changed Today Map's summary from an opaque grade to observable facts such as
+  the longest opening and whether a requested block fits.
+- Reworked the visual identity as after-hours stationery / an independent
+  magazine: warm paper, midnight ink, cobalt actions and focus, citron markers,
+  and sparing coral for postponement, errors, and destructive actions. Cards,
+  radii, and shadows were reduced while keyboard focus, forced colors,
+  reduced-motion support, and touch targets were preserved.
+- Added regression tests for first-screen action order, import guidance,
+  factual Today Map language, and removal of technical result terminology.
+
+### Refinement verification
+
+Final commands run from the repository root:
+
+```text
+npm test
+npm run build
+git diff --check
+```
+
+- Vitest: 8 test files passed, 60 tests passed.
+- TypeScript strict project build and Vite production build: passed.
+- Whitespace/error-marker check: passed.
+- Browser review: direct Quick Check and Back-state preservation, optional
+  import hierarchy, expanded Google Calendar guide, pre-labelled sample triage,
+  factual Today Map, and calendar-assisted candidate entry all passed.
+- Responsive review: Home and calendar flows had no horizontal overflow at
+  360 × 800; the editorial Home composition held at 1440 × 900.
+- Browser console: no warnings or errors.
+
+### Refinement handoff
+
+- The changes are intended for the existing `codex/anti-planner-expansion`
+  pull request.
+- Merge and deployment remain intentionally pending Yoshie Yamada's visual
+  review.
+- Remaining risk: Google may revise its export navigation, and Workspace
+  administrators can restrict export. The app links to official help and does
+  not claim mobile export support.
+- Rare parser-limit and malformed-calendar warnings retain some precise
+  technical vocabulary. Primary controls and normal-path guidance are plain;
+  a future copy pass could add a simpler first layer to those diagnostics.
+
 — Codex

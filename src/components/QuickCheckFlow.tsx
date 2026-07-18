@@ -106,7 +106,7 @@ function ActivityStep({
           </p>
         ) : null}
         <button className="button button-primary full-width-mobile" type="submit">
-          Question this decision <span aria-hidden="true">→</span>
+          Start Quick Check <span aria-hidden="true">→</span>
         </button>
       </form>
     </section>
@@ -247,7 +247,7 @@ function ShrinkStep({
           disabled={selected === null}
           onClick={onComplete}
         >
-          Tell me to stop <span aria-hidden="true">→</span>
+          See my result <span aria-hidden="true">→</span>
         </button>
       </div>
     </section>

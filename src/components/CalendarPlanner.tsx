@@ -67,13 +67,20 @@ function EventTime({ event }: { event: CalendarOccurrence }) {
   );
 }
 
-function classificationLabels(classification: EventClassification): string[] {
-  const labels: string[] = [];
-  if (classification.recovery) labels.push("Recovery");
-  else if (classification.fixed) labels.push("Fixed");
-  else if (classification.movable) labels.push("Movable");
-  if (classification.reducible) labels.push("Reducible");
-  if (classification.highEnergy) labels.push("High energy");
+type ClassificationLabel = {
+  text: string;
+  tone: "recovery" | "fixed" | "movable" | "reducible" | "high-energy";
+};
+
+function classificationLabels(classification: EventClassification): ClassificationLabel[] {
+  const labels: ClassificationLabel[] = [];
+  if (classification.recovery) labels.push({ text: "Protected recovery", tone: "recovery" });
+  else if (classification.fixed) labels.push({ text: "Must stay", tone: "fixed" });
+  else if (classification.movable) labels.push({ text: "Can move", tone: "movable" });
+  if (classification.reducible) labels.push({ text: "Can be shorter", tone: "reducible" });
+  if (classification.highEnergy) {
+    labels.push({ text: "Takes a lot of energy", tone: "high-energy" });
+  }
   return labels;
 }
 
@@ -87,6 +94,11 @@ function ClassificationControls({
   onChange: (value: EventClassification) => void;
 }) {
   const mobility = value.fixed ? "fixed" : value.movable ? "movable" : "neutral";
+  const mobilityLabels = {
+    neutral: "Not sure",
+    fixed: "Must stay",
+    movable: "Can move",
+  } as const;
   const setMobility = (next: "neutral" | "fixed" | "movable") => {
     onChange(
       normalizeClassification({
@@ -110,7 +122,7 @@ function ClassificationControls({
             key={option}
             onClick={() => setMobility(option)}
           >
-            {option === "neutral" ? "Unlabelled" : option[0]!.toUpperCase() + option.slice(1)}
+            {mobilityLabels[option]}
           </button>
         ))}
       </div>
@@ -124,7 +136,7 @@ function ClassificationControls({
               onChange(normalizeClassification({ ...value, reducible: change.target.checked }))
             }
           />
-          <span>Reducible</span>
+          <span>Can be shorter</span>
         </label>
         <label>
           <input
@@ -134,7 +146,7 @@ function ClassificationControls({
               onChange(normalizeClassification({ ...value, highEnergy: change.target.checked }))
             }
           />
-          <span>High energy</span>
+          <span>Takes a lot of energy</span>
         </label>
         <label>
           <input
@@ -144,7 +156,7 @@ function ClassificationControls({
               onChange(normalizeClassification({ ...value, recovery: change.target.checked }))
             }
           />
-          <span>Recovery</span>
+          <span>Protected recovery</span>
         </label>
       </div>
     </fieldset>
@@ -162,7 +174,7 @@ function SnapshotDatePicker({
 }) {
   return (
     <label className="snapshot-date-picker">
-      <span>Day in this snapshot</span>
+      <span>Date to view</span>
       <input
         type="date"
         value={selectedDate}
@@ -193,17 +205,17 @@ export function CalendarTriage({
   return (
     <section className="triage-panel panel-wide" aria-labelledby="triage-heading">
       <button className="back-button" type="button" onClick={onBack}>
-        <span aria-hidden="true">←</span> Change snapshot
+        <span aria-hidden="true">←</span> Choose another calendar file
       </button>
       <div className="triage-heading-row">
         <div>
-          <div className="eyebrow">HUMAN CLASSIFICATION</div>
+          <div className="eyebrow">MARK WHAT CAN MOVE</div>
           <h1 id="triage-heading" data-stage-focus tabIndex={-1}>
-            Tell the app what the titles cannot.
+            Mark what can move.
           </h1>
           <p className="lede">
-            The app knows only times. You decide what is fixed, movable,
-            reducible, energy-heavy, or protected recovery.
+            The app sees event times, not meaning. Mark what must stay, can
+            move, can be shorter, takes a lot of energy, or protects recovery.
           </p>
         </div>
         <SnapshotDatePicker
@@ -215,24 +227,24 @@ export function CalendarTriage({
 
       {snapshot.source === "demo" ? (
         <p className="demo-note">
-          This fictional day arrives pre-labelled for the demo. Change any label
-          to see the map and solver respond.
+          This sample day is already marked. Change any label to see the day
+          view and room-making options update.
         </p>
       ) : (
         <p className="demo-note">
-          Imported events start unlabelled. Leaving one neutral is a valid choice;
-          the solver will not volunteer it for changes.
+          Imported events start as “Not sure.” If you leave one that way, the
+          app will never suggest changing it.
         </p>
       )}
 
       <div className="triage-progress" role="status">
-        {labelledCount} of {occurrences.length} events have at least one human label.
+        {labelledCount} of {occurrences.length} events marked.
       </div>
 
       {occurrences.length === 0 ? (
         <div className="empty-day">
           <h2>No events found on {dateHeading(selectedDate)}.</h2>
-          <p>Choose another date inside the imported seven-day window.</p>
+          <p>Choose another date from the imported week.</p>
         </div>
       ) : (
         <ol className="triage-list">
@@ -255,13 +267,13 @@ export function CalendarTriage({
 
       {occurrences.length > 150 ? (
         <p className="import-warning">
-          Only the first 150 events are shown for labelling. The remaining events
-          stay neutral and still appear as time constraints.
+          Only the first 150 events are shown here. Events not shown remain
+          unchanged and still count as occupied time.
         </p>
       ) : null}
       <div className="sticky-actions">
         <button className="button button-primary" type="button" onClick={onContinue}>
-          See the Today Map <span aria-hidden="true">→</span>
+          See this day <span aria-hidden="true">→</span>
         </button>
       </div>
     </section>
@@ -359,7 +371,7 @@ export function TodayMap({
     <section className="map-panel panel-wide" aria-labelledby="map-heading">
       <div className="map-heading-row">
         <div>
-          <div className="eyebrow">TODAY MAP · {metrics.pressure.toUpperCase()}</div>
+          <div className="eyebrow">TODAY MAP</div>
           <h1 id="map-heading" data-stage-focus tabIndex={-1}>
             {dateHeading(selectedDate)}
           </h1>
@@ -373,9 +385,9 @@ export function TodayMap({
       </div>
 
       <dl className="day-metrics">
-        <Metric label="Occupied" value={formatMinutes(metrics.occupiedMinutes)} note="overlaps counted once" />
+        <Metric label="Time with events" value={formatMinutes(metrics.occupiedMinutes)} note="overlapping events count once" />
         <Metric label="Longest opening" value={formatMinutes(metrics.longestOpenMinutes)} />
-        <Metric label="Overlap" value={formatMinutes(metrics.overlapMinutes)} />
+        <Metric label="Overlapping time" value={formatMinutes(metrics.overlapMinutes)} />
         <Metric label="Protected recovery" value={formatMinutes(metrics.protectedRecoveryMinutes)} />
       </dl>
 
@@ -384,16 +396,16 @@ export function TodayMap({
           <div className="agenda-heading">
             <div>
               <h2>The day, in order</h2>
-              <p>Planning window: 7 AM–9 PM. Openings are facts, not assignments.</p>
+              <p>Times shown: 7 AM–9 PM. Openings are facts, not assignments.</p>
             </div>
             <button className="quiet-button" type="button" onClick={onEditLabels}>
-              Edit human labels
+              Change event labels
             </button>
           </div>
 
           {allDay.length > 0 ? (
             <div className="all-day-group">
-              <span>ALL DAY · NOT COUNTED AS 24 HOURS OF LOAD</span>
+              <span>ALL-DAY EVENTS · SHOWN SEPARATELY FROM TIMED EVENTS</span>
               <ul>
                 {allDay.map((event) => <li key={event.id}>{event.title}</li>)}
               </ul>
@@ -426,10 +438,10 @@ export function TodayMap({
                     </div>
                     <div className="status-chips">
                       {row.overlapping ? <span className="chip chip-overlap">Overlap</span> : null}
-                      {labels.length === 0 ? <span className="chip">Unlabelled</span> : null}
+                      {labels.length === 0 ? <span className="chip">Not sure</span> : null}
                       {labels.map((label) => (
-                        <span className={`chip chip-${label.toLowerCase().replace(" ", "-")}`} key={label}>
-                          {label}
+                        <span className={`chip chip-${label.tone}`} key={label.tone}>
+                          {label.text}
                         </span>
                       ))}
                     </div>
@@ -441,30 +453,30 @@ export function TodayMap({
         </div>
 
         <aside className="day-reading" aria-labelledby="reading-heading">
-          <span className="reading-state">{metrics.pressure}</span>
+          <span className="reading-state">AT A GLANCE</span>
           <h2 id="reading-heading">
-            {metrics.pressure === "overfull"
-              ? "This day is already negotiating with itself."
-              : metrics.pressure === "full"
-                ? "There is room, but not much slack."
-                : "The day still has breathing room."}
+            {metrics.overlapMinutes > 0
+              ? "Some events overlap."
+              : metrics.longestOpenMinutes < 60
+                ? "No open block reaches one hour."
+                : "At least one open block is an hour or longer."}
           </h2>
           <ul>
-            <li>{metrics.fixedCount} fixed</li>
-            <li>{metrics.movableCount} movable</li>
-            <li>{metrics.reducibleCount} reducible</li>
-            <li>{metrics.highEnergyCount} high-energy</li>
-            <li>{metrics.fragmentedGapCount} short fragmented openings</li>
+            <li>{metrics.fixedCount} marked “Must stay”</li>
+            <li>{metrics.movableCount} marked “Can move”</li>
+            <li>{metrics.reducibleCount} marked “Can be shorter”</li>
+            <li>{metrics.highEnergyCount} marked “Takes a lot of energy”</li>
+            <li>{metrics.fragmentedGapCount} short gaps under one hour</li>
           </ul>
           <p>
-            This reading uses only event times and the labels shown on this page.
-            Titles are display text, never evidence.
+            This view uses only event times and the labels you chose. No AI reads
+            your calendar. We can see the time. Only you know what it means.
           </p>
           <button className="button button-primary" type="button" onClick={onAddActivity}>
-            Question one more addition <span aria-hidden="true">→</span>
+            Check one thing <span aria-hidden="true">→</span>
           </button>
           <button className="text-action" type="button" onClick={onChangeSnapshot}>
-            Use a different snapshot
+            Use a different calendar file
           </button>
         </aside>
       </div>
@@ -484,12 +496,17 @@ export function TodayMap({
 }
 
 export type CandidateSetupProps = {
+  initialActivity?: string;
   onBack: () => void;
   onContinue: (activity: string, minutes: number) => void;
 };
 
-export function CandidateSetup({ onBack, onContinue }: CandidateSetupProps) {
-  const [activity, setActivity] = useState("");
+export function CandidateSetup({
+  initialActivity = "",
+  onBack,
+  onContinue,
+}: CandidateSetupProps) {
+  const [activity, setActivity] = useState(initialActivity);
   const [minutes, setMinutes] = useState(60);
   const [error, setError] = useState<string | null>(null);
   const durationOptions = [15, 30, 45, 60, 90, 120];
@@ -511,11 +528,11 @@ export function CandidateSetup({ onBack, onContinue }: CandidateSetupProps) {
   return (
     <section className="candidate-panel decision-panel panel" aria-labelledby="candidate-heading">
       <button className="back-button" type="button" onClick={onBack}>
-        <span aria-hidden="true">←</span> Back to Today Map
+        <span aria-hidden="true">←</span> Back to this day
       </button>
       <div className="eyebrow">ONE POSSIBLE ADDITION</div>
       <h1 id="candidate-heading" data-stage-focus tabIndex={-1}>
-        What are you asking this day to hold?
+        What do you want to add?
       </h1>
       <form onSubmit={submit} noValidate>
         <label className="input-label" htmlFor="candidate-activity">The thing</label>
@@ -531,7 +548,7 @@ export function CandidateSetup({ onBack, onContinue }: CandidateSetupProps) {
           }}
         />
         <fieldset className="duration-fieldset">
-          <legend>How much uninterrupted time would it honestly need?</legend>
+          <legend>How much uninterrupted time would it need?</legend>
           <div className="duration-options">
             {durationOptions.map((option) => (
               <label key={option}>
@@ -548,8 +565,8 @@ export function CandidateSetup({ onBack, onContinue }: CandidateSetupProps) {
           </div>
         </fieldset>
         <p className="step-support">
-          Duration is asked only in calendar mode. The app will not guess it
-          from the activity name or energy answer.
+          We ask for duration only when calendar context is added. The app will
+          not guess it from the activity name or energy answer.
         </p>
         {error ? <p className="form-error" role="alert">{error}</p> : null}
         <button className="button button-primary" type="submit">

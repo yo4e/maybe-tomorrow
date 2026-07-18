@@ -2,9 +2,10 @@
 
 > A local-first anti-planner for people who need help doing one less thing.
 
-Maybe Tomorrow. helps overproductive people look at what a day is already
-carrying before adding one more activity. It can return exactly three humane
-verdicts:
+Maybe Tomorrow. starts with one ordinary question: does this really have to
+happen today? A user can check one proposed activity immediately, with no
+calendar required. Optional local calendar context can make the same decision
+more grounded. The app returns exactly three humane verdicts:
 
 - **Maybe tomorrow.** — postpone it without guilt;
 - **Make it smaller.** — keep the intention and reduce the size; or
@@ -70,6 +71,12 @@ failure. It does not claim to provide medical advice or prevent illness.
   Calendar export structure; and
 - the bundled fictional “Yoshie’s overfull Tuesday” demo.
 
+For Google Calendar, use a computer and choose **Settings → Import & export →
+Export**, then select the downloaded ZIP in Maybe Tomorrow. without unpacking
+it. Google’s mobile Calendar app does not provide export, and an organization
+administrator may restrict it. See [Google Calendar’s export
+instructions](https://support.google.com/calendar/answer/37111?hl=en).
+
 The parser supports timed and all-day events, `RRULE`, `RDATE`, `EXDATE`, moved
 or cancelled recurrence exceptions, UTC, floating time, and embedded
 `VTIMEZONE` definitions. Imports are bounded by file, expanded size, component,
@@ -99,6 +106,7 @@ definition are skipped rather than guessed.
 - [`docs/DEMO_SCENARIOS.md`](./docs/DEMO_SCENARIOS.md) — reproducible Quick Check and anti-planner demos
 - [`CODEX_WORKLOG.md`](./CODEX_WORKLOG.md) — implementation record and verification
 - [Issue #3](../../issues/3) — expansion proposal, review, and authorization
+- [Issue #5](../../issues/5) — Quick Check hierarchy and editorial-identity refinement
 
 ## Run locally
 
@@ -126,25 +134,32 @@ npm run preview
 
 The production files are written to `dist/`.
 
-## Demo path
+## Demo paths
 
-1. Select **Try the overfull day**.
-2. Review or change the fictional human labels.
-3. Open the Today Map and select **Question one more addition**.
-4. Name the activity and choose its honest uninterrupted duration.
-5. Complete Quick Check.
-6. Expand **Cost of Yes** and compare any replacement plans.
-7. Save the decision and optional trade-off to the local journal.
+### Core decision first
 
-Standalone Quick Check remains available without a calendar.
+1. Enter `Start another side project` in the first viewport.
+2. Select **Check one thing** and complete the eight quick answers.
+3. Pause on **Maybe tomorrow.** and open **What would need to change?**
+4. Save the result to the local journal.
+
+### Optional deeper calendar context
+
+1. Return home and select **Try the sample day**.
+2. Review or change the fictional human labels, then open the Today Map.
+3. Select **Check one thing**, name an activity, and choose its honest duration.
+4. Complete Quick Check, compare **See what would have to move**, and save an
+   optional room-making choice.
 
 ## Status
 
-The expanded anti-planner is implemented locally. The deterministic test suite
-covers scoring, counterfactuals, replacement planning, day metrics, ICS/ZIP
-import, recurrence and timezone behavior, journal migration, and malformed
-storage recovery. GitHub Pages deployment is configured but remains pending a
-commit to `main` and repository Pages configuration.
+The expanded anti-planner and approved Issue #5 refinement are implemented on
+the review branch. The deterministic test suite covers scoring,
+counterfactuals, replacement planning, day metrics, ICS/ZIP import, recurrence
+and timezone behavior, journal migration, malformed storage recovery, and the
+refined first-screen hierarchy. GitHub Pages deployment is configured, but the
+refinement remains pending Yoshie Yamada’s browser review and must not be
+merged or deployed before that review.
 
 Expected public URL after deployment:
 

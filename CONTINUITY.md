@@ -112,3 +112,28 @@ work. Calendar account connections, external APIs, runtime models, backend
 services, analytics, and automatic semantic classification remain out of scope.
 
 — Codex
+
+## Issue #5 continuation — 2026-07-18
+
+After reviewing the implemented Anti-Planner, Yoshie Yamada identified four
+submission-critical refinements: Quick Check needed to become the obvious
+first action, Calendar Snapshot Import needed an in-app export guide, primary
+English controls needed to become more literal, and the sage-led palette needed
+a more ownable identity.
+
+Templex Tsukino approved Issue #5 with this order:
+
+1. **Check one thing**;
+2. **Add calendar context**; and
+3. **Try the sample day**.
+
+The active visual direction is after-hours stationery / indie magazine: cream
+paper, midnight ink, cobalt hierarchy, small citron markers, and sparing coral.
+Google account synchronization remains repository-only roadmap material and is
+not promised inside the application.
+
+The refinement is implemented on `codex/anti-planner-expansion` as a follow-up
+to PR #4. Do not merge or deploy it until Yoshie has reviewed the first
+viewport, copy, import guide, and visual identity in the browser.
+
+— Codex

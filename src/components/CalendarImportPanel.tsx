@@ -25,9 +25,9 @@ export function CalendarImportPanel({
   const chooseFiles = (nextFiles: File[]) => {
     const supported = nextFiles.filter((file) => /\.(ics|zip)$/i.test(file.name));
     if (supported.length !== nextFiles.length) {
-      setLocalError("Choose .ics files or one .zip calendar export.");
+      setLocalError("Choose .ics or .zip calendar files.");
     } else if (supported.length > 10) {
-      setLocalError("Choose no more than 10 files at once.");
+      setLocalError("Choose no more than 10 calendar files at once.");
     } else {
       setLocalError(null);
     }
@@ -37,7 +37,7 @@ export function CalendarImportPanel({
   const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (files.length === 0) {
-      setLocalError("Choose a calendar snapshot first.");
+      setLocalError("Choose a calendar file first.");
       return;
     }
     await onImport(files, startDate);
@@ -54,38 +54,37 @@ export function CalendarImportPanel({
       <button className="back-button" type="button" onClick={onBack}>
         <span aria-hidden="true">←</span> Back
       </button>
-      <div className="eyebrow">CALENDAR SNAPSHOT</div>
+      <div className="eyebrow">OPTIONAL DAY CONTEXT</div>
       <h1 id="import-heading" data-stage-focus tabIndex={-1}>
-        Bring the day here. Only here.
+        Add calendar context
       </h1>
       <p className="lede">
-        Export an iCalendar file from your calendar service, then choose it
-        below. Maybe Tomorrow. reads it locally and makes no network request.
+        Choose one or more <code>.ics</code> files, or a ZIP containing <code>.ics</code>
+        files—including a Google Calendar export. You can use the downloaded ZIP
+        as-is. There is no need to unpack it yourself.
       </p>
 
-      <div className="demo-invitation">
-        <div>
-          <span className="demo-label">NO FILE? START HERE</span>
-          <h2>Yoshie’s fictional overfull Tuesday</h2>
-          <p>Pre-labelled, private, and ready for the complete demo.</p>
-        </div>
-        <button className="button button-primary" type="button" onClick={onLoadDemo}>
-          Load demo day <span aria-hidden="true">→</span>
-        </button>
-      </div>
-
-      <div className="or-divider"><span>or use your snapshot</span></div>
+      <p id={`${inputId}-privacy`}>
+        The file is read in this browser. It is not uploaded, synchronized, or
+        written back to your calendar. To update the calendar context, export a
+        fresh file and import it again.
+      </p>
 
       <form onSubmit={submit} noValidate>
         <label className="input-label" htmlFor={`${inputId}-date`}>
           First day to inspect
         </label>
+        <p id={`${inputId}-date-help`}>
+          Choose the first day. Maybe Tomorrow. will inspect a seven-day window
+          starting there.
+        </p>
         <input
           className="date-input"
           id={`${inputId}-date`}
           type="date"
           value={startDate}
           onChange={(event) => setStartDate(event.target.value)}
+          aria-describedby={`${inputId}-date-help`}
           required
         />
 
@@ -100,14 +99,17 @@ export function CalendarImportPanel({
           onDrop={drop}
         >
           <label className="file-label" htmlFor={inputId}>
-            <strong>Choose .ics or .zip files</strong>
-            <span>or drop them here · up to 5 MB total compressed</span>
+            <strong>Choose .ics or .zip calendar files</strong>
+            <span>
+              or drop them here · up to 10 calendars total · 5 MB selected files
+            </span>
           </label>
           <input
             className="visually-hidden"
             id={inputId}
             type="file"
             accept=".ics,.zip,text/calendar,application/zip"
+            aria-describedby={`${inputId}-privacy`}
             multiple
             onChange={(event) => chooseFiles(Array.from(event.target.files ?? []))}
           />
@@ -127,25 +129,48 @@ export function CalendarImportPanel({
         {localError || error ? (
           <p className="form-error" role="alert">{localError ?? error}</p>
         ) : null}
-        {busy ? <p className="import-status" role="status">Reading the snapshot in this tab…</p> : null}
+        {busy ? <p className="import-status" role="status">Reading the calendar file in this browser…</p> : null}
 
         <button
           className="button button-primary"
           type="submit"
           disabled={busy || files.length === 0}
         >
-          {busy ? "Reading…" : "Inspect this snapshot"}
+          {busy ? "Reading…" : "Use my calendar file"}
         </button>
       </form>
 
-      <details className="privacy-details">
-        <summary>What stays private?</summary>
+      <details className="calendar-guide">
+        <summary>How to export from Google Calendar</summary>
+        <ol>
+          <li>On a computer, open Google Calendar.</li>
+          <li>Open Settings, then choose Settings.</li>
+          <li>Choose Import &amp; export on the left.</li>
+          <li>Under Export, choose Export. Google downloads a ZIP file.</li>
+          <li>Return here and choose that ZIP as downloaded. Do not unpack it first.</li>
+        </ol>
         <p>
-          Event titles and times remain in this browser. The original file is
-          never saved to the journal. Imported events start unlabelled because
-          the app does not guess their meaning.
+          Google Calendar cannot export from its mobile app. A work or school
+          administrator may also restrict calendar export.
+        </p>
+        <p>
+          <strong>Not supported:</strong> screenshots, PDFs, CSV files, calendar
+          links, encrypted ZIPs, and other archive formats.
         </p>
       </details>
+
+      <div className="or-divider"><span>or keep personal data out</span></div>
+
+      <div className="demo-invitation">
+        <div>
+          <span className="demo-label">NO PERSONAL FILE NEEDED</span>
+          <h2>Try a fictional sample day</h2>
+          <p>A fictional Tuesday is pre-labelled and ready to explore.</p>
+        </div>
+        <button className="button button-secondary" type="button" onClick={onLoadDemo}>
+          Try the sample day <span aria-hidden="true">→</span>
+        </button>
+      </div>
     </section>
   );
 }

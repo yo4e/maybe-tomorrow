@@ -16,11 +16,12 @@ at the shape of a calendar only after the user deliberately brings a snapshot
 into the browser. It does not infer what an event means from its title and it
 does not claim authority over the user's commitments.
 
-The complete experience has two connected paths:
+The complete experience has two connected paths, with a deliberate hierarchy:
 
 1. **Quick Check** asks seven questions about one proposed activity and returns
-   exactly one of the existing three verdicts.
-2. **Today Map** lets the user inspect a local calendar snapshot, label the
+   exactly one of the existing three verdicts. It is the hero-level entry and
+   requires no calendar.
+2. **Today Map** is optional context. It lets the user inspect a local calendar snapshot, label the
    flexibility and energy character of its events, and use that context when
    evaluating one more activity.
 
@@ -124,26 +125,35 @@ confirmed clear-all action. No draft or imported calendar is uploaded.
 
 ## Visual direction
 
-The revised interface should feel quiet, humane, and slightly dreamy while
-remaining highly legible. Use a low-contrast paper background, deep botanical
-text, muted sage and dusk-blue surfaces, soft corners, and restrained motion.
-Avoid gradients, glass effects, gamification, dense dashboards, and productivity
-score theatre.
+The revised interface should feel like after-hours stationery or an independent
+magazine: quiet, humane, slightly unexpected, and highly legible. Use cream
+paper, midnight ink, confident cobalt for hierarchy, citron as a small physical
+marker or tab, and coral only for postponement or consequential change. Create
+calm through whitespace, typography, pacing, and restraint rather than a
+sage-led wellness palette. Prefer editorial rules and bands to excessive
+rounded cards and shadows. Avoid gradients, glass effects, gamification, dense
+dashboards, and productivity score theatre.
+
+Controls, headings, labels, and instructions use plain action language. The
+dry editorial voice remains in verdicts, explanations, transitions, and
+secondary copy. Technical terms such as counterfactual and solver remain valid
+implementation vocabulary but are not required user-facing concepts.
 
 ## Demonstration path
 
 The primary live demo should work without user files:
 
-1. load the fictional overfull-day snapshot;
-2. inspect the pre-labelled Today Map;
-3. propose one more activity;
-4. complete Quick Check;
-5. receive a verdict with transparent factors;
-6. inspect Cost of Yes;
-7. compare minimal replacement plans;
-8. save the decision and plan to the local journal.
+1. enter one activity directly in the first viewport;
+2. complete Quick Check and receive a verdict with transparent factors;
+3. optionally inspect what would need to change;
+4. return home and load the fictional sample day;
+5. inspect the pre-labelled Today Map;
+6. propose one more activity with an honest duration;
+7. compare minimal room-making options; and
+8. save the decision and optional choice to the local journal.
 
-Quick Check must also remain available as a direct, context-free path.
+The calendar demonstration deepens the direct decision. It must never appear
+to be the price of entry.
 
 ## Acceptance criteria
 
@@ -160,5 +170,15 @@ Quick Check must also remain available as a direct, context-free path.
 - `npm test` and `npm run build` succeed.
 
 ---
+
+— Codex
+
+## Issue #5 refinement boundary
+
+This hierarchy, copy system, visual direction, import guide, and the decision
+to keep future Google account synchronization out of the application were
+approved by Yoshie Yamada and Templex Tsukino in Issue #5. The refinement
+preserves every deterministic rule, import bound, privacy guarantee,
+accessibility behavior, and feature from Issue #3.
 
 — Codex

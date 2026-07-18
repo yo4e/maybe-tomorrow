@@ -38,7 +38,7 @@ function DayContext({ context }: { context: JournalDayContext }) {
   return (
     <div className="journal-day-context">
       <p className="journal-snapshot">
-        <span className="journal-context-label">Calendar snapshot</span>{" "}
+        <span className="journal-context-label">Calendar used</span>{" "}
         <strong>{context.snapshotName}</strong>
         {" · "}
         <time dateTime={context.selectedDate}>
@@ -64,7 +64,7 @@ function DayContext({ context }: { context: JournalDayContext }) {
           <dd>{formatMinutes(context.metrics.overlapMinutes)}</dd>
         </div>
         <div className="journal-metric">
-          <dt>Fragmented gaps</dt>
+          <dt>Short gaps under 1 hour</dt>
           <dd>{context.metrics.fragmentedGapCount}</dd>
         </div>
         <div className="journal-metric">
@@ -72,14 +72,14 @@ function DayContext({ context }: { context: JournalDayContext }) {
           <dd>{formatMinutes(context.metrics.protectedRecoveryMinutes)}</dd>
         </div>
         <div className="journal-metric journal-metric-candidate">
-          <dt>Candidate needed</dt>
+          <dt>Time requested</dt>
           <dd>{formatMinutes(context.candidateMinutes)}</dd>
         </div>
       </dl>
 
       {context.selectedPlan ? (
         <div className="journal-selected-plan">
-          <h4>Chosen trade-off</h4>
+          <h4>Saved room-making option</h4>
           <p>{context.selectedPlan.summary}</p>
           {context.selectedPlan.operations.length > 0 ? (
             <ul>
@@ -90,7 +90,7 @@ function DayContext({ context }: { context: JournalDayContext }) {
           ) : null}
         </div>
       ) : (
-        <p className="journal-no-plan">No replacement plan was accepted.</p>
+        <p className="journal-no-plan">No room-making option was saved.</p>
       )}
     </div>
   );
@@ -205,7 +205,7 @@ export function DecisionJournal({
                 <article className="journal-card">
                   <div className="journal-card-topline">
                     <span className="journal-kind">
-                      {entry.kind === "day-plan" ? "Day plan" : "Quick Check"}
+                      {entry.kind === "day-plan" ? "With calendar context" : "Quick Check"}
                     </span>
                     <span
                       className={`journal-verdict journal-verdict-${entry.decision.verdict}`}

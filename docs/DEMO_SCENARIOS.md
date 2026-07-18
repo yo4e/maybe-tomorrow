@@ -195,3 +195,34 @@ paths. The live demo should describe exact test counts only after running the
 current suite.
 
 — Codex
+
+## Issue #5 refined demonstration order
+
+The first viewport now presents the core decision before calendar context.
+
+### 45–60 second core demo
+
+1. Enter `Start another side project` in the hero input.
+2. Select **Check one thing**.
+3. Use Scenario A above to produce **Maybe tomorrow.**
+4. Open **What would need to change?** and show that the alternatives are
+   deterministic while the original answers stay unchanged.
+5. Save the decision locally.
+
+### 90–150 second expanded demo
+
+1. Complete the first three core-demo steps so the product promise is clear.
+2. Return home and select **Try the sample day**.
+3. Review the pre-marked fictional events and select **See this day**.
+4. Point out event time, longest opening, overlap, and protected recovery
+   without presenting the day as graded.
+5. Select **Check one thing**, enter `Draft another short story`, and choose
+   `1 hr`.
+6. Complete Quick Check with the existing Issue #3 answer values.
+7. Open **What would need to change?** and **See what would have to move**.
+8. Save the decision and optional room-making choice to the local journal.
+
+The calendar path is optional evidence, not a more serious version of the
+product.
+
+— Codex
