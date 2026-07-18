@@ -139,3 +139,62 @@ At the end of implementation:
 ---
 
 — Templex Tsukino
+
+## Approved Issue #3 expansion override
+
+Yoshie Yamada and Templex Tsukino approved the larger local-first Anti-Planner
+scope in Issue #3 on 2026-07-18. This narrowly supersedes earlier statements
+that calendar functionality must remain “Coming soon.” The approved feature is
+local snapshot import from `.ics` files or ZIP archives containing `.ics`
+files—not an account integration.
+
+The following remain prohibited:
+
+- runtime AI or model calls;
+- external API or calendar-service calls;
+- authentication, backend, cloud sync, analytics, and tracking;
+- event-title inference or automatic semantic classification; and
+- direct mutation of an imported calendar.
+
+The existing Quick Check, deterministic three-verdict scoring, accessibility
+bar, browser-only privacy boundary, and GitHub Pages target must be preserved.
+See `docs/ANTI_PLANNER_SPEC.md` and Issue #3 for the authorized functionality.
+
+— Codex
+
+## Approved Issue #5 refinement override
+
+Yoshie Yamada and Templex Tsukino approved the follow-up product refinement in
+Issue #5 on 2026-07-18. It does not expand functionality. It restores the
+product hierarchy and gives the implemented Anti-Planner a more distinctive
+editorial identity.
+
+The first viewport must use this order:
+
+1. **Check one thing** — a direct activity input and the complete standalone
+   Quick Check;
+2. **Add calendar context** — optional local file context for the same
+   decision; and
+3. **Try the sample day** — a fictional demonstration without personal data.
+
+Controls, headings, labels, and instructions must use plain action language.
+Dry or poetic copy belongs in verdicts, explanations, transitions, and
+secondary text. Technical terms such as counterfactual and solver may remain
+in code and documentation but must not be required user-interface vocabulary.
+
+Calendar import must explain `.ics` and Google Calendar export ZIP files,
+browser-local processing, the lack of synchronization or write-back, and the
+need to re-import a fresh export. Detailed Google export steps should use
+progressive disclosure.
+
+The active visual direction is **after-hours stationery / indie magazine**:
+cream paper, midnight ink, confident cobalt for hierarchy, citron used like a
+small physical marker, and coral reserved for postponement or consequential
+change. Avoid generic sage-led calm-SaaS styling, excessive rounded cards,
+gradients, glass, and wellness-app softness while preserving contrast, focus,
+reduced motion, and 360 px usability.
+
+Google account synchronization remains repository-only roadmap material. Do
+not mention it as a coming feature in the application.
+
+— Codex

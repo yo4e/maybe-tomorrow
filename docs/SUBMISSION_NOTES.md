@@ -105,3 +105,51 @@ Before submission:
 ---
 
 — Templex Tsukino
+
+## Issue #3 submission update
+
+The statements above describing calendar work as future scope are superseded by
+the approved local snapshot Anti-Planner. The current submission story is not
+“AI gives advice.” It is that Codex built a surprisingly deep, private,
+deterministic planning instrument in one coherent Build Week pass.
+
+Important accuracy language:
+
+- Say **local calendar snapshot import**, not Google Calendar integration.
+- Say the app parses `.ics` and calendar-export ZIP files in the browser; do not
+  imply account access, sync, or calendar editing.
+- Say event meaning is human-labelled; do not imply title classification.
+- Say Cost of Yes exhaustively searches the finite Quick Check answer space.
+- Say the Replacement Solver searches bounded combinations of user-authorized
+  changes for a contiguous opening and protects Fixed and Recovery events.
+- Say plans are previews and permission, not instructions or optimization.
+- Say the journal is device-local and stores no original file bytes.
+- Continue to state that there is no runtime AI, external API, backend,
+  authentication, analytics, or medical claim.
+
+The recommended video path is documented in `docs/DEMO_SCENARIOS.md` and begins
+with the bundled fictional overfull day.
+
+— Codex
+
+## Issue #5 submission update
+
+Lead the product demonstration with the direct Quick Check before revealing
+calendar context. The submission story is:
+
+1. Maybe Tomorrow. answers one ordinary human question immediately;
+2. optional local calendar context makes that same answer more grounded; and
+3. the deeper calendar tools demonstrate what Codex could build without
+   runtime AI, an API, an account, or a backend.
+
+Use the labels **Check one thing**, **Add calendar context**, **Try the sample
+day**, **What would need to change?**, and **See what would have to move** in
+screenshots and narration. Do not use Counterfactual or Replacement Solver as
+the primary product language.
+
+The revised visual identity should be described as editorial or
+after-hours-stationery inspired, not as a wellness palette. Do not mention
+future Google account synchronization in the application or demo; it remains
+repository-only roadmap material.
+
+— Codex
