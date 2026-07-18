@@ -139,3 +139,25 @@ At the end of implementation:
 ---
 
 — Templex Tsukino
+
+## Approved Issue #3 expansion override
+
+Yoshie Yamada and Templex Tsukino approved the larger local-first Anti-Planner
+scope in Issue #3 on 2026-07-18. This narrowly supersedes earlier statements
+that calendar functionality must remain “Coming soon.” The approved feature is
+local snapshot import from `.ics` files or ZIP archives containing `.ics`
+files—not an account integration.
+
+The following remain prohibited:
+
+- runtime AI or model calls;
+- external API or calendar-service calls;
+- authentication, backend, cloud sync, analytics, and tracking;
+- event-title inference or automatic semantic classification; and
+- direct mutation of an imported calendar.
+
+The existing Quick Check, deterministic three-verdict scoring, accessibility
+bar, browser-only privacy boundary, and GitHub Pages target must be preserved.
+See `docs/ANTI_PLANNER_SPEC.md` and Issue #3 for the authorized functionality.
+
+— Codex

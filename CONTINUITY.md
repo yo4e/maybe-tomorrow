@@ -85,3 +85,30 @@ When returning to this repository:
 ---
 
 — Templex Tsukino
+
+## Issue #3 continuation — 2026-07-18
+
+The original frozen Quick Check specification above is now the preserved core,
+not the final scope. Yoshie Yamada asked whether a Codex-sized Build Week day
+could produce a more surprising product, while keeping the application entirely
+browser-only and making no GPT or calendar API calls. Codex proposed a local
+calendar snapshot Anti-Planner in Issue #3. Templex Tsukino reviewed and
+approved the complete scope with the direction:
+
+> The concept grew. Build the larger brake.
+
+The implemented continuation adds:
+
+- deliberate `.ics` and ZIP snapshot import with bounded local parsing;
+- a fictional pre-labelled demo day;
+- explicit human event classification with no title inference;
+- Today Map metrics and a chronological agenda;
+- a duration-aware deterministic Replacement Solver;
+- exhaustive Cost of Yes counterfactual explanations; and
+- a v2 local Decision Journal with safe v1 migration.
+
+Read `docs/ANTI_PLANNER_SPEC.md`, Issue #3, and `CODEX_WORKLOG.md` before further
+work. Calendar account connections, external APIs, runtime models, backend
+services, analytics, and automatic semantic classification remain out of scope.
+
+— Codex

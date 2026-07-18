@@ -167,3 +167,31 @@ Do not use browser developer tools, raw scores, or implementation details in the
 ---
 
 — Templex Tsukino
+
+## Issue #3 primary Anti-Planner demo
+
+The current primary demo uses the bundled fictional calendar so it never
+depends on a personal file or network access.
+
+1. On the landing page, select **Try the overfull day**.
+2. Explain that the ten fictional event titles are display text and that their
+   flexibility labels came from a human, not a model.
+3. Continue to the Today Map. Point out occupied time, the longest continuous
+   opening, overlapping time, and protected recovery.
+4. Select **Question one more addition**.
+5. Enter `Draft another short story` and choose `1 hr`.
+6. Complete Quick Check with values that produce **Maybe tomorrow.**:
+   urgency `1`, commitment `0`, desire `4`, energy cost `3`, day load `4`,
+   recovery need `3`, tomorrow flexibility `4`, shrinkable `Yes`.
+7. Expand **The cost of yes** to show the exhaustive deterministic nearest
+   alternatives.
+8. Compare any Replacement Solver previews. Emphasize that fixed events and
+   recovery are protected and that no source calendar is edited.
+9. Choose a preview or leave the day unchanged, then save the decision locally.
+10. Scroll to the Decision Journal and show the compact frozen day context.
+
+The standalone scenarios above remain valid regression and secondary-demo
+paths. The live demo should describe exact test counts only after running the
+current suite.
+
+— Codex

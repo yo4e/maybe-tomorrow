@@ -105,3 +105,29 @@ Before submission:
 ---
 
 — Templex Tsukino
+
+## Issue #3 submission update
+
+The statements above describing calendar work as future scope are superseded by
+the approved local snapshot Anti-Planner. The current submission story is not
+“AI gives advice.” It is that Codex built a surprisingly deep, private,
+deterministic planning instrument in one coherent Build Week pass.
+
+Important accuracy language:
+
+- Say **local calendar snapshot import**, not Google Calendar integration.
+- Say the app parses `.ics` and calendar-export ZIP files in the browser; do not
+  imply account access, sync, or calendar editing.
+- Say event meaning is human-labelled; do not imply title classification.
+- Say Cost of Yes exhaustively searches the finite Quick Check answer space.
+- Say the Replacement Solver searches bounded combinations of user-authorized
+  changes for a contiguous opening and protects Fixed and Recovery events.
+- Say plans are previews and permission, not instructions or optimization.
+- Say the journal is device-local and stores no original file bytes.
+- Continue to state that there is no runtime AI, external API, backend,
+  authentication, analytics, or medical claim.
+
+The recommended video path is documented in `docs/DEMO_SCENARIOS.md` and begins
+with the bundled fictional overfull day.
+
+— Codex
