@@ -6,7 +6,7 @@ Last updated: 2026-07-18
 
 Maybe Tomorrow. has moved from idea selection into a frozen implementation specification.
 
-The repository contains the product story, scope, scoring algorithm, complete UX copy, design system, implementation plan, and hackathon submission narrative. No application code has been written yet.
+The repository contains the product story, scope, scoring algorithm, complete UX copy, design system, implementation plan, reproducible demo scenarios, and hackathon submission narrative. No application code has been written yet.
 
 The next action is not further ideation. The next action is implementation.
 
@@ -50,11 +50,12 @@ The app must remain deterministic, private, local, fast, and gently funny.
 5. `docs/UX_COPY.md`
 6. `docs/DESIGN_SYSTEM.md`
 7. `docs/IMPLEMENTATION_PLAN.md`
-8. `docs/SUBMISSION_NOTES.md`
+8. `docs/DEMO_SCENARIOS.md`
+9. `docs/SUBMISSION_NOTES.md`
 
 ## Next entry
 
-Implement the MVP end-to-end from the canonical GitHub issue.
+Implement the MVP end-to-end from Issue #1.
 
 Do not reopen product naming, runtime architecture, localization, external integrations, or scoring philosophy unless Yoshie Yamada explicitly requests a change.
 
@@ -64,7 +65,7 @@ After implementation:
 - deploy to GitHub Pages;
 - update README status and run instructions;
 - create `CODEX_WORKLOG.md` signed `— Codex`;
-- ask Yoshie to review copy, visual tone, and demo flow.
+- ask Yoshie to review copy, visual tone, and demo flow through Issue #2.
 
 ## Instruction to the next Templex Tsukino
 
