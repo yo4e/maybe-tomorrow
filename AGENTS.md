@@ -14,6 +14,9 @@ Read these files before writing code:
 4. `docs/UX_COPY.md`
 5. `docs/DESIGN_SYSTEM.md`
 6. `docs/IMPLEMENTATION_PLAN.md`
+7. `docs/DEMO_SCENARIOS.md`
+8. `docs/SUBMISSION_NOTES.md`
+9. `CONTINUITY.md`
 
 If documents appear to conflict, use this precedence:
 
