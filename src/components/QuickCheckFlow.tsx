@@ -62,7 +62,7 @@ function ActivityStep({
         <span aria-hidden="true">←</span> Back
       </button>
       <div className="eyebrow">{contextLabel ?? "ONE THING AT A TIME"}</div>
-      <h1 id="activity-heading">What are you about to add to today?</h1>
+      <h1 id="activity-heading">What are you about to add to your day?</h1>
       <p className="step-support">
         A task, outing, workout, favor, idea, or entirely new project you
         suddenly believe is urgent.

@@ -72,7 +72,7 @@ export function CalendarImportPanel({
 
       <form onSubmit={submit} noValidate>
         <label className="input-label" htmlFor={`${inputId}-date`}>
-          First day to inspect
+          Start date
         </label>
         <p id={`${inputId}-date-help`}>
           Choose the first day. Maybe Tomorrow. will inspect a seven-day window
@@ -101,7 +101,7 @@ export function CalendarImportPanel({
           <label className="file-label" htmlFor={inputId}>
             <strong>Choose .ics or .zip calendar files</strong>
             <span>
-              or drop them here · up to 10 calendars total · 5 MB selected files
+              or drop them here · up to 10 files · 5 MB total
             </span>
           </label>
           <input
@@ -150,8 +150,8 @@ export function CalendarImportPanel({
           <li>Return here and choose that ZIP as downloaded. Do not unpack it first.</li>
         </ol>
         <p>
-          Google Calendar cannot export from its mobile app. A work or school
-          administrator may also restrict calendar export.
+          Calendar export is not available in the Google Calendar mobile app. A
+          work or school administrator may also restrict calendar exports.
         </p>
         <p>
           <strong>Not supported:</strong> screenshots, PDFs, CSV files, calendar
@@ -159,13 +159,13 @@ export function CalendarImportPanel({
         </p>
       </details>
 
-      <div className="or-divider"><span>or keep personal data out</span></div>
+      <div className="or-divider"><span>or try it without personal data</span></div>
 
       <div className="demo-invitation">
         <div>
           <span className="demo-label">NO PERSONAL FILE NEEDED</span>
           <h2>Try a fictional sample day</h2>
-          <p>A fictional Tuesday is pre-labelled and ready to explore.</p>
+          <p>A fictional Tuesday is already labeled and ready to explore.</p>
         </div>
         <button className="button button-secondary" type="button" onClick={onLoadDemo}>
           Try the sample day <span aria-hidden="true">→</span>

@@ -36,7 +36,7 @@ export const QUESTIONS: QuestionDefinition[] = [
       option(1, "Not really"),
       option(2, "A little"),
       option(3, "Yes"),
-      option(4, "Strong commitment"),
+      option(4, "Yes, definitely"),
     ],
   },
   {
@@ -79,8 +79,8 @@ export const QUESTIONS: QuestionDefinition[] = [
       option(0, "Very little"),
       option(1, "A little"),
       option(2, "Some"),
-      option(3, "Quite a lot"),
-      option(4, "A lot"),
+      option(3, "A lot"),
+      option(4, "As much as possible"),
     ],
   },
   {

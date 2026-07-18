@@ -71,6 +71,9 @@ describe("Issue #5 product hierarchy", () => {
     expect(text).toContain("Import & export");
     expect(text).toContain("Do not unpack it first.");
     expect(text).toContain("not uploaded, synchronized, or written back");
+    expect(text).toContain("Start date");
+    expect(text).toContain("up to 10 files · 5 MB total");
+    expect(text).toContain("already labeled");
     expect(text.indexOf("Use my calendar file")).toBeLessThan(
       text.indexOf("Try the sample day"),
     );
@@ -107,7 +110,7 @@ describe("Issue #5 product hierarchy", () => {
       ),
     );
 
-    expect(text).toContain("Time with events");
+    expect(text).toContain("Occupied time");
     expect(text).toContain("Longest opening");
     expect(text).not.toMatch(/\b(gentle|full|overfull)\b/i);
   });

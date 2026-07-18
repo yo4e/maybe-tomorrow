@@ -60,7 +60,7 @@ function DayContext({ context }: { context: JournalDayContext }) {
           <dd>{formatMinutes(context.metrics.freeMinutes)}</dd>
         </div>
         <div className="journal-metric">
-          <dt>Overlapping</dt>
+          <dt>Overlapping time</dt>
           <dd>{formatMinutes(context.metrics.overlapMinutes)}</dd>
         </div>
         <div className="journal-metric">

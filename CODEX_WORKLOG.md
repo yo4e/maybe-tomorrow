@@ -264,4 +264,35 @@ git diff --check
   technical vocabulary. Primary controls and normal-path guidance are plain;
   a future copy pass could add a simpler first layer to those diagnostics.
 
+## Final US-English and paper-tone polish
+
+Yoshie Yamada approved one final pass after reviewing the revised application
+in the browser. The deterministic product behavior remains unchanged.
+
+- Fixed the remaining grammatical error in the high-energy explanation and
+  clarified the middle tomorrow-flexibility sentence.
+- Made the commitment and recovery answer scales read in a clear US-English
+  order.
+- Rendered arbitrary activity input as a quoted phrase in verdict sentences,
+  avoiding grammar such as “Start another side project does…”.
+- Removed doubled punctuation after quoted verdicts.
+- Corrected parallel grammar in calendar-label instructions and polished
+  action, metric, import, sample, and journal labels for US English.
+- Lightened the paper token from `#f2eadb` to `#f5efe5` to reduce the yellowed
+  appearance while preserving midnight ink, cobalt hierarchy, citron markers,
+  and sparing coral.
+- Added focused result-copy regression coverage for all three verdicts and the
+  quoted-verdict punctuation boundary.
+
+Final verification after this pass:
+
+- Vitest: 9 test files passed, 64 tests passed.
+- TypeScript strict project build and Vite production build: passed.
+- `git diff --check`: passed.
+- Browser review: softened paper color, import guidance, all eight Quick Check
+  answers, quoted result sentence, corrected factor sentence, quoted-verdict
+  punctuation, sample triage, and factual Today Map labels all passed.
+- The 360 px result and Today Map remained free of horizontal overflow; no
+  journal entry was added or removed during verification.
+
 — Codex

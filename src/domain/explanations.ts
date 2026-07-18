@@ -14,10 +14,10 @@ const FACTOR_COPY: Record<FactorKey, Partial<Record<ScoreValue, string>>> = {
   energyCost: {
     2: "This will take noticeable energy.",
     3: "This will take a lot of energy.",
-    4: "This asks for energy today may not have.",
+    4: "This may take more energy than you have today.",
   },
   tomorrowFlexibility: {
-    2: "This may be able to wait.",
+    2: "This could wait until tomorrow.",
     3: "This can probably wait until tomorrow.",
     4: "This can easily wait until tomorrow.",
   },

@@ -84,7 +84,7 @@ function CostOfYes({ decision }: { decision: Decision }) {
         <h2 id="cost-heading">What would need to change?</h2>
         <p>
           See the smallest changes that would lead to
-          {` “${verdictHeading[result.targetVerdict]}”`}. Your answers stay as they are.
+          {` “${verdictHeading[result.targetVerdict]}”`} Your answers stay as they are.
         </p>
       </div>
       <button
@@ -267,7 +267,7 @@ export function DecisionResult({
           {copy.heading}
         </h1>
         <p className="result-statement">
-          <strong>{decision.activity}</strong>
+          <strong>“{decision.activity}”</strong>
           {copy.statement(decision.activity).slice(decision.activity.length)}
         </p>
         <p className="result-body">{copy.body}</p>

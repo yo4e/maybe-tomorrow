@@ -214,8 +214,9 @@ export function CalendarTriage({
             Mark what can move.
           </h1>
           <p className="lede">
-            The app sees event times, not meaning. Mark what must stay, can
-            move, can be shorter, takes a lot of energy, or protects recovery.
+            The app sees event times, not meaning. Mark which events must stay,
+            can move, can be shortened, take a lot of energy, or protect
+            recovery time.
           </p>
         </div>
         <SnapshotDatePicker
@@ -273,7 +274,7 @@ export function CalendarTriage({
       ) : null}
       <div className="sticky-actions">
         <button className="button button-primary" type="button" onClick={onContinue}>
-          See this day <span aria-hidden="true">→</span>
+          View this day <span aria-hidden="true">→</span>
         </button>
       </div>
     </section>
@@ -385,7 +386,7 @@ export function TodayMap({
       </div>
 
       <dl className="day-metrics">
-        <Metric label="Time with events" value={formatMinutes(metrics.occupiedMinutes)} note="overlapping events count once" />
+        <Metric label="Occupied time" value={formatMinutes(metrics.occupiedMinutes)} note="overlapping events count once" />
         <Metric label="Longest opening" value={formatMinutes(metrics.longestOpenMinutes)} />
         <Metric label="Overlapping time" value={formatMinutes(metrics.overlapMinutes)} />
         <Metric label="Protected recovery" value={formatMinutes(metrics.protectedRecoveryMinutes)} />
