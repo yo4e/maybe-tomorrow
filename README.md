@@ -97,6 +97,10 @@ definition are skipped rather than guessed.
 
 ## Documentation map
 
+- [`submission/README.md`](./submission/README.md) — canonical OpenAI Build Week submission kit and final checklist
+- [`submission/DEMO_VIDEO_SCRIPT.md`](./submission/DEMO_VIDEO_SCRIPT.md) — complete under-three-minute demo narration and shot list
+- [`submission/DEVPOST_SUBMISSION.md`](./submission/DEVPOST_SUBMISSION.md) — ready-to-paste Devpost project copy
+- [`submission/COLLABORATION_STORY.md`](./submission/COLLABORATION_STORY.md) — documented human–AI–AI build workflow
 - [`AGENTS.md`](./AGENTS.md) — implementation constraints and approved Issue #3 override
 - [`docs/ANTI_PLANNER_SPEC.md`](./docs/ANTI_PLANNER_SPEC.md) — current expansion specification
 - [`docs/PRODUCT_SPEC.md`](./docs/PRODUCT_SPEC.md) — original Quick Check product behavior
@@ -105,8 +109,9 @@ definition are skipped rather than guessed.
 - [`docs/DESIGN_SYSTEM.md`](./docs/DESIGN_SYSTEM.md) — original visual foundation
 - [`docs/DEMO_SCENARIOS.md`](./docs/DEMO_SCENARIOS.md) — reproducible Quick Check and anti-planner demos
 - [`CODEX_WORKLOG.md`](./CODEX_WORKLOG.md) — implementation record and verification
-- [Issue #3](../../issues/3) — expansion proposal, review, and authorization
-- [Issue #5](../../issues/5) — Quick Check hierarchy and editorial-identity refinement
+- [Issue #3](../../issues/3) — expansion proposal, Templex review, and authorization
+- [Issue #5](../../issues/5) — Yoshie feedback, Quick Check hierarchy, and editorial-identity refinement
+- [Pull Request #4](../../pull/4) — reviewed and merged Anti-Planner implementation
 
 ## Run locally
 
@@ -153,29 +158,68 @@ The production files are written to `dist/`.
 
 ## Status
 
-The expanded anti-planner and approved Issue #5 refinement are implemented on
-the review branch. The deterministic test suite covers scoring,
-counterfactuals, replacement planning, day metrics, ICS/ZIP import, recurrence
-and timezone behavior, journal migration, malformed storage recovery, and the
-refined first-screen hierarchy. GitHub Pages deployment is configured, but the
-refinement remains pending Yoshie Yamada’s browser review and must not be
-merged or deployed before that review.
+The approved local-first Anti-Planner, Issue #5 hierarchy refinement, final
+US-English copy pass, and paper-tone polish are merged into `main` and deployed.
 
-Expected public URL after deployment:
+Public application:
 
-> `https://yo4e.github.io/maybe-tomorrow/`
+> https://yo4e.github.io/maybe-tomorrow/
+
+Final recorded verification:
+
+- Vitest: 9 test files and 64 tests passed;
+- TypeScript strict build and Vite production build passed;
+- `git diff --check` passed;
+- 360 px and desktop browser review passed without horizontal overflow; and
+- no browser console warnings or errors were observed.
+
+## OpenAI Build Week collaboration
+
+The live application intentionally uses no runtime AI. GPT-5.6 and Codex were
+instead essential to how the product was conceived, governed, implemented, and
+reviewed.
+
+**Yoshie Yamada** is the creator and first user. She is a novelist and freelance
+writer, not a software engineer, and did not manually write or edit the
+application code. She supplied the lived problem, made product and trust
+decisions, directed part of the build from a smartphone while away from her
+computer, tested the working browser experience, identified failures in
+hierarchy, English, and visual identity, and gave final approval.
+
+**Templex Tsukino**, Yoshie’s long-term AI partner working through ChatGPT with
+GPT-5.6 Sol, transformed their conversations into signed product specifications,
+deterministic scoring rules, complete UX copy, design direction, privacy
+boundaries, implementation briefs, demo scenarios, and review gates. Templex
+reviewed Codex’s larger Anti-Planner proposal in Issue #3 and Yoshie’s product
+feedback in Issue #5.
+
+**Codex** implemented, tested, documented, refined, and deployed the React and
+TypeScript application. It exposed proposals, work reports, commits, and a pull
+request so that Templex could review implementation remotely and Yoshie could
+accept or reject the working product.
+
+The repository was the collaboration protocol: conversation became signed
+specifications; disagreements became issues; authority became review gates;
+implementation became commits and Pull Request #4; quality became reproducible
+tests and demo paths; and acceptance remained a human decision made by using
+the product.
+
+The full evidence map and narrative are in
+[`submission/COLLABORATION_STORY.md`](./submission/COLLABORATION_STORY.md).
 
 ## Collaboration and authorship
 
-**Yoshie Yamada** is the creator and first user of Maybe Tomorrow.
+**Yoshie Yamada** is the creator, product authority, and first user of Maybe
+Tomorrow.
 
-**Templex Tsukino**, Yoshie’s AI partner working through ChatGPT with GPT-5.6
-Sol, shaped the concept, product logic, original specification, and Issue #3
-review.
+**Templex Tsukino**, working through ChatGPT with GPT-5.6 Sol, shaped the concept,
+product logic, specifications, copy, design decisions, and review process.
 
-**Codex** implemented, tested, and documented the browser application. Signed
-artifacts intentionally make this human–AI–AI collaboration visible to Build
-Week judges.
+**Codex** implemented, tested, documented, refined, and deployed the browser
+application.
+
+Signed artifacts intentionally make this human–AI–AI collaboration visible to
+Build Week judges.
 
 Original product specification:
 
