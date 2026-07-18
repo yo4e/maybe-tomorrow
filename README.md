@@ -55,7 +55,19 @@ The MVP explicitly excludes authentication, accounts, cloud sync, external APIs,
 - Vitest
 - GitHub Pages
 
-See [`AGENTS.md`](./AGENTS.md) for implementation instructions and [`docs/PRODUCT_SPEC.md`](./docs/PRODUCT_SPEC.md) for the frozen product specification.
+## Documentation map
+
+- [`AGENTS.md`](./AGENTS.md) — one-pass instructions and scope rules for Codex
+- [`CONTINUITY.md`](./CONTINUITY.md) — frozen decisions and the exact restart point
+- [`docs/PRODUCT_SPEC.md`](./docs/PRODUCT_SPEC.md) — complete product behavior
+- [`docs/SCORING.md`](./docs/SCORING.md) — deterministic formula, guardrails, and tests
+- [`docs/UX_COPY.md`](./docs/UX_COPY.md) — complete English interface copy
+- [`docs/DESIGN_SYSTEM.md`](./docs/DESIGN_SYSTEM.md) — visual and accessibility direction
+- [`docs/IMPLEMENTATION_PLAN.md`](./docs/IMPLEMENTATION_PLAN.md) — architecture, build order, and acceptance criteria
+- [`docs/DEMO_SCENARIOS.md`](./docs/DEMO_SCENARIOS.md) — reproducible inputs and expected verdicts
+- [`docs/SUBMISSION_NOTES.md`](./docs/SUBMISSION_NOTES.md) — hackathon narrative and demo guidance
+- [Issue #1](../../issues/1) — canonical end-to-end implementation task
+- [Issue #2](../../issues/2) — Yoshie review and submission polish
 
 ## Collaboration and authorship
 
