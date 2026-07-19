@@ -58,7 +58,9 @@ process inspectable instead of reducing it to “AI helped me code.”
 Yoshie also directed part of the build remotely from a smartphone while at an
 internet cafe and a gym. She returned home to test the browser experience,
 identify failures in hierarchy, English, and visual identity, and approve the
-release. The claim is directed build, including part remotely—not a fully
+release. Codex finished the approved release work while Yoshie attended a
+local summer festival—a real-life example of the time the product is meant to
+protect. The claim is directed build, including part remotely—not a fully
 remote or autonomous build.
 
 ## Verified official requirements
@@ -92,16 +94,29 @@ FAQ](https://openai.devpost.com/details/faqs) on July 19, 2026.
 - [x] README describes how GPT-5.6 Sol and Codex contributed and accelerated
       the build.
 - [x] Reproducible fictional sample day requiring no personal calendar data.
-- [x] Locked 283-word narration, 2:30 caption timeline, shot list, answer keys,
-      reset procedure, fallback path, and recording runbook.
+- [x] Locked 283-word narration, synchronized 2:30 English caption timeline,
+      optional timing-matched Japanese SRT, personal-footage plan, shot list,
+      answer keys, reset procedure, fallback path, and recording runbook.
 - [x] Desktop/mobile screenshot set, contact sheet, and original thumbnail
       sources.
 - [x] Issue #7 source/semantic audit, measured text contrast, Home Lighthouse
       check, targeted focus/error fixes, and seven accessibility regressions.
 - [ ] Yoshie performs a short keyboard/VoiceOver spot-check, or leaves the
       pending matrix explicitly unclaimed.
-- [ ] Yoshie or Templex reviews and approves the final submission PR.
-- [ ] Yoshie records English narration and assembles the final video.
+- [x] Templex reviewed the final submission PR and approved it subject only to
+      Yoshie's complete-file playback gate.
+- [x] Yoshie's two silent B-roll shots were recorded and incorporated into
+      sanitized local working copies.
+- [x] Yoshie approved the revised visual edit, personal-media crops, original
+      music treatment, and the festival segment after confirming that it shows
+      no disallowed trademark logo.
+- [x] Codex replaced the rejected macOS Samantha System Voice candidate with
+      Kokoro-82M `af_heart` and repeated technical, frame-identity, audio,
+      timing, clipping, and metadata QA on the English-only submission master.
+- [x] Yoshie watched and listened to the complete rights-cleared English
+      master, approving the replacement narration, clarity, pacing, music
+      balance, captions, and final visual/rights pass. The Japanese-captioned
+      edition remains optional work after submission.
 - [ ] Yoshie uploads the video as **Public** and verifies signed-out playback.
 - [ ] Yoshie runs `/feedback` in the primary Codex build task.
 - [ ] Yoshie joins Devpost, confirms eligibility and rights, fills any
@@ -144,15 +159,25 @@ See [`assets/storyboard.html`](./assets/storyboard.html) for the sequence.
 - The fictional sample has `0 min` overlapping time.
 - The product makes no medical claim and does not claim accessibility
   certification.
+- The prior macOS Samantha System Voice render was rejected during the license
+  audit and will not be published. The rights-cleared replacement uses
+  Kokoro-82M's `af_heart` voice under Apache-2.0. Renewed technical QA and
+  Yoshie's complete-file playback approval passed on July 20, 2026.
+- Kokoro, Misaki, and the Kokoro-82M model are local video-production tools;
+  they are not part of the application, production JavaScript bundle, or
+  browser runtime. See [`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md)
+  for the conservative public credit.
 - Yoshie did not manually write or edit application code. She made the product,
   scope, trust, language, usability, and acceptance decisions governing it.
 
 ## Final pre-submit verification
 
-1. Merge only after Yoshie or Templex reviews the submission PR.
+1. Merge the reviewed submission PR.
 2. Confirm the post-merge GitHub Pages deployment.
 3. Open the public app in a clean browser session and run both exact demo paths.
-4. Complete [`video/QA_CHECKLIST.md`](./video/QA_CHECKLIST.md).
+4. Preserve the completed English-master results in
+   [`video/QA_CHECKLIST.md`](./video/QA_CHECKLIST.md); none were carried forward
+   from the rejected System Voice candidate.
 5. Confirm YouTube Studio says **Public** and the video plays while signed out.
 6. Confirm the repository remains public with `LICENSE` and
    `THIRD_PARTY_NOTICES.md`.

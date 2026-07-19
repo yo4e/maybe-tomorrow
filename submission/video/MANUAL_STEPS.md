@@ -1,26 +1,45 @@
 # Human-Only Submission Steps
 
-Everything below requires Yoshie Yamada's voice, account, legal confirmation,
-or final product authority. Codex must not guess or publish these values.
+Everything below requires Yoshie Yamada's likeness, account, legal
+confirmation, rights confirmation, or final product authority. Codex must not
+guess or publish these values.
 
-## Before recording
+## Already confirmed by Yoshie
 
-1. Review the `codex/submission-package` pull request, or ask Templex Tsukino
-   to review it.
-2. Request any corrections before merge. Issue #6 explicitly requires this PR
-   to remain unmerged until Yoshie or Templex approves it.
-3. After approval, merge the PR and wait for GitHub Pages to deploy.
-4. Confirm <https://yo4e.github.io/maybe-tomorrow/> still loads and shows the
+- The complete visual edit and personal-footage crops are approved.
+- The selected festival-stall segment has been checked for trademark logos and
+  does not need a generic blur.
+- The original song may be used in the public competition video and on
+  YouTube, with the credit `Templex Tsukino / KazeX Records`.
+- The Kokoro-82M `af_heart` voice sample is approved for the final local
+  regeneration under Apache-2.0.
+- The Apple System Voice test is rejected and must not be published.
+- Codex rendered the complete Kokoro-narrated English candidate and passed its
+  technical, timing, loudness, clipping, stream, metadata, and visual-stream
+  identity checks.
+- Yoshie listened to and watched the complete English master and approved its
+  pronunciation, clarity, pace, meaning, music balance, caption sync, and
+  final visual/rights pass.
+- Templex reviewed Pull Request #10 and reported no remaining
+  repository-visible blocker once Yoshie's playback approval was complete.
+
+## Before publication
+
+1. Confirm <https://yo4e.github.io/maybe-tomorrow/> still loads and shows the
    new favicon.
 
-## Record and publish the video
+## Publish the approved video
 
-1. Follow [`RECORDING_RUNBOOK.md`](./RECORDING_RUNBOOK.md).
-2. Record Yoshie's English narration from [`TELEPROMPTER.txt`](./TELEPROMPTER.txt).
-3. Export and complete [`QA_CHECKLIST.md`](./QA_CHECKLIST.md).
-4. Upload with [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
-5. Set the video to **Public**, then confirm signed-out playback.
-6. Copy the final URL as `{{YOUTUBE_URL}}`.
+1. Use the approved English master whose SHA-256 is
+   `8b57a622f018422852589d13cb673e377685d122d58c716b4ea0bb2e0f6d2332`.
+2. Add the prepared Kokoro synthetic-voice disclosure and answer YouTube's
+   synthetic-content upload question truthfully.
+3. Upload with [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
+4. Set the video to **Public**, then confirm signed-out playback to the end.
+5. Copy the final URL as `{{YOUTUBE_URL}}`.
+
+An optional Japanese-captioned companion may be made after submission if time
+and resources remain. It is not required for the Build Week entry.
 
 ## Recommended accessibility spot-check
 

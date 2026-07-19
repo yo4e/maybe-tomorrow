@@ -18,10 +18,52 @@ editor.
    not place it over the recorded product.
 7. Rehearse each clip once without recording. Confirm the exact result before
    the real take.
-8. Prepare a quiet microphone. Headphones are optional because the product has
-   no required audio.
+8. Generate the final English voice locally with Kokoro-82M's `af_heart` voice
+   under Apache-2.0. Yoshie approved the sample; preserve the source and
+   license note for the final disclosure. Do not use the rejected Apple System
+   Voice test in any published export.
+9. Keep all raw personal footage outside the tracked repository. Work only
+   from copies, and preserve the untouched originals.
 
-## 2. Record silent product clips
+## 2. Prepare Yoshie's two captured silent B-roll clips
+
+Both clips were captured horizontally at `4K / 60 fps` in HLG HDR. Convert
+working derivatives to SDR Rec.709 and constant `30 fps`, mute source audio,
+apply rotation, and strip location, device, and source metadata before use.
+
+### Clip A — Introduction
+
+Use the strongest five seconds: Yoshie works at the computer, then looks toward
+the camera and gives a small natural smile. Remove the brief soft-focus middle
+and play the two clean moments at half speed across `0:00–0:10`.
+
+### Clip B — Product review
+
+Crop the captured review clip approximately `1.5×` around the laptop and right
+hand. Slow its usable `2.84` seconds to fill `1:44–1:48`, and crop the frame so
+the thin browser-chrome strip at the top of the laptop screen is outside the
+visible picture. Do not add a blur.
+
+Do not type. The shot should communicate product review, not manual coding.
+
+## 3. Prepare sanitized personal stills and footage
+
+Use copies of the approved hospital, internet-cafe, gym, and festival sources.
+Before editing them into the timeline:
+
+1. remove or crop avoidable third-party and facility marks, equipment names,
+   product labels, copyrighted book covers, QR codes, and private screens;
+2. exclude or crop unapproved prominent likenesses from the public submission;
+3. keep the hospital images factual and brief, with no medical-outcome claim;
+4. mute all source audio, especially festival and cafe ambience; and
+5. export clean `1920 × 1080` working derivatives without overwriting the
+   originals.
+
+Yoshie approved the selected crops and manually confirmed that the chosen
+festival-stall segment contains no trademark logo that needs removal. Keep its
+ordinary signage visible; do not apply a generic blur.
+
+## 4. Record silent product clips
 
 Record each item as a separate file. Leave one second of stillness before and
 after every clip for editing handles.
@@ -91,41 +133,61 @@ personal browser history, or unrelated repository.
    time. Only you know what it means.`
 3. End without moving the cursor for at least two seconds.
 
-## 3. Record narration
+## 5. Prepare narration
 
 1. Open [`TELEPROMPTER.txt`](./TELEPROMPTER.txt).
-2. Record its seven paragraphs as seven separate audio takes.
-3. Read conversationally, not as an advertisement.
-4. Aim for the caption segment lengths in [`SHOT_LIST.md`](./SHOT_LIST.md).
-5. If a paragraph runs long, rerecord it rather than speeding up the audio.
-6. Pronounce `ICS` as the letters “I-C-S,” `ZIP` as “zip,” and `GPT-5.6 Sol`
+2. Generate the English voice locally with Kokoro-82M's `af_heart` voice under
+   Apache-2.0. Yoshie approved both the sample and complete regenerated
+   narration. Do not imitate or clone a third party.
+3. Exclude the rejected Apple System Voice version from every publishable
+   export.
+4. Prepare the seven paragraphs as separate audio takes.
+5. Deliver them conversationally, not as an advertisement.
+6. Aim for the caption segment lengths in [`SHOT_LIST.md`](./SHOT_LIST.md).
+7. If a paragraph runs long, rerecord or regenerate it rather than speeding up
+   the audio.
+8. Pronounce `ICS` as the letters “I-C-S,” `ZIP` as “zip,” and `GPT-5.6 Sol`
    as “G-P-T five point six Sol.”
-7. Keep natural breaths between sentences, then remove only distracting dead
+9. Keep natural breaths between sentences, then remove only distracting dead
    air.
 
-The locked script is `283` words. At 115 words per minute it is approximately
-`2:28`, leaving more than 30 seconds below the official three-minute maximum.
+The locked script is `283` words. The final timing voice starts at `0:10`; the
+seven paragraph slots end by `2:30`, leaving the first ten seconds to the song.
 
-## 4. Assemble to the locked timeline
+## 6. Assemble to the locked timeline
 
 1. Create a `2:30` timeline using [`SHOT_LIST.md`](./SHOT_LIST.md).
 2. Place narration first, then fit the corresponding screen clips below it.
 3. Use straight cuts or very short dissolves only.
 4. Prefer a still frame over sped-up unreadable controls.
-5. Add [`CAPTIONS.srt`](./CAPTIONS.srt) as burned-in captions or as the YouTube
-   caption track. If burned in, keep two lines maximum and avoid covering
-   controls.
-6. Use no music. Product silence under narration is intentional.
-7. End by `2:30`; never add an outro that pushes the export to `3:00` or more.
+5. Use the personal footage only at the exact ranges in
+   [`SHOT_LIST.md`](./SHOT_LIST.md); the product remains the majority of the
+   runtime.
+6. Burn [`CAPTIONS.srt`](./CAPTIONS.srt) into the English submission master.
+   [`CAPTIONS.ja.srt`](./CAPTIONS.ja.srt) may be used later for an optional
+   post-submission companion whose visual edit and English audio remain
+   identical.
+7. Start the approved original song at `0:00`, let it lead the first ten
+   seconds, then duck it deeply beneath narration. Show
+   `Music: Templex Tsukino / KazeX Records` during the opening.
+8. End by `2:30`; never add an outro that pushes the export to `3:00` or more.
 
-## 5. Export and verify
+## 7. Export and verify
 
-1. Export MP4 using H.264 video and AAC audio at `1920 × 1080`.
-2. Play the complete local export with headphones.
-3. Complete every item in [`QA_CHECKLIST.md`](./QA_CHECKLIST.md).
-4. Upload to YouTube using [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
-5. Set visibility to **Public** in YouTube Studio.
-6. Open the final URL in a signed-out/private browser window and play from
+1. Export MP4 using H.264 video and AAC audio at `1920 × 1080`, SDR Rec.709,
+   constant `30 fps`, and `48 kHz` stereo.
+2. Strip inherited metadata and confirm that no GPS, device name, attached
+   cover art, lyrics, or source-tool comment remains.
+3. Play the complete English submission master with headphones after the
+   Kokoro narration has been regenerated. If an optional Japanese companion is
+   made after submission, verify it separately then.
+4. Complete every item in [`QA_CHECKLIST.md`](./QA_CHECKLIST.md).
+5. Upload to YouTube using [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
+6. Set visibility to **Public** in YouTube Studio.
+7. If a realistic synthetic dub or other meaningfully synthetic media is used,
+   answer the YouTube altered/synthetic-content question truthfully and include
+   the prepared narration disclosure in the description.
+8. Open the final URL in a signed-out/private browser window and play from
    beginning to end.
 
 — Codex

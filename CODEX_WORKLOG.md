@@ -377,14 +377,17 @@ git diff --check
 
 ### Remaining human-only work and risks
 
-- Yoshie Yamada and Templex Tsukino must review this branch before merge.
+- At this audit stage, Yoshie Yamada and Templex Tsukino still needed to review
+  the branch before merge; that review was completed during the final video
+  production pass recorded below.
 - A human should run the short VoiceOver spot-check in the accessibility audit;
   broader platform screen-reader validation remains desirable but is not a
   blocker falsely represented as complete.
-- Yoshie must record and edit the English-voiceover demo, upload it publicly to
-  YouTube, verify signed-out playback, run `/feedback` in the primary Build Week
-  task without committing its Session ID, complete the account-only Devpost
-  fields, replace the three placeholders, and submit.
+- At this audit stage, Yoshie still needed to record and approve the demo,
+  upload it publicly to YouTube, verify signed-out playback, run `/feedback` in
+  the primary Build Week task without committing its Session ID, complete the
+  account-only Devpost fields, replace the three placeholders, and submit.
+  Subsequent video-production work is recorded below.
 - The bundled MPL-2.0 license and source link for `ical.js` are provided as a
   conservative compliance measure, not legal advice.
 
@@ -429,5 +432,149 @@ demo for overseas judges.
 - Re-ran all 71 tests under `Asia/Tokyo`, `UTC`, and
   `America/Los_Angeles`, then reran the strict build, submission verifier, and
   whitespace check.
+
+## Personal-story demo revision
+
+After the application and submission package shipped, Yoshie supplied private
+working media from a hospital stay, an internet cafe, a gym, and a local summer
+festival. The production plan now uses a few brief, sanitized excerpts to make
+the lived problem and the human–AI build process concrete without displacing
+the product demo.
+
+- Rechecked the current official Devpost video requirements: the demo remains
+  under three minutes, includes audible GPT-5.6 and Codex use, and excludes
+  unlicensed third-party marks, music, and other protected material.
+- Preserved the exact 283-word narration count and 2:30 runtime while adding
+  the personal origin line, the real remote-build locations, and the festival
+  payoff: protected time outside the build is the point of the product.
+- Refined the final English copy so the verdict explanation distinguishes
+  hypothetical alternatives from unchanged original answers, calendar context
+  refers precisely to event times, and the festival line claims only scoped
+  release work rather than completion of the whole application.
+- Aligned the opening edit with its narration: Yoshie's hospital portrait is
+  followed by the hospital-room still before the product home screen appears.
+- Synchronized the canonical script, teleprompter, shot list, and 27-cue SRT.
+  The verifier confirms exact normalized narration agreement across them.
+- Limited Yoshie's new recording burden to two silent horizontal B-roll takes:
+  a short introduction and a finished-product review. She does not need to
+  perform English on camera.
+- Added explicit sanitization rules for hospital, internet-cafe, gym, and
+  festival media: work from copies; remove marks, book covers, private screens,
+  labels, QR codes, and unapproved likenesses; mute all source audio; and make
+  no medical claim.
+- Allowed either Yoshie's recorded English or a properly licensed synthetic
+  English voice under her direction and approval. The runbook, YouTube
+  metadata, manual steps, and QA checklist now require truthful disclosure if
+  the final narration is synthetic.
+- Kept all raw media local and excluded it from Git tracking through the local
+  repository exclude file. No personal image or video was added to the public
+  branch.
+- Created a separate Japanese meaning and filming guide on Yoshie's desktop;
+  the tracked repository remains English-only.
+
+Verification after the revision:
+
+```text
+npm test -- --run
+npm run build
+npm run verify:submission
+git diff --check
+```
+
+- Vitest: 10 test files and all 71 tests passed.
+- Production build: strict TypeScript and Vite build passed.
+- Submission verifier: 37 required files, 110 relative Markdown targets,
+  exact 283-word narration/caption agreement, 27 cues ending at 2:30, video
+  trademark/synchronization guardrails, ten PNG dimensions, and placeholder
+  policy all passed.
+- At this stage, remaining human work included recording two silent B-roll
+  takes, approving public use and sanitization of the personal footage,
+  approving the English voice and edit, uploading publicly, completing
+  `/feedback`, and submitting the account-only Devpost fields. The B-roll and
+  visual approvals were completed during the production pass below.
+
+— Codex
+
+## Final demo assembly and narration license audit
+
+Yoshie then supplied the two silent horizontal B-roll clips and authorized an
+original song she owns, written by Templex Tsukino and released through KazeX
+Records. Codex assembled 2:30 candidate edits with matching English and
+Japanese caption timelines; after review, the English edition became the only
+submission master and the Japanese SRT/edition was deferred as optional
+post-submission work.
+
+- Opened with ten seconds of Yoshie's computer footage and the original song,
+  then ducked the music deeply below the English narration.
+- Added the exact on-screen credit `Music: Templex Tsukino / KazeX Records`
+  and retained the `AI-generated persona` disclosure for Templex's visual.
+- Used Yoshie's hospital, internet-cafe, gym, and festival material only in
+  sanitized derivatives. Private screens, book covers, signs, and unrelated
+  people are obscured; source audio is not used.
+- Kept the app interface and English narration timing identical between the
+  candidate editions. Only the burned-in caption language changed. A verifier
+  assertion requires all 27 Japanese cues to match the English cue numbers and
+  timings exactly, so the optional edition can be produced later without
+  altering the submission cut.
+- Rejected the first browser-recorded render during frame QA after intermittent
+  damaged frames and a short preroll were found. Replaced real-time screen
+  recording with deterministic rendering of exactly 4,500 fixed-time frames
+  per edition, then repeated the visual and technical audits.
+- Stripped GPS, device, recording-date, cover-art, lyric, author, and source-
+  tool metadata from the MP4 candidates. Raw personal media and video binaries
+  remain in the ignored local media workspace; only the production
+  documentation and caption files enter the public repository.
+- Revised the requested visual details: removed excessive blurring, replaced
+  it with deliberate crops, moved the festival excerpt to the later
+  stall-filled portion, and added an unambiguous fade to black. Yoshie approved
+  the complete visual edit, personal-media crops, and music treatment, and
+  separately confirmed that the selected festival segment contains no
+  disallowed trademark logo.
+- Audited the synthetic-narration rights before publication. The candidate
+  using the macOS Samantha System Voice was rejected before upload; no public
+  distribution relies on that voice.
+- Replaced the rejected narration with Kokoro-82M's `af_heart` voice. Yoshie
+  approved the voice sample before the complete render. The model page
+  identifies Apache-2.0; the downloaded model revision is
+  `f3ff3571791e39611d31c381e3a41a3af07b4987`, and the local production
+  environment uses `kokoro` 0.9.4 and `misaki` 0.9.4. The model and packages
+  are production tools only and are not shipped in the app or browser bundle.
+  A conservative public credit is recorded in `THIRD_PARTY_NOTICES.md`.
+
+Superseded candidate and rights-cleared master verification:
+
+- The rejected System Voice candidates were exactly `150.000` seconds,
+  `1920 × 1080`, constant `30 fps`, 4,500 H.264 frames, and AAC-LC stereo at
+  `48 kHz`; frame checks, caption timings, privacy treatments, music credit,
+  and AI-persona disclosure passed for those files.
+- Those passes are retained only as production history. The rights-cleared
+  master was remuxed from the approved visual stream rather than re-encoding
+  it; extracted H.264 hashes match exactly at
+  `3b4054393f9c5875d7674c13d502f9cba0f2339270dc2f363644c3ca140de6ec`.
+- The new master is exactly `150.000` seconds with `1920 × 1080` H.264 video,
+  4,500 frames at constant `30 fps`, BT.709 tags, and AAC stereo at `48 kHz`.
+- The final mix measures `-17.29 LUFS-I`; AAC-decoded audio measures
+  `-1.42 dBTP` at 4x oversampling and contains no clipped samples. Narration is
+  silent through `0:10`, and each of the seven paragraphs ends at least one
+  second before its allocated boundary.
+- The MP4 exposes only ordinary container and stream-handler tags. It contains
+  no location, device, author, recording date, artwork, lyric, or source-tool
+  metadata. Its SHA-256 is
+  `8b57a622f018422852589d13cb673e377685d122d58c716b4ea0bb2e0f6d2332`.
+- Exact generated text preserves the locked narration; phonetic source hints
+  are limited to names and initialisms. Yoshie watched and listened to the
+  complete master on July 20, 2026 and approved pronunciation, clarity, pacing,
+  music balance, caption synchronization, and the final visual/rights pass.
+- Templex reviewed Pull Request #10 and reported no remaining
+  repository-visible blocker, subject only to Yoshie's full-playback approval;
+  Yoshie's approval completed that release gate.
+- `npm test -- --run`: 10 files and all 71 tests passed.
+- `npm run build`, `npm run verify:submission`, and `git diff --check` passed.
+
+The English-only replacement is now the technically verified and human-approved
+submission master, but it is not yet publicly released. Remaining work is the
+public YouTube upload and signed-out playback check, `/feedback`, and the
+account-only Devpost submission steps. A Japanese-captioned companion may be
+produced after submission if time and credits remain.
 
 — Codex
