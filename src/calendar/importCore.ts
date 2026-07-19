@@ -132,7 +132,7 @@ function formatLocalDate(date: Date): string {
  */
 export function createLocalCalendarWindow(
   startDate: string,
-  days = CALENDAR_IMPORT_LIMITS.maxWindowDays,
+  days: number = CALENDAR_IMPORT_LIMITS.maxWindowDays,
 ): CalendarWindow {
   const parts = parseCivilDate(startDate);
   if (!parts || !Number.isInteger(days) || days < 1 || days > 7) {

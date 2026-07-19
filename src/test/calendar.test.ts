@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 
 import { importDemoCalendar } from "../calendar/demo";
 import {
+  createLocalCalendarWindow,
   importCalendarBytes,
   importIcsText,
 } from "../calendar/importCore";
@@ -228,12 +229,7 @@ describe("calendar snapshot import", () => {
   });
 
   it("loads the fictional overfull-day demo with stable source and classifications", () => {
-    const demoWindow = windowFrom(
-      "2026-07-20T15:00:00Z",
-      "2026-07-21T15:00:00Z",
-      "2026-07-21",
-      "2026-07-22",
-    );
+    const demoWindow = createLocalCalendarWindow("2026-07-21", 1);
     const first = importDemoCalendar(demoWindow);
     const second = importDemoCalendar(demoWindow);
 
@@ -243,6 +239,12 @@ describe("calendar snapshot import", () => {
     expect(first.occurrences.map((item) => item.id)).toEqual(
       second.occurrences.map((item) => item.id),
     );
+    const firstOccurrence = first.occurrences[0];
+    expect(firstOccurrence?.kind).toBe("timed");
+    if (firstOccurrence?.kind === "timed") {
+      expect(new Date(firstOccurrence.startMs).getHours()).toBe(7);
+      expect(new Date(firstOccurrence.startMs).getMinutes()).toBe(30);
+    }
   });
 
   it("returns recoverable errors for malformed data and invalid windows", () => {
