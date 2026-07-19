@@ -577,4 +577,27 @@ public YouTube upload and signed-out playback check, `/feedback`, and the
 account-only Devpost submission steps. A Japanese-captioned companion may be
 produced after submission if time and credits remain.
 
+## Pull Request #10 merge and public release verification — July 20, 2026
+
+- Pull Request #10 was marked ready only after Templex's review and Yoshie's
+  complete-video approval, then merged to `main` as `d42c36a`.
+- GitHub Actions run `29708164385` completed both the build and GitHub Pages
+  deployment jobs successfully. The deployed home and `favicon.svg` each
+  returned HTTP 200.
+- A clean public-browser Quick Check reproduced **Maybe tomorrow.**, its three
+  expected leading factors, and the complete `78,125`-combination Cost of Yes
+  result.
+- The fictional sample reproduced `11 hr 30 min` occupied, a `30 min` longest
+  opening, `0 min` overlap, and `1 hr 15 min` protected recovery. Its
+  room-making path shortened **Go to the gym** by `30 min`, left `5:00–6:00
+  PM` open, and reported `18` allowed combinations.
+- At `360 × 800`, the document width remained exactly `360 px`; no horizontal
+  overflow appeared. The English document language, page title, favicon,
+  primary home content, and navigation were present, with no browser warning
+  or error logged.
+- Remaining submission work is deliberately account-bound: public YouTube
+  upload and signed-out playback, `/feedback`, and the Devpost form. The
+  optional VoiceOver spot-check remains explicitly unclaimed rather than being
+  represented as certification.
+
 — Codex

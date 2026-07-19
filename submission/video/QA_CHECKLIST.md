@@ -101,7 +101,8 @@ Japanese video is required for this checklist.
 ## Repository and live product
 
 - [x] The final submission PR received Yoshie and Templex review before merge.
-- [ ] GitHub Pages deployment succeeded after merge.
+- [x] GitHub Pages deployment succeeded for merge commit `d42c36a` in Actions
+      run `29708164385`, and the deployed home and favicon returned HTTP 200.
 - [x] Live home, core Quick Check, sample Today Map, and room-making path work.
 - [ ] A keyboard/VoiceOver spot-check is recorded, or remaining assistive-
       technology coverage is left explicitly Pending without a certification
