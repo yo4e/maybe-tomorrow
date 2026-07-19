@@ -238,7 +238,13 @@ export function CalendarTriage({
         </p>
       )}
 
-      <div className="triage-progress" role="status">
+      <div
+        className="triage-progress"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <span className="visually-hidden">{dateHeading(selectedDate)}: </span>
         {labelledCount} of {occurrences.length} events marked.
       </div>
 
@@ -392,6 +398,19 @@ export function TodayMap({
         <Metric label="Protected recovery" value={formatMinutes(metrics.protectedRecoveryMinutes)} />
       </dl>
 
+      <p
+        className="visually-hidden"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        data-map-update-status
+      >
+        Showing {dateHeading(selectedDate)}. Occupied time {formatMinutes(metrics.occupiedMinutes)}.
+        Longest opening {formatMinutes(metrics.longestOpenMinutes)}. Overlapping time
+        {` ${formatMinutes(metrics.overlapMinutes)}`}. Protected recovery
+        {` ${formatMinutes(metrics.protectedRecoveryMinutes)}`}.
+      </p>
+
       <div className="map-layout">
         <div className="agenda-column">
           <div className="agenda-heading">
@@ -543,6 +562,8 @@ export function CandidateSetup({
           value={activity}
           maxLength={120}
           placeholder="Draft a new story idea"
+          aria-invalid={Boolean(error)}
+          aria-describedby={error ? "candidate-activity-error" : undefined}
           onChange={(event) => {
             setActivity(event.target.value);
             if (error) setError(null);
@@ -569,7 +590,11 @@ export function CandidateSetup({
           We ask for duration only when calendar context is added. The app will
           not guess it from the activity name or energy answer.
         </p>
-        {error ? <p className="form-error" role="alert">{error}</p> : null}
+        {error ? (
+          <p className="form-error" id="candidate-activity-error" role="alert">
+            {error}
+          </p>
+        ) : null}
         <button className="button button-primary" type="submit">
           Start the Quick Check <span aria-hidden="true">→</span>
         </button>

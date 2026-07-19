@@ -1,0 +1,28 @@
+# Third-party notices
+
+Maybe Tomorrow. includes and is built with the components listed below. The
+root [MIT License](LICENSE) applies to the project's original code and
+documentation only. It does not relicense third-party material; each component
+remains subject to its own license.
+
+| Component | Use in this project | License | Versioned source | Included license |
+| --- | --- | --- | --- | --- |
+| fflate 0.8.3 | Browser-side ZIP reading | MIT | [fflate v0.8.3](https://github.com/101arrowz/fflate/tree/v0.8.3) | [fflate.txt](licenses/fflate.txt) |
+| ical.js 2.2.1 | Browser-side iCalendar parsing | Mozilla Public License 2.0 | [ical.js v2.2.1](https://github.com/kewisch/ical.js/tree/v2.2.1) | [ical.js.txt](licenses/ical.js.txt) |
+| React 19.2.7, React DOM 19.2.7, and Scheduler 0.27.0 | Browser user interface | MIT | [React v19.2.7](https://github.com/facebook/react/tree/v19.2.7) | [react-family.txt](licenses/react-family.txt) |
+| Vite 8.1.5 | Production build tooling and module-preload integration | MIT | [Vite v8.1.5](https://github.com/vitejs/vite/tree/v8.1.5) | [vite.txt](licenses/vite.txt) |
+| Rolldown 1.1.5 | Production bundling and emitted module-preload bootstrap | MIT | [Rolldown v1.1.5](https://github.com/rolldown/rolldown/tree/v1.1.5) | [rolldown.txt](licenses/rolldown.txt) |
+| Vite/Rolldown module-preload polyfill, based on es-module-shims by Guy Bedford | Browser compatibility code emitted into the production bundle | MIT | [Emitted source in Rolldown v1.1.5](https://github.com/rolldown/rolldown/blob/v1.1.5/crates/rolldown_plugin_vite_module_preload_polyfill/src/module-preload-polyfill.js) and [upstream es-module-shims](https://github.com/guybedford/es-module-shims) | [modulepreload.txt](licenses/modulepreload.txt) |
+
+## ical.js source availability
+
+The production JavaScript bundle includes ical.js 2.2.1 in Executable Form.
+The corresponding unmodified Source Code Form is available from the exact
+[ical.js v2.2.1 source tag](https://github.com/kewisch/ical.js/tree/v2.2.1),
+and the complete unmodified Mozilla Public License 2.0 text is included in
+[licenses/ical.js.txt](licenses/ical.js.txt).
+
+The package versions above match the installed dependency tree and lockfile
+used for the release build.
+
+— Codex

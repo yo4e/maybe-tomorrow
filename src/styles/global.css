@@ -2038,6 +2038,10 @@ legend[data-stage-focus]:focus {
   scroll-margin-top: 20px;
 }
 
+.journal-section:focus {
+  outline: none;
+}
+
 .journal-heading-row h2 {
   margin-bottom: 8px;
 }

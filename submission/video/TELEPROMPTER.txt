@@ -1,0 +1,13 @@
+Most productivity apps help us do more. My problem is the opposite. I’m Yoshie Yamada, a novelist and freelance writer, and Maybe Tomorrow. asks whether one more worthwhile thing really belongs today.
+
+I name one activity and answer seven scored questions, plus one final check about making it smaller. The rules are fixed and transparent, with only three possible verdicts—no generated advice and no hidden confidence score.
+
+On an overfull day, another side project gets “Maybe tomorrow.” The app checks all 78,125 scored answer combinations and shows the smallest facts that would have changed the result, without changing my answers.
+
+Calendar context is optional. I can import an ICS file, a calendar export ZIP, or use this entirely fictional sample. Everything stays in this browser. The app reads time, but only I decide which events must stay, can move or shrink, take energy, or protect recovery.
+
+For one more hour of writing, it searches only changes I have authorized. Here, shortening the fictional gym creates a continuous hour. Fixed commitments and recovery stay protected, and the source calendar is never edited.
+
+I did not manually write or edit the application code. I shaped the product with my AI partner, Templex Tsukino, using GPT-5.6 Sol. Templex turned our conversations into signed specifications, rules, copy, privacy boundaries, and review gates. Codex implemented, tested, documented, and deployed the browser app. I directed part of the build from my phone at an internet cafe and a gym, then tested the product and approved the release.
+
+Maybe Tomorrow. was built through AI collaboration, but it refuses to pretend AI understands your life. No AI reads your calendar. We can see the time. Only you know what it means.

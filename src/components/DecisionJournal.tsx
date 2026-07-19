@@ -104,6 +104,9 @@ export function DecisionJournal({
   const [confirmingClear, setConfirmingClear] = useState(false);
   const clearTriggerRef = useRef<HTMLButtonElement>(null);
   const keepButtonRef = useRef<HTMLButtonElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const emptyRef = useRef<HTMLParagraphElement>(null);
+  const deleteButtonRefs = useRef(new Map<string, HTMLButtonElement>());
   const savedDateFormatter = useMemo(
     () =>
       new Intl.DateTimeFormat("en-US", {
@@ -124,16 +127,34 @@ export function DecisionJournal({
     window.requestAnimationFrame(() => clearTriggerRef.current?.focus());
   };
 
+  const focusAfterRemoval = (preferredEntryId?: string) => {
+    window.requestAnimationFrame(() => {
+      const preferredButton = preferredEntryId
+        ? deleteButtonRefs.current.get(preferredEntryId)
+        : undefined;
+      if (preferredButton?.isConnected) {
+        preferredButton.focus();
+        return;
+      }
+      if (emptyRef.current?.isConnected) {
+        emptyRef.current.focus();
+        return;
+      }
+      headingRef.current?.focus();
+    });
+  };
+
   return (
     <section
       className="journal-section section-block"
       id="journal"
+      tabIndex={-1}
       aria-labelledby="journal-heading"
     >
       <div className="journal-heading-row section-heading-row">
         <div>
           <div className="eyebrow">SAVED IN THIS BROWSER</div>
-          <h2 id="journal-heading">Decision journal</h2>
+          <h2 id="journal-heading" ref={headingRef} tabIndex={-1}>Decision journal</h2>
           <p className="journal-intro">
             A private record of the things you did not automatically say yes to.
           </p>
@@ -176,6 +197,7 @@ export function DecisionJournal({
               onClick={() => {
                 onClear();
                 setConfirmingClear(false);
+                focusAfterRemoval();
               }}
             >
               Clear journal
@@ -193,13 +215,14 @@ export function DecisionJournal({
       ) : null}
 
       {entries.length === 0 ? (
-        <p className="journal-empty empty-history">
+        <p className="journal-empty empty-history" ref={emptyRef} tabIndex={-1}>
           Nothing saved yet. A suspiciously productive situation.
         </p>
       ) : (
         <ol className="journal-list">
-          {entries.map((entry) => {
+          {entries.map((entry, index) => {
             const verdictCopy = VERDICT_COPY[entry.decision.verdict];
+            const nextEntryId = entries[index + 1]?.id ?? entries[index - 1]?.id;
             return (
               <li className="journal-item" key={entry.id}>
                 <article className="journal-card">
@@ -230,8 +253,15 @@ export function DecisionJournal({
                     <button
                       className="journal-delete delete-button"
                       type="button"
+                      ref={(node) => {
+                        if (node) deleteButtonRefs.current.set(entry.id, node);
+                        else deleteButtonRefs.current.delete(entry.id);
+                      }}
                       aria-label={`Delete saved decision for ${entry.decision.activity}`}
-                      onClick={() => onDelete(entry.id)}
+                      onClick={() => {
+                        onDelete(entry.id);
+                        focusAfterRemoval(nextEntryId);
+                      }}
                     >
                       Delete
                     </button>

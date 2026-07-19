@@ -295,4 +295,119 @@ Final verification after this pass:
 - The 360 px result and Today Map remained free of horizontal overflow; no
   journal entry was added or removed during verification.
 
+## Build Week submission package and release audit
+
+Issue #6 authorized the final submission-preparation pass. The application
+behavior and privacy boundary remain unchanged; this pass makes the repository
+reviewable, recordable, and safer to submit.
+
+### Submission and licensing
+
+- Added an MIT `LICENSE` for Yoshie Yamada's original work, as authorized in
+  Issue #6, plus `THIRD_PARTY_NOTICES.md` and exact bundled license texts for
+  React, Scheduler, Vite, Rolldown, `ical.js`, `fflate`, and the modulepreload
+  polyfill.
+- Re-audited the current official Build Week page, Devpost overview, rules,
+  FAQ, deadline, video requirements, public-repository requirement, and
+  `/feedback` requirement. Account-only eligibility answers and final Devpost
+  submission remain human decisions.
+- Rebuilt `submission/` into a paste-ready handoff: a 283-word narration,
+  24-cue captions ending at 2:30, exact answer keys, shot list, recording and
+  reset runbooks, YouTube metadata, Devpost copy, manual-action checklist, and
+  a final QA checklist.
+- Added a deterministic submission verifier for required files, relative
+  Markdown links, narration/caption agreement, caption duration, PNG
+  dimensions, and the three intentionally unresolved public placeholders.
+
+### Visual assets and browser identity
+
+- Added an original cobalt, cream, and citron favicon in SVG plus a 180 × 180
+  Apple touch icon.
+- Added eight fictional-data screenshots covering desktop and 390 px mobile
+  flows, original Devpost and YouTube thumbnail sources and PNG exports, and a
+  local storyboard for reviewing the complete asset set.
+- No personal calendar, account, session ID, or private Build Week data appears
+  in the public assets.
+
+## Issue #7 accessibility follow-up
+
+Copilot's Issue #7 proposal was useful, but a repository change cannot honestly
+certify all assistive-technology behavior. The response therefore combines
+targeted remediation, reproducible evidence, and an explicit manual matrix.
+
+- Grouped the Home context choices semantically; associated candidate and file
+  errors with their fields using `aria-invalid` and `aria-describedby`; and
+  added polite status announcements for imported-file count, triage date, and
+  Today Map metrics.
+- Added predictable focus recovery after deleting or clearing journal entries
+  and made the journal fragment target programmatically focusable.
+- Added seven accessibility regression tests and a signed audit documenting
+  semantic review, keyboard and reflow checks, exact contrast measurements,
+  automated results, limitations, and pending VoiceOver/NVDA/iOS/TalkBack
+  checks.
+- The lowest measured current text contrast is 5.183:1, and a Home-page
+  Lighthouse accessibility audit scored 1.00. An attempted axe run was not
+  counted because the available ChromeDriver and Chrome major versions did not
+  match. No WCAG or screen-reader certification is claimed.
+
+### Final verification for this branch
+
+Commands run from a clean dependency install:
+
+```text
+npm ci
+npm test
+npm run build
+npm run verify:submission
+git diff --check
+```
+
+- npm reported 94 installed packages and zero known vulnerabilities.
+- Vitest: 10 test files passed, 71 tests passed.
+- TypeScript strict checking and Vite production build: passed.
+- Submission verifier: 37 required files, 108 relative Markdown links across
+  28 files, exact narration/caption agreement, 24 caption cues ending at 2:30,
+  ten validated PNG assets, and only the approved placeholders passed.
+- Mobile browser review at 390 × 844 found no horizontal overflow. The Home,
+  sample triage, Today Map, and calendar-assisted Quick Check routes rendered;
+  live status text and candidate-error relationships were present; both icon
+  links resolved under the Vite base path; and the browser console contained no
+  warnings or errors.
+- The existing local journal entry was not modified during browser review.
+
+### Remaining human-only work and risks
+
+- Yoshie Yamada and Templex Tsukino must review this branch before merge.
+- A human should run the short VoiceOver spot-check in the accessibility audit;
+  broader platform screen-reader validation remains desirable but is not a
+  blocker falsely represented as complete.
+- Yoshie must record and edit the English-voiceover demo, upload it publicly to
+  YouTube, verify signed-out playback, run `/feedback` in the primary Build Week
+  task without committing its Session ID, complete the account-only Devpost
+  fields, replace the three placeholders, and submit.
+- The bundled MPL-2.0 license and source link for `ical.js` are provided as a
+  conservative compliance measure, not legal advice.
+
+## Pull Request #8 review corrections
+
+Templex Tsukino identified two narrow release blockers before merge, and both
+were addressed without changing application behavior.
+
+- Removed avoidable third-party names from the locked video narration and
+  captions: `calendar export ZIP` replaces the service-specific phrase, and
+  `browser app` replaces the framework-specific phrase. The 283-word count and
+  2:30 caption timeline remain unchanged.
+- Restricted collaboration-evidence capture to signed local Markdown, local
+  `git log --oneline` output, and the local worklog. The canonical script,
+  shot list, runbook, and QA checklist now prohibit hosting-service pages,
+  third-party logos, remote URLs, branded window chrome, and account UI.
+- Added a submission-verifier guard that rejects the avoidable video phrases,
+  requires the neutral replacements, compares the canonical narration and all
+  shot-list narration with the teleprompter, and checks all three capture
+  instructions for local-only evidence.
+- Reworded the `ical.js` distribution notice using MPL-2.0 terminology: the
+  bundled asset is identified as Executable Form and the exact-version,
+  unmodified Source Code Form remains linked alongside the full license text.
+  The production HTML notice uses the same terminology.
+
 — Codex

@@ -1,98 +1,164 @@
 # OpenAI Build Week Submission Kit
 
-This directory is the canonical preparation space for the **Maybe Tomorrow.** OpenAI Build Week submission.
-
-The application itself is already deployed. These files translate the finished product and its unusual creation process into materials for judges.
+This directory is the canonical preparation space for the **Maybe Tomorrow.**
+OpenAI Build Week submission. The application is shipped; this package turns
+the finished product and its creation process into reproducible evidence for
+judges.
 
 ## Submission position
 
 - **Project:** Maybe Tomorrow.
 - **Track:** Apps for Your Life
-- **Live app:** https://yo4e.github.io/maybe-tomorrow/
-- **Repository:** https://github.com/yo4e/maybe-tomorrow
-- **Core pitch:** An anti-planner for people whose problem is not a lack of motivation, but too many worthwhile things competing for one finite day.
-- **Build story:** A non-engineer novelist and freelance writer directed a human–AI–AI development loop without manually writing or editing application code.
+- **Live app:** <https://yo4e.github.io/maybe-tomorrow/>
+- **Repository:** <https://github.com/yo4e/maybe-tomorrow>
+- **Core pitch:** An anti-planner for people whose problem is not a lack of
+  motivation, but too many worthwhile things competing for one finite day.
+- **Build thesis:** A non-engineer novelist and freelance writer directed a
+  documented human–AI–AI software-development loop without manually writing or
+  editing application code.
 
-## Files in this kit
+## Canonical files
 
-- [`DEMO_VIDEO_SCRIPT.md`](./DEMO_VIDEO_SCRIPT.md) — a complete under-three-minute public YouTube demo script, shot list, and exact test inputs.
-- [`DEVPOST_SUBMISSION.md`](./DEVPOST_SUBMISSION.md) — ready-to-paste project description sections for Devpost.
-- [`COLLABORATION_STORY.md`](./COLLABORATION_STORY.md) — the detailed GPT-5.6 Sol, Templex Tsukino, Codex, and Yoshie Yamada workflow, with repository evidence.
+- [`DEMO_VIDEO_SCRIPT.md`](./DEMO_VIDEO_SCRIPT.md) — locked 2:30 story and
+  truth boundaries.
+- [`video/README.md`](./video/README.md) — complete video-production package.
+- [`video/DEVPOST_FINAL.md`](./video/DEVPOST_FINAL.md) — final consolidated
+  paste-ready submission copy.
+- [`DEVPOST_SUBMISSION.md`](./DEVPOST_SUBMISSION.md) — audit record and route to
+  the final copy.
+- [`COLLABORATION_STORY.md`](./COLLABORATION_STORY.md) — detailed GPT-5.6 Sol,
+  Templex Tsukino, Codex, and Yoshie Yamada workflow with repository evidence.
+- [`assets/ASSET_MANIFEST.md`](./assets/ASSET_MANIFEST.md) — final fictional-data
+  screenshots and thumbnails.
 
-Older notes in [`docs/SUBMISSION_NOTES.md`](../docs/SUBMISSION_NOTES.md) remain useful historical material, but this directory reflects the final deployed Anti-Planner and is the submission source of truth.
+Older [`docs/SUBMISSION_NOTES.md`](../docs/SUBMISSION_NOTES.md) remains
+historical material only. Where it conflicts, this package reflects the final
+deployed Anti-Planner.
 
 ## The strongest judging story
 
-Maybe Tomorrow. is not notable because an AI writes advice at runtime. It deliberately does not.
+Maybe Tomorrow. is not notable because a model writes advice at runtime. It
+deliberately does not.
 
-Its strongest claim is that **the software itself was created through a documented collaboration between a human creator and two complementary AI roles**:
+Its strongest claim is that the software itself was created through a
+documented collaboration among three roles:
 
-1. **Yoshie Yamada**, a novelist and freelance writer with no software-engineering role, supplied the lived problem, product judgment, qualitative testing, and final approval.
-2. **Templex Tsukino**, Yoshie’s long-term AI partner in ChatGPT using GPT-5.6 Sol, transformed conversation into product architecture, deterministic rules, UX copy, design direction, review gates, and signed repository documents.
-3. **Codex** implemented, tested, documented, refined, and deployed the browser application.
+1. **Yoshie Yamada**, a novelist and freelance writer, supplied the lived
+   problem, product judgment, qualitative testing, and final approval.
+2. **Templex Tsukino**, Yoshie's long-term AI partner in ChatGPT using GPT-5.6
+   Sol, transformed conversation into product architecture, deterministic
+   rules, UX copy, design direction, privacy boundaries, and review gates.
+3. **Codex** implemented, tested, documented, refined, and deployed the browser
+   application.
 
-The repository became their shared workspace. Specifications, issues, commits, pull requests, review comments, worklogs, and signatures make the process inspectable rather than reducing it to an unsupported claim that “AI helped.”
+The repository became their collaboration protocol. Signed specifications,
+issues, commits, pull requests, review comments, tests, and worklogs make the
+process inspectable instead of reducing it to “AI helped me code.”
 
-Yoshie also directed the build remotely. While away from her computer at an internet cafe and a gym, she used a smartphone connected to Codex to issue instructions and continue the build. She returned home to test the finished experience in the browser, report where the product hierarchy and English copy were wrong, and approve the final deployment.
+Yoshie also directed part of the build remotely from a smartphone while at an
+internet cafe and a gym. She returned home to test the browser experience,
+identify failures in hierarchy, English, and visual identity, and approve the
+release. The claim is directed build, including part remotely—not a fully
+remote or autonomous build.
 
-## Official submission checklist
+## Verified official requirements
 
-- [x] Working project built during the submission period with Codex and GPT-5.6.
-- [x] Chosen track: **Apps for Your Life**.
-- [x] Public working application.
-- [x] Public code repository with setup, sample-data, demo, test, and architecture documentation.
-- [x] README identifies how GPT-5.6 Sol, Templex Tsukino, and Codex contributed.
-- [x] Reproducible fictional sample day; judges do not need to provide personal calendar data.
-- [ ] Record a demo video shorter than three minutes.
-- [ ] Include audible explanation of both Codex and GPT-5.6 use.
-- [ ] Upload the demo as a **public YouTube video**.
-- [ ] Paste the final YouTube URL into Devpost and this file.
-- [ ] Run `/feedback` in the primary Codex build thread and paste the Session ID into Devpost.
-- [ ] Choose and add an explicit repository license before submission. The repository is public, but license selection is a human legal decision and has intentionally not been guessed here.
-- [ ] Take the final screenshot set.
-- [ ] Complete and submit the Devpost form.
+The package was reconciled against the [OpenAI Build Week
+page](https://openai.com/build-week/), [Devpost challenge
+page](https://openai.devpost.com/), [official
+rules](https://openai.devpost.com/rules), and [official
+FAQ](https://openai.devpost.com/details/faqs) on July 19, 2026.
 
-## Manual values still needed
+- The demo is designed for `2:30` and must remain shorter than `3:00`.
+- The YouTube video must be **Public**, not merely available as Unlisted.
+- Audible English narration explains both GPT-5.6 and Codex use.
+- The public repository includes setup, sample data, tests, collaboration
+  decisions, MIT licensing, and third-party notices.
+- `/feedback` must be run in the primary Codex task where the majority of core
+  functionality was built. Its Session ID belongs in Devpost, not the repo.
+- The deadline is July 21, 2026 at 5:00 PM PDT / July 22, 2026 at 9:00 AM JST.
+- Registration, eligibility, rights confirmations, and any fields shown only
+  after joining Devpost require Yoshie's account and judgment.
+
+## Prepared submission checklist
+
+- [x] Working project built during the submission period with GPT-5.6 and
+      Codex.
+- [x] Track selected: **Apps for Your Life**.
+- [x] Public deployed application.
+- [x] Public repository with exact setup, sample, test, architecture, and
+      collaboration documentation.
+- [x] MIT project license and verified third-party license notices.
+- [x] README describes how GPT-5.6 Sol and Codex contributed and accelerated
+      the build.
+- [x] Reproducible fictional sample day requiring no personal calendar data.
+- [x] Locked 283-word narration, 2:30 caption timeline, shot list, answer keys,
+      reset procedure, fallback path, and recording runbook.
+- [x] Desktop/mobile screenshot set, contact sheet, and original thumbnail
+      sources.
+- [x] Issue #7 source/semantic audit, measured text contrast, Home Lighthouse
+      check, targeted focus/error fixes, and seven accessibility regressions.
+- [ ] Yoshie performs a short keyboard/VoiceOver spot-check, or leaves the
+      pending matrix explicitly unclaimed.
+- [ ] Yoshie or Templex reviews and approves the final submission PR.
+- [ ] Yoshie records English narration and assembles the final video.
+- [ ] Yoshie uploads the video as **Public** and verifies signed-out playback.
+- [ ] Yoshie runs `/feedback` in the primary Codex build task.
+- [ ] Yoshie joins Devpost, confirms eligibility and rights, fills any
+      account-only fields, and submits.
+
+## Human-only values
 
 ```text
-Public YouTube demo URL: [ADD]
-Codex /feedback Session ID: [ADD]
-Devpost project URL: [ADD]
-Repository license: [CHOOSE AND ADD]
+Public YouTube demo: {{YOUTUBE_URL}}
+Codex /feedback Session ID: {{FEEDBACK_SESSION_ID}}
+Public Devpost project: {{DEVPOST_URL}}
 ```
 
-## Recommended screenshot set
+Do not replace the Session ID placeholder in the public repository. Paste the
+real value directly into Devpost.
 
-1. Landing page with `You do not need help doing more.` and the direct **Check one thing** action.
+## Prepared screenshot set
+
+1. Home at `1440 × 900` with **Check one thing** first.
 2. **Maybe tomorrow.** verdict for `Start another side project`.
-3. Open **What would need to change?** result showing deterministic alternatives.
-4. Fictional Today Map with protected recovery, overlaps, and the longest opening.
-5. Open **See what would have to move** preview.
-6. GitHub Issue #3 or Issue #5 showing the Templex review gate and Codex implementation response.
-7. Commit history showing signed Templex specifications followed by Codex implementation commits.
+3. Open **What would need to change?** with deterministic alternatives.
+4. Fictional Today Map with all four factual metrics.
+5. Fictional calendar-aware verdict and room-making preview.
+6. Detailed room-making plan and bounded-search proof.
+7. Home at `390 × 844`.
+8. Core verdict at `390 × 844`.
+
+See [`assets/storyboard.html`](./assets/storyboard.html) for the sequence.
 
 ## Accuracy boundaries
 
-State these points clearly:
-
-- The live application uses **no runtime AI**.
-- No AI reads or semantically interprets calendar titles.
-- Calendar files are parsed only in the current browser tab.
+- The live app uses no runtime AI.
+- No AI reads or semantically interprets event titles.
+- Calendar snapshots are parsed only in the current browser tab.
 - The app does not connect to, synchronize with, or edit Google Calendar.
-- The Cost of Yes exhaustively searches all 78,125 scored Quick Check combinations.
-- The room-making engine searches bounded combinations of changes explicitly authorized by human labels.
+- Cost of Yes checks all 78,125 scored Quick Check combinations.
+- The room-making engine searches bounded combinations of changes explicitly
+  authorized by human labels.
 - Plans are previews, not automatic calendar edits.
-- The product makes no medical claim and is not an accessibility certification.
-- Yoshie did not manually write or edit the application code; this does not mean she was absent from engineering decisions. She made the product, scope, trust, language, and acceptance decisions that governed the code.
+- The fictional sample has `0 min` overlapping time.
+- The product makes no medical claim and does not claim accessibility
+  certification.
+- Yoshie did not manually write or edit application code. She made the product,
+  scope, trust, language, usability, and acceptance decisions governing it.
 
 ## Final pre-submit verification
 
-Before pressing Submit:
+1. Merge only after Yoshie or Templex reviews the submission PR.
+2. Confirm the post-merge GitHub Pages deployment.
+3. Open the public app in a clean browser session and run both exact demo paths.
+4. Complete [`video/QA_CHECKLIST.md`](./video/QA_CHECKLIST.md).
+5. Confirm YouTube Studio says **Public** and the video plays while signed out.
+6. Confirm the repository remains public with `LICENSE` and
+   `THIRD_PARTY_NOTICES.md`.
+7. Run `/feedback` in the primary Codex build task and keep its Session ID out
+   of the repository.
+8. Preview the Devpost form and remove every unresolved placeholder before
+   pressing Submit.
 
-1. Open the public app in a clean browser session.
-2. Run the exact Quick Check and sample-day paths in the video script.
-3. Confirm the public YouTube video plays while signed out.
-4. Confirm the repository is public and has an explicit license.
-5. Confirm the README and video both name Codex and GPT-5.6.
-6. Confirm the `/feedback` Session ID is from the primary build thread.
-7. Remove every `[ADD]` placeholder from the submitted copy.
+— Codex

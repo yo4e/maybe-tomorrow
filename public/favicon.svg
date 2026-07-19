@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Maybe Tomorrow.</title>
+  <rect width="64" height="64" rx="11" fill="#2456d6" />
+  <path
+    d="M12 48V15h8.2l11.7 18.4L43.6 15H52v33h-8.2V28.5L32 46.4 20.2 28.5V48H12Z"
+    fill="#f5efe5"
+  />
+  <circle cx="53" cy="51" r="5" fill="#d6ef3f" />
+</svg>
