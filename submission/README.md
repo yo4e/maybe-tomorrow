@@ -58,7 +58,9 @@ process inspectable instead of reducing it to “AI helped me code.”
 Yoshie also directed part of the build remotely from a smartphone while at an
 internet cafe and a gym. She returned home to test the browser experience,
 identify failures in hierarchy, English, and visual identity, and approve the
-release. The claim is directed build, including part remotely—not a fully
+release. Codex finished the approved release work while Yoshie attended a
+local summer festival—a real-life example of the time the product is meant to
+protect. The claim is directed build, including part remotely—not a fully
 remote or autonomous build.
 
 ## Verified official requirements
@@ -92,8 +94,9 @@ FAQ](https://openai.devpost.com/details/faqs) on July 19, 2026.
 - [x] README describes how GPT-5.6 Sol and Codex contributed and accelerated
       the build.
 - [x] Reproducible fictional sample day requiring no personal calendar data.
-- [x] Locked 283-word narration, 2:30 caption timeline, shot list, answer keys,
-      reset procedure, fallback path, and recording runbook.
+- [x] Locked 283-word narration, 2:30 caption timeline, personal-footage plan,
+      shot list, answer keys, reset procedure, fallback path, and recording
+      runbook.
 - [x] Desktop/mobile screenshot set, contact sheet, and original thumbnail
       sources.
 - [x] Issue #7 source/semantic audit, measured text contrast, Home Lighthouse
@@ -101,7 +104,10 @@ FAQ](https://openai.devpost.com/details/faqs) on July 19, 2026.
 - [ ] Yoshie performs a short keyboard/VoiceOver spot-check, or leaves the
       pending matrix explicitly unclaimed.
 - [ ] Yoshie or Templex reviews and approves the final submission PR.
-- [ ] Yoshie records English narration and assembles the final video.
+- [ ] Yoshie records two silent B-roll shots and approves every personal-media
+      crop and the final English narration.
+- [ ] Codex assembles the draft video; Yoshie reviews and approves the final
+      export.
 - [ ] Yoshie uploads the video as **Public** and verifies signed-out playback.
 - [ ] Yoshie runs `/feedback` in the primary Codex build task.
 - [ ] Yoshie joins Devpost, confirms eligibility and rights, fills any

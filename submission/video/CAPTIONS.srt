@@ -5,107 +5,121 @@ My problem is the opposite.
 
 2
 00:00:05,000 --> 00:00:10,000
-I’m Yoshie Yamada, a novelist and freelance writer,
+I’m Yoshie Yamada, a novelist and freelance writer.
 
 3
 00:00:10,000 --> 00:00:15,000
-and Maybe Tomorrow. asks whether one more worthwhile thing
-really belongs today.
+I can turn even a hospital room into a workspace.
 
 4
-00:00:15,000 --> 00:00:21,000
-I name one activity and answer seven scored questions,
-plus one final check about making it smaller.
+00:00:15,000 --> 00:00:19,000
+So I needed a brake: Maybe Tomorrow.
 
 5
-00:00:21,000 --> 00:00:28,000
-The rules are fixed and transparent,
-with only three possible verdicts—
+00:00:19,000 --> 00:00:25,000
+I name one activity and answer seven scored questions,
+plus a final check about making it smaller.
 
 6
-00:00:28,000 --> 00:00:35,000
-no generated advice and no hidden confidence score.
+00:00:25,000 --> 00:00:31,000
+The rules are fixed and transparent,
+with three verdicts—
 
 7
-00:00:35,000 --> 00:00:41,000
-On an overfull day, another side project gets “Maybe tomorrow.”
+00:00:31,000 --> 00:00:38,000
+no generated advice or hidden confidence score.
 
 8
-00:00:41,000 --> 00:00:47,000
-The app checks all 78,125 scored answer combinations
+00:00:38,000 --> 00:00:44,000
+On an overfull day, another side project
+gets “Maybe tomorrow.”
 
 9
-00:00:47,000 --> 00:00:54,000
-and shows the smallest facts that would have changed the result,
-without changing my answers.
+00:00:44,000 --> 00:00:49,000
+The app checks all 78,125 scored answer combinations
 
 10
-00:00:54,000 --> 00:01:01,000
+00:00:49,000 --> 00:00:56,000
+and shows the smallest changes needed for another result,
+while leaving my original answers untouched.
+
+11
+00:00:56,000 --> 00:01:02,000
 Calendar context is optional. I can import an ICS file,
 a calendar export ZIP,
 
-11
-00:01:01,000 --> 00:01:07,000
-or use this entirely fictional sample.
+12
+00:01:02,000 --> 00:01:08,000
+or use a fictional sample.
 Everything stays in this browser.
 
-12
-00:01:07,000 --> 00:01:13,000
-The app reads time, but only I decide which events must stay,
-can move or shrink,
-
 13
-00:01:13,000 --> 00:01:20,000
-take energy, or protect recovery.
+00:01:08,000 --> 00:01:14,000
+The app uses event times, but only I decide what must stay,
 
 14
-00:01:20,000 --> 00:01:26,000
-For one more hour of writing,
-it searches only changes I have authorized.
+00:01:14,000 --> 00:01:20,000
+what can move or shrink, what takes energy,
+and what protects recovery.
 
 15
-00:01:26,000 --> 00:01:32,000
-Here, shortening the fictional gym creates a continuous hour.
+00:01:20,000 --> 00:01:26,000
+For one more hour of writing,
+it considers only changes I have allowed.
 
 16
+00:01:26,000 --> 00:01:32,000
+Here, shortening the fictional gym visit
+creates a continuous hour.
+
+17
 00:01:32,000 --> 00:01:39,000
 Fixed commitments and recovery stay protected,
 and the source calendar is never edited.
 
-17
-00:01:39,000 --> 00:01:45,000
-I did not manually write or edit the application code.
-
 18
-00:01:45,000 --> 00:01:51,000
+00:01:39,000 --> 00:01:43,000
+I didn’t write or edit code.
+
+19
+00:01:43,000 --> 00:01:49,000
 I shaped the product with my AI partner, Templex Tsukino,
 using GPT-5.6 Sol.
 
-19
-00:01:51,000 --> 00:01:58,000
-Templex turned our conversations into signed specifications,
-rules, copy, privacy boundaries, and review gates.
-
 20
-00:01:58,000 --> 00:02:04,000
+00:01:49,000 --> 00:01:53,000
+Templex turned our conversations into
+
+21
+00:01:53,000 --> 00:01:57,000
+signed specifications, rules,
+privacy boundaries, and review criteria.
+
+22
+00:01:57,000 --> 00:02:01,000
 Codex implemented, tested, documented,
 and deployed the browser app.
 
-21
-00:02:04,000 --> 00:02:12,000
-I directed part of the build from my phone
-at an internet cafe and a gym,
-
-22
-00:02:12,000 --> 00:02:19,000
-then tested the product and approved the release.
-
 23
-00:02:19,000 --> 00:02:25,000
-Maybe Tomorrow. was built through AI collaboration,
-but it refuses to pretend AI understands your life.
+00:02:01,000 --> 00:02:07,000
+I directed part of the build from my phone
+at an internet cafe and a gym.
 
 24
-00:02:25,000 --> 00:02:30,000
-No AI reads your calendar. We can see the time.
+00:02:07,000 --> 00:02:13,000
+Codex completed release work while I enjoyed the festival.
+That wasn’t lost productivity.
+
+25
+00:02:13,000 --> 00:02:18,000
+It was the point.
+Maybe Tomorrow. was built with AI,
+
+26
+00:02:18,000 --> 00:02:24,000
+but no AI reads your calendar.
+We can see the time.
+
+27
+00:02:24,000 --> 00:02:30,000
 Only you know what it means.

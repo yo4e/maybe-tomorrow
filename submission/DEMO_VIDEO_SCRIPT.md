@@ -10,10 +10,11 @@ procedure, answer key, teleprompter, and caption file.
 - **Hard limit:** shorter than 3:00
 - **Narration:** 283 words, approximately 2:28 at 115 words per minute
 - **Platform:** public YouTube video
-- **Audio:** Yoshie Yamada's English narration; no music required
+- **Audio:** English narration directed and approved by Yoshie Yamada; no
+  music required
 - **Captions:** burned-in or uploaded from [`CAPTIONS.srt`](./video/CAPTIONS.srt)
-- **Capture:** deployed product plus local repository evidence; no developer
-  tools and no personal calendar data
+- **Capture:** deployed product plus local repository evidence; no browser
+  developer tools and no personal calendar data
 
 The final export should use clean cuts and ordinary-speed product interaction.
 The product is the hero. The collaboration evidence explains how GPT-5.6 and
@@ -25,18 +26,20 @@ Codex made this particular build possible.
 
 ## Timed story
 
-### 0:00–0:15 — The problem
+### 0:00–0:19 — The problem and its origin
 
-**Screen:** Open the deployed home screen. Hold on `Does this really have to
-happen today?`, the activity field, and **Check one thing**.
+**Screen:** Begin with a silent shot of Yoshie at her computer, then use a
+brief hospital portrait and hospital-room still before opening the deployed
+home screen. The hospital footage establishes lived context only; it must not
+imply a medical benefit.
 
 **Narration:**
 
 > Most productivity apps help us do more. My problem is the opposite. I’m
-> Yoshie Yamada, a novelist and freelance writer, and Maybe Tomorrow. asks
-> whether one more worthwhile thing really belongs today.
+> Yoshie Yamada, a novelist and freelance writer. I can turn even a hospital
+> room into a workspace. So I needed a brake: Maybe Tomorrow.
 
-### 0:15–0:35 — Quick Check
+### 0:19–0:38 — Quick Check
 
 **Screen:** Enter `Start another side project`, select **Check one thing**, and
 complete all eight answers from [`ANSWER_KEYS.md`](./video/ANSWER_KEYS.md).
@@ -45,11 +48,11 @@ readable.
 
 **Narration:**
 
-> I name one activity and answer seven scored questions, plus one final check
-> about making it smaller. The rules are fixed and transparent, with only
-> three possible verdicts—no generated advice and no hidden confidence score.
+> I name one activity and answer seven scored questions, plus a final check
+> about making it smaller. The rules are fixed and transparent, with three
+> verdicts—no generated advice or hidden confidence score.
 
-### 0:35–0:54 — Verdict and Cost of Yes
+### 0:38–0:56 — Verdict and Cost of Yes
 
 **Screen:** Hold on **Maybe tomorrow.**, then open **What would need to
 change?** and show the nearest alternative facts and `78,125 combinations`.
@@ -57,10 +60,10 @@ change?** and show the nearest alternative facts and `78,125 combinations`.
 **Narration:**
 
 > On an overfull day, another side project gets “Maybe tomorrow.” The app
-> checks all 78,125 scored answer combinations and shows the smallest facts
-> that would have changed the result, without changing my answers.
+> checks all 78,125 scored answer combinations and shows the smallest changes
+> needed for another result, while leaving my original answers untouched.
 
-### 0:54–1:20 — Optional calendar context
+### 0:56–1:20 — Optional calendar context
 
 **Screen:** Return home, select **Try the sample day**, then **View this day**.
 Show the fictional event labels and Today Map. Point to the four factual
@@ -69,9 +72,9 @@ metrics; do not claim that the sample contains overlaps.
 **Narration:**
 
 > Calendar context is optional. I can import an ICS file, a calendar export
-> ZIP, or use this entirely fictional sample. Everything stays in this
-> browser. The app reads time, but only I decide which events must stay, can
-> move or shrink, take energy, or protect recovery.
+> ZIP, or use a fictional sample. Everything stays in this browser. The app
+> uses event times, but only I decide what must stay, what can move or shrink,
+> what takes energy, and what protects recovery.
 
 ### 1:20–1:39 — One honest trade-off
 
@@ -83,38 +86,41 @@ combinations.
 
 **Narration:**
 
-> For one more hour of writing, it searches only changes I have authorized.
-> Here, shortening the fictional gym creates a continuous hour. Fixed
+> For one more hour of writing, it considers only changes I have allowed.
+> Here, shortening the fictional gym visit creates a continuous hour. Fixed
 > commitments and recovery stay protected, and the source calendar is never
 > edited.
 
-### 1:39–2:19 — How GPT-5.6 and Codex were used
+### 1:39–2:01 — How GPT-5.6 and Codex were used
 
-**Screen:** Cut to tightly cropped local text evidence only: signed local Markdown
-specifications, local `git log --oneline` history, and the final
-`CODEX_WORKLOG.md` verification. Use a neutral local text renderer or terminal
-and crop all window chrome. Do not record a hosting-service page, logo, remote
-URL, or account interface.
-
-**Narration:**
-
-> I did not manually write or edit the application code. I shaped the product
-> with my AI partner, Templex Tsukino, using GPT-5.6 Sol. Templex turned our
-> conversations into signed specifications, rules, copy, privacy boundaries,
-> and review gates. Codex implemented, tested, documented, and deployed the
-> browser app. I directed part of the build from my phone at an internet cafe
-> and a gym, then tested the product and approved the release.
-
-### 2:19–2:30 — Closing boundary
-
-**Screen:** Return to the product and end on the project name and browser-local
-privacy statement.
+**Screen:** Begin with a silent over-shoulder shot of Yoshie reviewing the
+finished product. Cut to tightly cropped local text evidence only:
+signed local Markdown specifications, local `git log --oneline` history, and
+the final `CODEX_WORKLOG.md` verification. Use a neutral local text renderer or
+terminal and crop all window chrome. Do not record a hosting-service page,
+logo, remote URL, or account interface.
 
 **Narration:**
 
-> Maybe Tomorrow. was built through AI collaboration, but it refuses to
-> pretend AI understands your life. No AI reads your calendar. We can see the
-> time. Only you know what it means.
+> I didn’t write or edit code. I shaped the product with my AI partner,
+> Templex Tsukino, using GPT-5.6 Sol. Templex turned our conversations into
+> signed specifications, rules, privacy boundaries, and review criteria. Codex
+> implemented, tested, documented, and deployed the browser app.
+
+### 2:01–2:30 — The life the product protects
+
+**Screen:** Use short, sanitized cuts from the real build context: internet
+cafe, gym with a computer, and Yoshie at a local summer festival. Every crop
+must exclude third-party marks, copyrighted book covers, private screens, and
+identifiable bystanders without permission. Mute all source audio. Return to
+the product for the final privacy statement.
+
+**Narration:**
+
+> I directed part of the build from my phone at an internet cafe and a gym.
+> Codex completed release work while I enjoyed the festival. That wasn’t lost
+> productivity. It was the point. Maybe Tomorrow. was built with AI, but no AI
+> reads your calendar. We can see the time. Only you know what it means.
 
 ## Recording truth boundaries
 
@@ -131,6 +137,11 @@ privacy statement.
 - A preview never edits the source calendar.
 - Yoshie did not manually write or edit application code, but she remained the
   creator, product authority, first user, tester, and final approver.
+- Hospital imagery documents Yoshie's tendency to keep working; it does not
+  make or imply a health claim.
+- Real-life footage must be used only with Yoshie's approval and after removing
+  every avoidable third-party mark, copyrighted work, private screen, and
+  unapproved likeness.
 - Do not claim a medical benefit, accessibility certification, autonomous AI
   agency, or one-prompt creation.
 

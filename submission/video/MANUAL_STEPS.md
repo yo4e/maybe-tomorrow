@@ -1,26 +1,37 @@
 # Human-Only Submission Steps
 
-Everything below requires Yoshie Yamada's voice, account, legal confirmation,
-or final product authority. Codex must not guess or publish these values.
+Everything below requires Yoshie Yamada's likeness, account, legal
+confirmation, rights confirmation, or final product authority. Codex must not
+guess or publish these values.
 
 ## Before recording
 
-1. Review the `codex/submission-package` pull request, or ask Templex Tsukino
-   to review it.
-2. Request any corrections before merge. Issue #6 explicitly requires this PR
-   to remain unmerged until Yoshie or Templex approves it.
-3. After approval, merge the PR and wait for GitHub Pages to deploy.
-4. Confirm <https://yo4e.github.io/maybe-tomorrow/> still loads and shows the
+1. Review the final revised English narration and its Japanese meaning guide.
+2. Confirm that the hospital images may be shown publicly and that no visible
+   companion or bystander is included without permission.
+3. Record the two silent B-roll clips in
+   [`RECORDING_RUNBOOK.md`](./RECORDING_RUNBOOK.md). No English performance is
+   required on camera.
+4. Review the sanitized internet-cafe, gym, hospital, and festival derivatives
+   before they enter the final edit. Confirm that third-party marks,
+   copyrighted book covers, private screens, labels, and unapproved likenesses
+   are absent.
+5. Confirm <https://yo4e.github.io/maybe-tomorrow/> still loads and shows the
    new favicon.
 
 ## Record and publish the video
 
 1. Follow [`RECORDING_RUNBOOK.md`](./RECORDING_RUNBOOK.md).
-2. Record Yoshie's English narration from [`TELEPROMPTER.txt`](./TELEPROMPTER.txt).
-3. Export and complete [`QA_CHECKLIST.md`](./QA_CHECKLIST.md).
-4. Upload with [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
-5. Set the video to **Public**, then confirm signed-out playback.
-6. Copy the final URL as `{{YOUTUBE_URL}}`.
+2. Approve the final English narration from
+   [`TELEPROMPTER.txt`](./TELEPROMPTER.txt), including pronunciation and pace.
+3. If a synthetic English voice is used, confirm its use is permitted, add the
+   prepared description disclosure, and answer YouTube's synthetic-content
+   upload question truthfully.
+4. Review the complete edit with headphones and request any corrections.
+5. Export and complete [`QA_CHECKLIST.md`](./QA_CHECKLIST.md).
+6. Upload with [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
+7. Set the video to **Public**, then confirm signed-out playback.
+8. Copy the final URL as `{{YOUTUBE_URL}}`.
 
 ## Recommended accessibility spot-check
 

@@ -430,4 +430,63 @@ demo for overseas judges.
   `America/Los_Angeles`, then reran the strict build, submission verifier, and
   whitespace check.
 
+## Personal-story demo revision
+
+After the application and submission package shipped, Yoshie supplied private
+working media from a hospital stay, an internet cafe, a gym, and a local summer
+festival. The production plan now uses a few brief, sanitized excerpts to make
+the lived problem and the human–AI build process concrete without displacing
+the product demo.
+
+- Rechecked the current official Devpost video requirements: the demo remains
+  under three minutes, includes audible GPT-5.6 and Codex use, and excludes
+  unlicensed third-party marks, music, and other protected material.
+- Preserved the exact 283-word narration count and 2:30 runtime while adding
+  the personal origin line, the real remote-build locations, and the festival
+  payoff: protected time outside the build is the point of the product.
+- Refined the final English copy so the verdict explanation distinguishes
+  hypothetical alternatives from unchanged original answers, calendar context
+  refers precisely to event times, and the festival line claims only scoped
+  release work rather than completion of the whole application.
+- Aligned the opening edit with its narration: Yoshie's hospital portrait is
+  followed by the hospital-room still before the product home screen appears.
+- Synchronized the canonical script, teleprompter, shot list, and 27-cue SRT.
+  The verifier confirms exact normalized narration agreement across them.
+- Limited Yoshie's new recording burden to two silent horizontal B-roll takes:
+  a short introduction and a finished-product review. She does not need to
+  perform English on camera.
+- Added explicit sanitization rules for hospital, internet-cafe, gym, and
+  festival media: work from copies; remove marks, book covers, private screens,
+  labels, QR codes, and unapproved likenesses; mute all source audio; and make
+  no medical claim.
+- Allowed either Yoshie's recorded English or a properly licensed synthetic
+  English voice under her direction and approval. The runbook, YouTube
+  metadata, manual steps, and QA checklist now require truthful disclosure if
+  the final narration is synthetic.
+- Kept all raw media local and excluded it from Git tracking through the local
+  repository exclude file. No personal image or video was added to the public
+  branch.
+- Created a separate Japanese meaning and filming guide on Yoshie's desktop;
+  the tracked repository remains English-only.
+
+Verification after the revision:
+
+```text
+npm test -- --run
+npm run build
+npm run verify:submission
+git diff --check
+```
+
+- Vitest: 10 test files and all 71 tests passed.
+- Production build: strict TypeScript and Vite build passed.
+- Submission verifier: 37 required files, 110 relative Markdown targets,
+  exact 283-word narration/caption agreement, 27 cues ending at 2:30, video
+  trademark/synchronization guardrails, ten PNG dimensions, and placeholder
+  policy all passed.
+- Remaining human work is limited to recording the two silent B-roll takes,
+  approving public use and sanitization of the personal footage, approving the
+  final English voice and edit, uploading publicly, completing `/feedback`,
+  and submitting the account-only Devpost fields.
+
 — Codex

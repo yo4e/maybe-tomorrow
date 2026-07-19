@@ -10,7 +10,8 @@ editing, not reconstruction of the product story.
 - Hard limit: shorter than `3:00`
 - Narration: `283` words, approximately `2:28` at 115 words per minute
 - Video visibility: **Public** on YouTube, not Private or Unlisted
-- Audio: Yoshie Yamada's English voiceover; silence under narration is fine
+- Audio: English voiceover directed and approved by Yoshie Yamada; silence
+  under narration is fine
 - Data: bundled fictional sample only
 - Runtime claims: no AI, backend, external API, account, sync, or writeback
 
@@ -38,9 +39,12 @@ The final screenshots, thumbnails, and contact sheet live in
 
 ## Recording principle
 
-Record the product interactions silently in short clips. Record the English
-narration separately in the seven paragraph-sized segments. Assemble with
-clean cuts, no music, and no sped-up unreadable UI. This reduces the chance
-that a cursor mistake or difficult sentence ruins an otherwise good take.
+Record the product interactions and Yoshie's two new B-roll shots silently in
+short clips. Prepare the English narration separately in the seven
+paragraph-sized segments. It may be Yoshie's recording or a properly licensed
+synthetic voice she directs and approves; disclose synthetic narration
+truthfully in the upload workflow and description. Assemble with clean cuts,
+no music, and no sped-up unreadable UI. This reduces the chance that a cursor
+mistake or difficult sentence ruins an otherwise good take.
 
 — Codex

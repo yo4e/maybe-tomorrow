@@ -18,10 +18,59 @@ editor.
    not place it over the recorded product.
 7. Rehearse each clip once without recording. Confirm the exact result before
    the real take.
-8. Prepare a quiet microphone. Headphones are optional because the product has
-   no required audio.
+8. If Yoshie will record the final English voice, prepare a quiet microphone.
+   If the final voice is synthetic, confirm the voice may be used in a public
+   competition entry and keep a note of its source.
+9. Keep all raw personal footage outside the tracked repository. Work only
+   from copies, and preserve the untouched originals.
 
-## 2. Record silent product clips
+## 2. Record Yoshie's two silent B-roll clips
+
+Both clips must be horizontal `16:9`, ideally `4K / 30 fps`. Use a tripod or
+stable surface, the rear `1x` camera, eye-level framing, and light from in front
+of or beside Yoshie rather than a bright window behind her. Record no speech;
+visible Japanese lip movement under English narration will look like a failed
+dub.
+
+### Clip A — Introduction
+
+Record `12–15` seconds with Yoshie framed from the chest up and the edge of a
+computer visible:
+
+1. hold still for two seconds;
+2. look at the computer for three seconds;
+3. look into the camera for three seconds;
+4. make a small natural smile; and
+5. return attention to the computer.
+
+### Clip B — Product review
+
+Record `15–20` seconds from roughly 45 degrees behind Yoshie's shoulder, with
+her profile and the finished app visible:
+
+1. hold still for three seconds;
+2. make one slow trackpad scroll using only fictional data;
+3. read the screen;
+4. give one small nod; and
+5. hold still again.
+
+Do not type. The shot should communicate product review, not manual coding.
+
+## 3. Prepare sanitized personal stills and footage
+
+Use copies of the approved hospital, internet-cafe, gym, and festival sources.
+Before editing them into the timeline:
+
+1. remove or crop every third-party mark, facility mark, equipment name,
+   product label, copyrighted book cover, QR code, and private screen;
+2. exclude or obscure every bystander whose likeness is not approved for this
+   public submission;
+3. keep the hospital images factual and brief, with no medical-outcome claim;
+4. mute all source audio, especially festival and cafe ambience; and
+5. export clean `1920 × 1080` working derivatives without overwriting the
+   originals.
+
+## 4. Record silent product clips
 
 Record each item as a separate file. Leave one second of stillness before and
 after every clip for editing handles.
@@ -91,41 +140,55 @@ personal browser history, or unrelated repository.
    time. Only you know what it means.`
 3. End without moving the cursor for at least two seconds.
 
-## 3. Record narration
+## 5. Prepare narration
 
 1. Open [`TELEPROMPTER.txt`](./TELEPROMPTER.txt).
-2. Record its seven paragraphs as seven separate audio takes.
-3. Read conversationally, not as an advertisement.
-4. Aim for the caption segment lengths in [`SHOT_LIST.md`](./SHOT_LIST.md).
-5. If a paragraph runs long, rerecord it rather than speeding up the audio.
-6. Pronounce `ICS` as the letters “I-C-S,” `ZIP` as “zip,” and `GPT-5.6 Sol`
+2. Use either Yoshie's recorded English voice or a properly licensed synthetic
+   English voice that Yoshie directs and approves. Do not imitate or clone a
+   third party.
+3. If Yoshie records a Japanese timing guide, use it only as an editing scratch
+   track. It is not the final English submission audio and does not need to be
+   filmed.
+4. Prepare the seven paragraphs as separate audio takes.
+5. Deliver them conversationally, not as an advertisement.
+6. Aim for the caption segment lengths in [`SHOT_LIST.md`](./SHOT_LIST.md).
+7. If a paragraph runs long, rerecord or regenerate it rather than speeding up
+   the audio.
+8. Pronounce `ICS` as the letters “I-C-S,” `ZIP` as “zip,” and `GPT-5.6 Sol`
    as “G-P-T five point six Sol.”
-7. Keep natural breaths between sentences, then remove only distracting dead
+9. Keep natural breaths between sentences, then remove only distracting dead
    air.
 
 The locked script is `283` words. At 115 words per minute it is approximately
 `2:28`, leaving more than 30 seconds below the official three-minute maximum.
 
-## 4. Assemble to the locked timeline
+## 6. Assemble to the locked timeline
 
 1. Create a `2:30` timeline using [`SHOT_LIST.md`](./SHOT_LIST.md).
 2. Place narration first, then fit the corresponding screen clips below it.
 3. Use straight cuts or very short dissolves only.
 4. Prefer a still frame over sped-up unreadable controls.
-5. Add [`CAPTIONS.srt`](./CAPTIONS.srt) as burned-in captions or as the YouTube
+5. Use the personal footage only at the exact ranges in
+   [`SHOT_LIST.md`](./SHOT_LIST.md); the product remains the majority of the
+   runtime.
+6. Add [`CAPTIONS.srt`](./CAPTIONS.srt) as burned-in captions or as the YouTube
    caption track. If burned in, keep two lines maximum and avoid covering
    controls.
-6. Use no music. Product silence under narration is intentional.
-7. End by `2:30`; never add an outro that pushes the export to `3:00` or more.
+7. Use no music. Product and source-footage silence under narration is
+   intentional.
+8. End by `2:30`; never add an outro that pushes the export to `3:00` or more.
 
-## 5. Export and verify
+## 7. Export and verify
 
 1. Export MP4 using H.264 video and AAC audio at `1920 × 1080`.
 2. Play the complete local export with headphones.
 3. Complete every item in [`QA_CHECKLIST.md`](./QA_CHECKLIST.md).
 4. Upload to YouTube using [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
 5. Set visibility to **Public** in YouTube Studio.
-6. Open the final URL in a signed-out/private browser window and play from
+6. If a realistic synthetic dub or other meaningfully synthetic media is used,
+   answer the YouTube altered/synthetic-content question truthfully and include
+   the prepared narration disclosure in the description.
+7. Open the final URL in a signed-out/private browser window and play from
    beginning to end.
 
 — Codex

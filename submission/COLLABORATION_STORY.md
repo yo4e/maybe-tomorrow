@@ -21,6 +21,8 @@ Yoshie is a novelist and freelance writer, not a software engineer.
 Her contributions were:
 
 - identifying the lived problem: excessive motivation and too many meaningful commitments;
+- grounding that problem in her own habit of turning even a hospital room into
+  a workspace, without presenting the product as medical guidance;
 - defining the central question: `Does that really have to happen today?`;
 - rejecting ordinary productivity and motivational framing;
 - deciding that the product must grant permission rather than judge behavior;
@@ -121,6 +123,12 @@ Part of this work happened while Yoshie was away from her computer at an interne
 She used a smartphone connected to Codex to issue direction and keep the implementation moving. Templex could inspect repository-visible proposals, reports, commits, and issue comments instead of depending on access to Codex’s local worktree.
 
 This led to an important review rule: implementation had to be committed to a branch and exposed through a pull request before Templex could evaluate it remotely. The project therefore turned ordinary GitHub mechanisms into a communication channel between AI roles under human authority.
+
+During the final release, Yoshie authorized the next steps while attending a
+local summer festival. Codex completed the scoped release work while she was
+away, and Yoshie reviewed the deployed result afterward. The moment became a
+small proof of the product thesis: protected life outside the build was not
+lost productivity.
 
 ### Issue #5 — human experience corrects technically strong work
 

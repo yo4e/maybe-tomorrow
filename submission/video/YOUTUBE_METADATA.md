@@ -13,6 +13,8 @@ Maybe Tomorrow. is a local-first anti-planner for people who need help doing one
 
 Created for OpenAI Build Week by novelist and freelance writer Yoshie Yamada through a documented collaboration with her AI partner Templex Tsukino in ChatGPT using GPT-5.6 Sol, and implemented, tested, documented, and deployed with Codex.
 
+English narration uses a synthetic voice under Yoshie Yamada's direction and final approval.
+
 Live app: https://yo4e.github.io/maybe-tomorrow/
 Source, specifications, and build record: https://github.com/yo4e/maybe-tomorrow
 Build Week project: {{DEVPOST_URL}}
@@ -24,6 +26,8 @@ License: MIT for project code and documentation. Third-party components remain u
 
 Delete the `Build Week project` line until `{{DEVPOST_URL}}` is known. After
 submission, add the public Devpost URL and save the YouTube description.
+Delete the synthetic-voice sentence only if the final export instead uses
+Yoshie's own recorded English voice.
 
 ## Optional tags
 
@@ -52,6 +56,9 @@ MAYBE TOMORROW.
 - Captions: upload [`CAPTIONS.srt`](./CAPTIONS.srt) as English, or use the
   same text as burned-in captions
 - Music: none
+- Altered/synthetic content: answer the upload question truthfully. If the
+  final export uses a realistic synthetic dub or any other meaningfully
+  synthetic media, select the applicable disclosure.
 - Paid promotion: none, unless Yoshie independently knows otherwise
 - License: YouTube Standard License is acceptable for the video; this does not
   change the repository's MIT license

@@ -4,14 +4,22 @@
 
 - [ ] Duration is shorter than `3:00`; target is `2:30`.
 - [ ] English narration is audible from beginning to end.
-- [ ] Yoshie explicitly says `GPT-5.6 Sol` and `Codex`.
-- [ ] Yoshie states that she did not manually write or edit application code.
-- [ ] Yoshie's creator, product-authority, testing, and approval role remains
-      clear.
+- [ ] The narration explicitly says `GPT-5.6 Sol` and `Codex`.
+- [ ] The narration states that Yoshie did not write or edit application code.
+- [ ] Yoshie's creator and product-authority role remains clear; her silent
+      review footage does not imply that she wrote code.
 - [ ] Captions match [`TELEPROMPTER.txt`](./TELEPROMPTER.txt).
 - [ ] No caption covers a control or important metric.
 - [ ] The product and local text evidence remain legible at normal playback.
 - [ ] There is no copyrighted music.
+- [ ] Hospital footage establishes personal context only and does not imply a
+      medical outcome or recommendation.
+- [ ] Every personal-footage derivative is approved by Yoshie and contains no
+      avoidable third-party mark, copyrighted book cover, private screen,
+      identifying label, QR code, or unapproved likeness.
+- [ ] Internet-cafe, gym, and festival source audio is fully muted.
+- [ ] If a synthetic English voice is used, its use is permitted, it does not
+      imitate a third party, and the upload disclosure is accurate.
 - [ ] No personal calendar, notification, account detail, or private tab is
       visible.
 - [ ] The sample reports `0 min` overlapping time; the narration does not
@@ -33,6 +41,8 @@
 - [ ] YouTube Studio shows visibility **Public**, not Unlisted or Private.
 - [ ] `{{YOUTUBE_URL}}` plays to the end in a signed-out/private browser.
 - [ ] Title and description match [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
+- [ ] If applicable, YouTube's altered/synthetic-content setting and the
+      narration disclosure accurately describe the final audio and visuals.
 - [ ] Live app and repository links are clickable in the description.
 - [ ] English captions are available and synchronized.
 - [ ] Thumbnail is clear at small size.
