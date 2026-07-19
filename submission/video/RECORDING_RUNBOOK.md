@@ -18,9 +18,10 @@ editor.
    not place it over the recorded product.
 7. Rehearse each clip once without recording. Confirm the exact result before
    the real take.
-8. If Yoshie will record the final English voice, prepare a quiet microphone.
-   If the final voice is synthetic, confirm the voice may be used in a public
-   competition entry and keep a note of its source.
+8. Generate the final English voice locally with Kokoro-82M's `af_heart` voice
+   under Apache-2.0. Yoshie approved the sample; preserve the source and
+   license note for the final disclosure. Do not use the rejected Apple System
+   Voice test in any published export.
 9. Keep all raw personal footage outside the tracked repository. Work only
    from copies, and preserve the untouched originals.
 
@@ -39,8 +40,9 @@ and play the two clean moments at half speed across `0:00–0:10`.
 ### Clip B — Product review
 
 Crop the captured review clip approximately `1.5×` around the laptop and right
-hand. Slow its usable `2.84` seconds to fill `1:44–1:48`, and obscure the thin
-browser-chrome strip at the top of the laptop screen.
+hand. Slow its usable `2.84` seconds to fill `1:44–1:48`, and crop the frame so
+the thin browser-chrome strip at the top of the laptop screen is outside the
+visible picture. Do not add a blur.
 
 Do not type. The shot should communicate product review, not manual coding.
 
@@ -49,14 +51,17 @@ Do not type. The shot should communicate product review, not manual coding.
 Use copies of the approved hospital, internet-cafe, gym, and festival sources.
 Before editing them into the timeline:
 
-1. remove or crop every third-party mark, facility mark, equipment name,
-   product label, copyrighted book cover, QR code, and private screen;
-2. exclude or obscure every bystander whose likeness is not approved for this
-   public submission;
+1. remove or crop avoidable third-party and facility marks, equipment names,
+   product labels, copyrighted book covers, QR codes, and private screens;
+2. exclude or crop unapproved prominent likenesses from the public submission;
 3. keep the hospital images factual and brief, with no medical-outcome claim;
 4. mute all source audio, especially festival and cafe ambience; and
 5. export clean `1920 × 1080` working derivatives without overwriting the
    originals.
+
+Yoshie approved the selected crops and manually confirmed that the chosen
+festival-stall segment contains no trademark logo that needs removal. Keep its
+ordinary signage visible; do not apply a generic blur.
 
 ## 4. Record silent product clips
 
@@ -131,11 +136,11 @@ personal browser history, or unrelated repository.
 ## 5. Prepare narration
 
 1. Open [`TELEPROMPTER.txt`](./TELEPROMPTER.txt).
-2. Use either Yoshie's recorded English voice or a properly licensed synthetic
-   English voice that Yoshie directs and approves. Do not imitate or clone a
-   third party.
-3. The Japanese edition keeps this same English audio and changes only the
-   burned-in captions.
+2. Generate the English voice locally with Kokoro-82M's `af_heart` voice under
+   Apache-2.0. Yoshie approved the sample, but must listen to and approve the
+   complete regenerated narration. Do not imitate or clone a third party.
+3. Exclude the rejected Apple System Voice version from every publishable
+   export.
 4. Prepare the seven paragraphs as separate audio takes.
 5. Deliver them conversationally, not as an advertisement.
 6. Aim for the caption segment lengths in [`SHOT_LIST.md`](./SHOT_LIST.md).
@@ -158,9 +163,10 @@ seven paragraph slots end by `2:30`, leaving the first ten seconds to the song.
 5. Use the personal footage only at the exact ranges in
    [`SHOT_LIST.md`](./SHOT_LIST.md); the product remains the majority of the
    runtime.
-6. Burn [`CAPTIONS.srt`](./CAPTIONS.srt) into the English edition and
-   [`CAPTIONS.ja.srt`](./CAPTIONS.ja.srt) into the Japanese edition. The visual
-   edit and audio must otherwise remain identical.
+6. Burn [`CAPTIONS.srt`](./CAPTIONS.srt) into the English submission master.
+   [`CAPTIONS.ja.srt`](./CAPTIONS.ja.srt) may be used later for an optional
+   post-submission companion whose visual edit and English audio remain
+   identical.
 7. Start the approved original song at `0:00`, let it lead the first ten
    seconds, then duck it deeply beneath narration. Show
    `Music: Templex Tsukino / KazeX Records` during the opening.
@@ -172,7 +178,9 @@ seven paragraph slots end by `2:30`, leaving the first ten seconds to the song.
    constant `30 fps`, and `48 kHz` stereo.
 2. Strip inherited metadata and confirm that no GPS, device name, attached
    cover art, lyrics, or source-tool comment remains.
-3. Play both complete local exports with headphones.
+3. Play the complete English submission master with headphones after the
+   Kokoro narration has been regenerated. If an optional Japanese companion is
+   made after submission, verify it separately then.
 4. Complete every item in [`QA_CHECKLIST.md`](./QA_CHECKLIST.md).
 5. Upload to YouTube using [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
 6. Set visibility to **Public** in YouTube Studio.

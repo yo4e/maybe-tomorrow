@@ -94,9 +94,9 @@ FAQ](https://openai.devpost.com/details/faqs) on July 19, 2026.
 - [x] README describes how GPT-5.6 Sol and Codex contributed and accelerated
       the build.
 - [x] Reproducible fictional sample day requiring no personal calendar data.
-- [x] Locked 283-word narration, synchronized English and Japanese 2:30
-      caption timelines, personal-footage plan, shot list, answer keys, reset
-      procedure, fallback path, and recording runbook.
+- [x] Locked 283-word narration, synchronized 2:30 English caption timeline,
+      optional timing-matched Japanese SRT, personal-footage plan, shot list,
+      answer keys, reset procedure, fallback path, and recording runbook.
 - [x] Desktop/mobile screenshot set, contact sheet, and original thumbnail
       sources.
 - [x] Issue #7 source/semantic audit, measured text contrast, Home Lighthouse
@@ -106,9 +106,15 @@ FAQ](https://openai.devpost.com/details/faqs) on July 19, 2026.
 - [ ] Yoshie or Templex reviews and approves the final submission PR.
 - [x] Yoshie's two silent B-roll shots were recorded and incorporated into
       sanitized local working copies.
-- [x] Codex assembled matching 2:30 English- and Japanese-captioned exports.
-- [ ] Yoshie reviews every personal-media crop, the final English narration,
-      both caption editions, and the complete edit with headphones.
+- [x] Yoshie approved the revised visual edit, personal-media crops, original
+      music treatment, and the festival segment after confirming that it shows
+      no disallowed trademark logo.
+- [x] Codex replaced the rejected macOS Samantha System Voice candidate with
+      Kokoro-82M `af_heart` and repeated technical, frame-identity, audio,
+      timing, clipping, and metadata QA on the English-only submission master.
+- [ ] Yoshie re-approves the replacement narration and complete English edit
+      with headphones. The Japanese-captioned edition is optional work after
+      submission, not a submission dependency.
 - [ ] Yoshie uploads the video as **Public** and verifies signed-out playback.
 - [ ] Yoshie runs `/feedback` in the primary Codex build task.
 - [ ] Yoshie joins Devpost, confirms eligibility and rights, fills any
@@ -151,6 +157,14 @@ See [`assets/storyboard.html`](./assets/storyboard.html) for the sequence.
 - The fictional sample has `0 min` overlapping time.
 - The product makes no medical claim and does not claim accessibility
   certification.
+- The prior macOS Samantha System Voice render was rejected during the license
+  audit and will not be published. The rights-cleared replacement uses
+  Kokoro-82M's `af_heart` voice under Apache-2.0. Renewed technical QA passed;
+  Yoshie's complete-file listening approval remains the publication gate.
+- Kokoro, Misaki, and the Kokoro-82M model are local video-production tools;
+  they are not part of the application, production JavaScript bundle, or
+  browser runtime. See [`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md)
+  for the conservative public credit.
 - Yoshie did not manually write or edit application code. She made the product,
   scope, trust, language, usability, and acceptance decisions governing it.
 
@@ -159,7 +173,9 @@ See [`assets/storyboard.html`](./assets/storyboard.html) for the sequence.
 1. Merge only after Yoshie or Templex reviews the submission PR.
 2. Confirm the post-merge GitHub Pages deployment.
 3. Open the public app in a clean browser session and run both exact demo paths.
-4. Complete [`video/QA_CHECKLIST.md`](./video/QA_CHECKLIST.md).
+4. Complete [`video/QA_CHECKLIST.md`](./video/QA_CHECKLIST.md) again for the
+   Kokoro-narrated English master; do not carry forward pass results from the
+   rejected System Voice candidate.
 5. Confirm YouTube Studio says **Public** and the video plays while signed out.
 6. Confirm the repository remains public with `LICENSE` and
    `THIRD_PARTY_NOTICES.md`.

@@ -10,12 +10,14 @@ procedure, answer key, teleprompter, and caption file.
 - **Hard limit:** shorter than 3:00
 - **Narration:** 283 words, beginning at `0:10` and ending before `2:30`
 - **Platform:** public YouTube video
-- **Audio:** English narration directed and approved by Yoshie Yamada, plus
-  original music credited to Templex Tsukino / KazeX Records and used with the
-  rights holder's permission
-- **Captions:** burned-in English from [`CAPTIONS.srt`](./video/CAPTIONS.srt),
-  with a Japanese-captioned companion export from
-  [`CAPTIONS.ja.srt`](./video/CAPTIONS.ja.srt)
+- **Audio:** English narration generated locally with Kokoro-82M's `af_heart`
+  voice under Apache-2.0, directed by Yoshie Yamada and subject to her final
+  listening approval; plus original music credited to Templex Tsukino / KazeX
+  Records and used with the rights holder's permission. The rejected Apple
+  System Voice test must not be published.
+- **Captions:** burned-in English from [`CAPTIONS.srt`](./video/CAPTIONS.srt).
+  [`CAPTIONS.ja.srt`](./video/CAPTIONS.ja.srt) is retained only for a possible
+  post-submission companion and is not required for the Build Week entry.
 - **Capture:** deployed product plus local repository evidence; no browser
   developer tools and no personal calendar data
 
@@ -31,9 +33,10 @@ Codex made this particular build possible.
 
 ### 0:00–0:10 — Music, title, and creator
 
-**Screen:** Use Yoshie's silent computer footage in gentle slow motion. Keep
-`Maybe Tomorrow.` and the product descriptor readable without covering Yoshie
-or the product. Show the small credit `Music: Templex Tsukino / KazeX Records`.
+**Screen:** Use Yoshie's silent computer footage in gentle slow motion without
+an opening title card. Show only the small credit
+`Music: Templex Tsukino / KazeX Records` without covering Yoshie or the
+computer.
 
 **Audio:** Let the original song establish the opening. Narration begins at
 `0:10`; after that point the song remains deeply ducked beneath the voice.
@@ -121,10 +124,11 @@ appearance.
 ### 2:07–2:30 — The life the product protects
 
 **Screen:** Use short, sanitized cuts from the real build context: internet
-cafe, gym with a computer, and Yoshie at a local summer festival. Every crop
-must exclude third-party marks, copyrighted book covers, private screens, and
-identifiable bystanders without permission. Mute all source audio. Return to
-the product for the final privacy statement.
+cafe, gym with a computer, and Yoshie at a local summer festival. Use Yoshie's
+approved crops. The festival stalls have been checked for trademark logos and
+do not need a generic blur. Continue to crop avoidable third-party marks,
+copyrighted book covers, private screens, and unapproved prominent likenesses.
+Mute all source audio. Return to the product for the final privacy statement.
 
 **Narration:**
 
@@ -151,8 +155,10 @@ the product for the final privacy statement.
 - Hospital imagery documents Yoshie's tendency to keep working; it does not
   make or imply a health claim.
 - Real-life footage must be used only with Yoshie's approval and after removing
-  every avoidable third-party mark, copyrighted work, private screen, and
-  unapproved likeness.
+  avoidable third-party marks, copyrighted works, private screens, and
+  unapproved prominent likenesses. Yoshie's manual check found no trademark
+  logo in the selected festival-stall segment, so it does not require a blanket
+  blur.
 - The original song may be used only under Yoshie's confirmed rights. The
   final file must carry the on-screen music credit and must not inherit cover
   art, lyrics, location, device, or source-tool metadata.
@@ -166,7 +172,8 @@ the product for the final privacy statement.
 - [`video/ANSWER_KEYS.md`](./video/ANSWER_KEYS.md)
 - [`video/TELEPROMPTER.txt`](./video/TELEPROMPTER.txt)
 - [`video/CAPTIONS.srt`](./video/CAPTIONS.srt)
-- [`video/CAPTIONS.ja.srt`](./video/CAPTIONS.ja.srt)
+- [`video/CAPTIONS.ja.srt`](./video/CAPTIONS.ja.srt) — optional future
+  post-submission companion only
 - [`video/RESET_AND_FALLBACK.md`](./video/RESET_AND_FALLBACK.md)
 - [`video/YOUTUBE_METADATA.md`](./video/YOUTUBE_METADATA.md)
 - [`assets/storyboard.html`](./assets/storyboard.html)

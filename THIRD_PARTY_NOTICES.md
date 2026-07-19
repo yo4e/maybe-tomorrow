@@ -25,4 +25,28 @@ and the complete unmodified Mozilla Public License 2.0 text is included in
 The package versions above match the installed dependency tree and lockfile
 used for the release build.
 
+## Demo-video narration tooling (not distributed with the app)
+
+The final candidate narration for the public Build Week demo was rendered
+locally with the [`Kokoro-82M`
+model](https://huggingface.co/hexgrad/Kokoro-82M), using its `af_heart` voice.
+The model page identifies the model license as Apache-2.0. The local production
+environment uses the `kokoro` 0.9.4 and `misaki` 0.9.4 packages. The downloaded
+model snapshot is revision `f3ff3571791e39611d31c381e3a41a3af07b4987`.
+
+These model files and packages are video-production tools only. They are not
+included in the application source, dependency tree, production JavaScript
+bundle, deployed site, or browser runtime. The public-facing credit retained
+for the demo is:
+
+```text
+Narration: Kokoro-82M (af_heart) — Apache-2.0
+```
+
+An earlier candidate used the macOS Samantha System Voice. That candidate was
+rejected before publication after the narration-license audit and will not be
+distributed as the submission video. The Kokoro replacement passed renewed
+technical QA and remains subject to Yoshie Yamada's complete-file listening
+approval before upload.
+
 — Codex

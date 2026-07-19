@@ -48,9 +48,29 @@ Open [`storyboard.html`](./storyboard.html) locally to review the complete set
 in sequence. The recording itself should use product interaction where
 practical and these stills only as prepared fallback material.
 
-The collaboration-evidence clip remains a manual capture because it must show
-the final reviewed Git history, Issues #3 and #5, Pull Request #4, and the final
-worklog state after this submission PR is complete. Crop public repository
-evidence tightly and exclude unrelated account information.
+The collaboration-evidence clip uses signed local Markdown, a local
+`git log --oneline` view, and the final local worklog. It does not use Issues,
+pull-request pages, hosting-service UI, branded browser chrome, remote URLs, or
+account information.
+
+## Local video assets and rights status
+
+The raw personal media, soundtrack, narration files, and rendered MP4s remain
+in the ignored local production workspace and are not repository assets.
+
+| Asset | Current status | Rights and safety record |
+|---|---|---|
+| Yoshie's hospital, internet-cafe, gym, desk, and festival media | Revised crops and visual edit approved by Yoshie | Work only from sanitized copies; source audio is not used; no medical claim is made |
+| Festival segment | Approved by Yoshie | Yoshie checked the selected frames and confirmed that no disallowed trademark logo appears |
+| Original music | Approved in the visual edit | Yoshie controls the rights; on-screen credit: `Music: Templex Tsukino / KazeX Records` |
+| English synthetic narration | Rights-cleared replacement rendered; technical QA passed; complete-file listening approval pending | Kokoro-82M `af_heart`; the model page identifies Apache-2.0; credit and tooling details are recorded in [`THIRD_PARTY_NOTICES.md`](../../THIRD_PARTY_NOTICES.md) |
+| Japanese captions | Timing-matched SRT prepared | Optional post-submission edition; the submission master is English only |
+
+The earlier macOS Samantha System Voice candidate was rejected before
+publication after the license audit. Its technical or editorial QA results do
+did not clear the Kokoro replacement. The replacement has now passed renewed
+technical, timing, loudness, clipping, stream, metadata, and visual-stream
+identity checks; it still needs Yoshie's complete-file listening approval
+before upload.
 
 — Codex

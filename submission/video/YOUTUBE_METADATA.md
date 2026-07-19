@@ -2,16 +2,10 @@
 
 ## Title
 
-English-captioned Build Week entry:
+Build Week entry:
 
 ```text
 Maybe Tomorrow. — An Anti-Planner Built by a Novelist, GPT-5.6, and Codex
-```
-
-Japanese-captioned companion:
-
-```text
-Maybe Tomorrow. — Build Week Demo with Japanese Captions
 ```
 
 ## Description
@@ -21,7 +15,7 @@ Maybe Tomorrow. is a local-first anti-planner for people who need help doing one
 
 Created for OpenAI Build Week by novelist and freelance writer Yoshie Yamada through a documented collaboration with her AI partner Templex Tsukino in ChatGPT using GPT-5.6 Sol, and implemented, tested, documented, and deployed with Codex.
 
-English narration uses a synthetic voice under Yoshie Yamada's direction and final approval.
+English narration was generated locally with Kokoro-82M's af_heart voice, licensed under the Apache License 2.0, at Yoshie Yamada's direction and with her final approval.
 Music: Templex Tsukino / KazeX Records. Used with the rights holder's permission.
 Visual disclosure: Templex Tsukino is an AI persona represented by AI-generated imagery.
 
@@ -36,15 +30,13 @@ License: MIT for project code and documentation. Third-party components remain u
 
 Delete the `Build Week project` line until `{{DEVPOST_URL}}` is known. After
 submission, add the public Devpost URL and save the YouTube description.
-Delete the synthetic-voice sentence only if the final export instead uses
-Yoshie's own recorded English voice.
+Do not upload or describe the rejected Apple System Voice test as a final
+narration source.
 
-For the Japanese-captioned companion, add this sentence after the first
-paragraph:
-
-```text
-This companion edition keeps the original English interface and narration and adds burned-in Japanese captions.
-```
+If an optional Japanese-captioned companion is made after submission, add this
+sentence after the first paragraph: `This companion edition keeps the original
+English interface and narration and adds burned-in Japanese captions.` This
+companion is not required for the Build Week submission.
 
 ## Optional tags
 
@@ -70,9 +62,9 @@ MAYBE TOMORROW.
 - Visibility: **Public**
 - Audience: choose the accurate setting; the project is not directed to
   children
-- Captions: the English upload uses [`CAPTIONS.srt`](./CAPTIONS.srt); the
-  Japanese-captioned companion uses [`CAPTIONS.ja.srt`](./CAPTIONS.ja.srt).
-  Keep the matching English track available on both uploads when practical.
+- Captions: the submission upload uses [`CAPTIONS.srt`](./CAPTIONS.srt).
+  [`CAPTIONS.ja.srt`](./CAPTIONS.ja.srt) is reserved for a possible
+  post-submission companion.
 - Music: original music credited on screen and in the description as
   `Templex Tsukino / KazeX Records`; Yoshie confirmed the required rights
 - Altered/synthetic content: answer the upload question truthfully. If the
