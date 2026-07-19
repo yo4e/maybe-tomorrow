@@ -21,6 +21,8 @@ export function CalendarImportPanel({
   const [startDate, setStartDate] = useState(() => formatLocalDate(new Date()));
   const [dragging, setDragging] = useState(false);
   const [localError, setLocalError] = useState<string | null>(null);
+  const fileError = localError ?? error;
+  const fileErrorId = `${inputId}-file-error`;
 
   const chooseFiles = (nextFiles: File[]) => {
     const supported = nextFiles.filter((file) => /\.(ics|zip)$/i.test(file.name));
@@ -109,11 +111,27 @@ export function CalendarImportPanel({
             id={inputId}
             type="file"
             accept=".ics,.zip,text/calendar,application/zip"
-            aria-describedby={`${inputId}-privacy`}
+            aria-invalid={Boolean(fileError)}
+            aria-describedby={
+              fileError
+                ? `${inputId}-privacy ${fileErrorId}`
+                : `${inputId}-privacy`
+            }
             multiple
             onChange={(event) => chooseFiles(Array.from(event.target.files ?? []))}
           />
         </div>
+
+        <p
+          className="visually-hidden"
+          aria-live="polite"
+          aria-atomic="true"
+          data-file-selection-status
+        >
+          {files.length > 0
+            ? `${files.length} calendar ${files.length === 1 ? "file" : "files"} selected.`
+            : ""}
+        </p>
 
         {files.length > 0 ? (
           <ul className="selected-files" aria-label="Selected files">
@@ -126,8 +144,8 @@ export function CalendarImportPanel({
           </ul>
         ) : null}
 
-        {localError || error ? (
-          <p className="form-error" role="alert">{localError ?? error}</p>
+        {fileError ? (
+          <p className="form-error" id={fileErrorId} role="alert">{fileError}</p>
         ) : null}
         {busy ? <p className="import-status" role="status">Reading the calendar file in this browser…</p> : null}
 

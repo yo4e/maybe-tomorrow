@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title description">
+  <title id="title">Maybe Tomorrow. YouTube thumbnail</title>
+  <desc id="description">Cream editorial card with a cobalt margin, the words Too motivated? Maybe tomorrow, and a citron marker.</desc>
+  <rect width="1280" height="720" fill="#f5efe5"/>
+  <rect width="104" height="720" fill="#2456d6"/>
+  <rect x="104" y="0" width="1176" height="18" fill="#141a2a"/>
+  <circle cx="1138" cy="118" r="54" fill="#d6ef3f"/>
+  <circle cx="1138" cy="118" r="22" fill="#f5efe5"/>
+  <text x="170" y="176" fill="#141a2a" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" letter-spacing="8">TOO MOTIVATED?</text>
+  <text x="164" y="365" fill="#2456d6" font-family="Georgia, 'Times New Roman', serif" font-size="128" font-style="italic" font-weight="700">Maybe</text>
+  <text x="164" y="500" fill="#141a2a" font-family="Georgia, 'Times New Roman', serif" font-size="128" font-style="italic" font-weight="700">Tomorrow.</text>
+  <line x1="170" y1="560" x2="1118" y2="560" stroke="#df664f" stroke-width="10"/>
+  <text x="172" y="625" fill="#141a2a" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700" letter-spacing="4">A LOCAL-FIRST ANTI-PLANNER</text>
+  <text x="1120" y="646" fill="#2456d6" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="end">YOSHIE × GPT-5.6 × CODEX</text>
+</svg>

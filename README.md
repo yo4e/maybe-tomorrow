@@ -99,7 +99,9 @@ definition are skipped rather than guessed.
 
 - [`submission/README.md`](./submission/README.md) — canonical OpenAI Build Week submission kit and final checklist
 - [`submission/DEMO_VIDEO_SCRIPT.md`](./submission/DEMO_VIDEO_SCRIPT.md) — complete under-three-minute demo narration and shot list
-- [`submission/DEVPOST_SUBMISSION.md`](./submission/DEVPOST_SUBMISSION.md) — ready-to-paste Devpost project copy
+- [`submission/video/README.md`](./submission/video/README.md) — recording runbook, shot list, captions, metadata, final Devpost copy, and human-only steps
+- [`submission/assets/ASSET_MANIFEST.md`](./submission/assets/ASSET_MANIFEST.md) — fictional-data screenshots and original thumbnail assets
+- [`submission/DEVPOST_SUBMISSION.md`](./submission/DEVPOST_SUBMISSION.md) — audited Devpost field summary and route to the final paste-ready copy
 - [`submission/COLLABORATION_STORY.md`](./submission/COLLABORATION_STORY.md) — documented human–AI–AI build workflow
 - [`AGENTS.md`](./AGENTS.md) — implementation constraints and approved Issue #3 override
 - [`docs/ANTI_PLANNER_SPEC.md`](./docs/ANTI_PLANNER_SPEC.md) — current expansion specification
@@ -108,6 +110,7 @@ definition are skipped rather than guessed.
 - [`docs/UX_COPY.md`](./docs/UX_COPY.md) — original verdict copy
 - [`docs/DESIGN_SYSTEM.md`](./docs/DESIGN_SYSTEM.md) — original visual foundation
 - [`docs/DEMO_SCENARIOS.md`](./docs/DEMO_SCENARIOS.md) — reproducible Quick Check and anti-planner demos
+- [`docs/ACCESSIBILITY_AUDIT.md`](./docs/ACCESSIBILITY_AUDIT.md) — measured contrast, semantic review, automated evidence, and pending human screen-reader matrix
 - [`CODEX_WORKLOG.md`](./CODEX_WORKLOG.md) — implementation record and verification
 - [Issue #3](../../issues/3) — expansion proposal, Templex review, and authorization
 - [Issue #5](../../issues/5) — Yoshie feedback, Quick Check hierarchy, and editorial-identity refinement
@@ -134,10 +137,19 @@ http://localhost:5173/maybe-tomorrow/
 ```bash
 npm test
 npm run build
+npm run verify:submission
 npm run preview
 ```
 
 The production files are written to `dist/`.
+
+## License
+
+Maybe Tomorrow.'s original project code and documentation are licensed under
+the [MIT License](./LICENSE), Copyright (c) 2026 Yoshie Yamada. Third-party
+components remain under their respective licenses and are not relicensed under
+MIT; exact versions, sources, and included license texts are recorded in
+[`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md).
 
 ## Demo paths
 
@@ -167,7 +179,7 @@ Public application:
 
 Final recorded verification:
 
-- Vitest: 9 test files and 64 tests passed;
+- Vitest: 10 test files and 71 tests passed;
 - TypeScript strict build and Vite production build passed;
 - `git diff --check` passed;
 - 360 px and desktop browser review passed without horizontal overflow; and

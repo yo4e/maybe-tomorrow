@@ -71,7 +71,11 @@ export function Home({ initialActivity = "", onTryDemo, onImport, onQuickCheck }
             ) : null}
           </form>
 
-          <div className="hero-secondary-paths" aria-label="Optional ways to add context">
+          <div
+            className="hero-secondary-paths"
+            role="group"
+            aria-label="Optional ways to add context"
+          >
             <button
               className="button button-secondary"
               type="button"

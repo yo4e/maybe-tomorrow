@@ -225,3 +225,5 @@ Avoid overstating:
 - Do not imply that no engineering decisions were needed because the human did not write code.
 - Do not imply that the app understands private calendar meaning.
 - Do not claim a medical outcome.
+
+— Codex

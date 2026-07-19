@@ -168,61 +168,73 @@ Do not use browser developer tools, raw scores, or implementation details in the
 
 — Templex Tsukino
 
-## Issue #3 primary Anti-Planner demo
+## Current recording scenarios
 
-The current primary demo uses the bundled fictional calendar so it never
-depends on a personal file or network access.
+The deployed Issue #5 interface presents the standalone decision first and the
+fictional calendar as optional context. Use the visible labels below when
+recording Issue #6 assets. The original scenarios above remain useful scoring
+references; in the current interface, the value `3` recovery label is
+**A lot**.
 
-1. On the landing page, select **Try the overfull day**.
-2. Explain that the ten fictional event titles are display text and that their
-   flexibility labels came from a human, not a model.
-3. Continue to the Today Map. Point out occupied time, the longest continuous
-   opening, overlapping time, and protected recovery.
-4. Select **Question one more addition**.
-5. Enter `Draft another short story` and choose `1 hr`.
-6. Complete Quick Check with values that produce **Maybe tomorrow.**:
-   urgency `1`, commitment `0`, desire `4`, energy cost `3`, day load `4`,
-   recovery need `3`, tomorrow flexibility `4`, shrinkable `Yes`.
-7. Expand **The cost of yes** to show the exhaustive deterministic nearest
-   alternatives.
-8. Compare any Replacement Solver previews. Emphasize that fixed events and
-   recovery are protected and that no source calendar is edited.
-9. Choose a preview or leave the day unchanged, then save the decision locally.
-10. Scroll to the Decision Journal and show the compact frozen day context.
+### Core decision
 
-The standalone scenarios above remain valid regression and secondary-demo
-paths. The live demo should describe exact test counts only after running the
-current suite.
-
-— Codex
-
-## Issue #5 refined demonstration order
-
-The first viewport now presents the core decision before calendar context.
-
-### 45–60 second core demo
-
-1. Enter `Start another side project` in the hero input.
+1. Enter `Start another side project`.
 2. Select **Check one thing**.
-3. Use Scenario A above to produce **Maybe tomorrow.**
-4. Open **What would need to change?** and show that the alternatives are
-   deterministic while the original answers stay unchanged.
-5. Save the decision locally.
+3. Use these exact visible answers, in order:
 
-### 90–150 second expanded demo
+   | Question | Visible answer |
+   |---|---|
+   | Urgency | Not urgent |
+   | Commitment | No |
+   | Genuine desire | Very much |
+   | Energy cost | A great deal |
+   | Day load | Overfull |
+   | Recovery need | A lot |
+   | Tomorrow flexibility | Easily |
+   | Make it smaller? | Yes, probably |
 
-1. Complete the first three core-demo steps so the product promise is clear.
-2. Return home and select **Try the sample day**.
-3. Review the pre-marked fictional events and select **See this day**.
-4. Point out event time, longest opening, overlap, and protected recovery
-   without presenting the day as graded.
-5. Select **Check one thing**, enter `Draft another short story`, and choose
+4. Pause on **Maybe tomorrow.** and its explanation.
+5. Under **What would need to change?**, select **Show possible changes** to
+   demonstrate that the fixed rules checked all `78,125` scored answer
+   combinations while leaving the original answers unchanged.
+6. Save the decision locally if the recording needs the Decision Journal.
+
+### Optional sample-day context
+
+1. Return home and select **Try the sample day**.
+2. Review the pre-marked fictional events, then select **View this day**.
+3. On the day view, show these exact facts without implying that the day is
+   graded:
+
+   - occupied: `11 hr 30 min`;
+   - longest opening: `30 min`;
+   - overlapping: `0 min`; and
+   - protected recovery: `1 hr 15 min`.
+
+4. Select **Check one thing**, enter `Draft another short story`, and choose
    `1 hr`.
-6. Complete Quick Check with the existing Issue #3 answer values.
-7. Open **What would need to change?** and **See what would have to move**.
-8. Save the decision and optional room-making choice to the local journal.
+5. Use these exact visible answers, in order:
 
-The calendar path is optional evidence, not a more serious version of the
-product.
+   | Question | Visible answer |
+   |---|---|
+   | Urgency | Barely |
+   | Commitment | No |
+   | Genuine desire | Very much |
+   | Energy cost | A lot |
+   | Day load | Overfull |
+   | Recovery need | A lot |
+   | Tomorrow flexibility | Easily |
+   | Make it smaller? | Yes, probably |
+
+6. Pause on **Maybe tomorrow.** The **See what would have to move** section is
+   already visible; it is not opened with a separate control.
+7. Show the first room-making option: shorten `Go to the gym` by `30 min`,
+   leaving `5:00–6:00 PM` open. The app checks `18` allowed combinations and
+   protects events marked **Must stay** and **Protected recovery**.
+8. Leave the day unchanged or save that option with the decision. Nothing edits
+   the source calendar.
+
+The sample day contains no overlapping time. It is optional evidence of local,
+human-labelled calendar context, not a more serious version of the product.
 
 — Codex
