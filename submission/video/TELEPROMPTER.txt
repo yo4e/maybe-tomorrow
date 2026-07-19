@@ -4,10 +4,10 @@ I name one activity and answer seven scored questions, plus one final check abou
 
 On an overfull day, another side project gets “Maybe tomorrow.” The app checks all 78,125 scored answer combinations and shows the smallest facts that would have changed the result, without changing my answers.
 
-Calendar context is optional. I can import an ICS file, a Google Calendar export ZIP, or use this fictional sample. Everything stays in this browser. The app reads time, but only I decide which events must stay, can move or shrink, take energy, or protect recovery.
+Calendar context is optional. I can import an ICS file, a calendar export ZIP, or use this entirely fictional sample. Everything stays in this browser. The app reads time, but only I decide which events must stay, can move or shrink, take energy, or protect recovery.
 
 For one more hour of writing, it searches only changes I have authorized. Here, shortening the fictional gym creates a continuous hour. Fixed commitments and recovery stay protected, and the source calendar is never edited.
 
-I did not manually write or edit the application code. I shaped the product with my AI partner, Templex Tsukino, using GPT-5.6 Sol. Templex turned our conversations into signed specifications, rules, copy, privacy boundaries, and review gates. Codex implemented, tested, documented, and deployed the React app. I directed part of the build from my phone at an internet cafe and a gym, then tested the product and approved the release.
+I did not manually write or edit the application code. I shaped the product with my AI partner, Templex Tsukino, using GPT-5.6 Sol. Templex turned our conversations into signed specifications, rules, copy, privacy boundaries, and review gates. Codex implemented, tested, documented, and deployed the browser app. I directed part of the build from my phone at an internet cafe and a gym, then tested the product and approved the release.
 
 Maybe Tomorrow. was built through AI collaboration, but it refuses to pretend AI understands your life. No AI reads your calendar. We can see the time. Only you know what it means.

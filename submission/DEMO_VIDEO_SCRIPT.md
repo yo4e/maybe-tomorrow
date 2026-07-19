@@ -68,10 +68,10 @@ metrics; do not claim that the sample contains overlaps.
 
 **Narration:**
 
-> Calendar context is optional. I can import an ICS file, a Google Calendar
-> export ZIP, or use this fictional sample. Everything stays in this browser.
-> The app reads time, but only I decide which events must stay, can move or
-> shrink, take energy, or protect recovery.
+> Calendar context is optional. I can import an ICS file, a calendar export
+> ZIP, or use this entirely fictional sample. Everything stays in this
+> browser. The app reads time, but only I decide which events must stay, can
+> move or shrink, take energy, or protect recovery.
 
 ### 1:20–1:39 — One honest trade-off
 
@@ -90,10 +90,11 @@ combinations.
 
 ### 1:39–2:19 — How GPT-5.6 and Codex were used
 
-**Screen:** Cut to tightly cropped, legible repository evidence: signed
-specifications, the Issue #3 and #5 review loop, selected Codex commits and
-Pull Request #4, and the final test/worklog record. Avoid unnecessary GitHub
-branding or unrelated account information.
+**Screen:** Cut to tightly cropped local text evidence only: signed local Markdown
+specifications, local `git log --oneline` history, and the final
+`CODEX_WORKLOG.md` verification. Use a neutral local text renderer or terminal
+and crop all window chrome. Do not record a hosting-service page, logo, remote
+URL, or account interface.
 
 **Narration:**
 
@@ -101,7 +102,7 @@ branding or unrelated account information.
 > with my AI partner, Templex Tsukino, using GPT-5.6 Sol. Templex turned our
 > conversations into signed specifications, rules, copy, privacy boundaries,
 > and review gates. Codex implemented, tested, documented, and deployed the
-> React app. I directed part of the build from my phone at an internet cafe
+> browser app. I directed part of the build from my phone at an internet cafe
 > and a gym, then tested the product and approved the release.
 
 ### 2:19–2:30 — Closing boundary
@@ -119,8 +120,8 @@ privacy statement.
 
 - The application uses no runtime AI, backend, account, analytics, or external
   API.
-- An `.ics` file or Google Calendar export ZIP is a local snapshot, not a live
-  Google Calendar integration.
+- An `.ics` file or calendar export ZIP is a local snapshot, not a live
+  calendar-account integration.
 - No AI reads or classifies event titles.
 - The Today Map reports facts; it does not grade a day.
 - Cost of Yes checks all 78,125 scored Quick Check combinations.

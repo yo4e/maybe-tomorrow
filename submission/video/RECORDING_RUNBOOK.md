@@ -72,18 +72,17 @@ after every clip for editing handles.
 
 ### Clip 6 — Collaboration evidence
 
-Record tight, readable crops of public repository evidence. Either use the
-public GitHub pages or local Markdown/history views with unrelated UI cropped
-out.
+Record only tight, readable crops of local Markdown and local git-history text.
+Use a neutral local text renderer or terminal and crop all window chrome.
 
-1. signed specification files in `docs/`;
-2. Issue #3 proposal and Templex approval;
-3. Issue #5 Yoshie feedback and Templex approval;
-4. Codex commits and merged Pull Request #4; and
-5. `CODEX_WORKLOG.md` showing the final 10 files / 71 tests verification.
+1. Templex-signed specification and scoring files in `docs/`;
+2. the signed collaboration decisions summarized in local Markdown;
+3. local `git log --oneline` output showing Codex commits; and
+4. `CODEX_WORKLOG.md` showing the final 10 files / 71 tests verification.
 
-Do not show notifications, private account information, personal browser
-history, or unrelated repositories.
+Do not show a remote hosting-service page, third-party logo, remote URL,
+branded application or window chrome, notification, private account detail,
+personal browser history, or unrelated repository.
 
 ### Clip 7 — Closing
 

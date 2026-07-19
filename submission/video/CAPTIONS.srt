@@ -42,11 +42,11 @@ without changing my answers.
 10
 00:00:54,000 --> 00:01:01,000
 Calendar context is optional. I can import an ICS file,
-a Google Calendar export ZIP,
+a calendar export ZIP,
 
 11
 00:01:01,000 --> 00:01:07,000
-or use this fictional sample.
+or use this entirely fictional sample.
 Everything stays in this browser.
 
 12
@@ -89,7 +89,7 @@ rules, copy, privacy boundaries, and review gates.
 20
 00:01:58,000 --> 00:02:04,000
 Codex implemented, tested, documented,
-and deployed the React app.
+and deployed the browser app.
 
 21
 00:02:04,000 --> 00:02:12,000

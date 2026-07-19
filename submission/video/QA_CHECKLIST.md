@@ -10,7 +10,7 @@
       clear.
 - [ ] Captions match [`TELEPROMPTER.txt`](./TELEPROMPTER.txt).
 - [ ] No caption covers a control or important metric.
-- [ ] The product and repository evidence remain legible at normal playback.
+- [ ] The product and local text evidence remain legible at normal playback.
 - [ ] There is no copyrighted music.
 - [ ] No personal calendar, notification, account detail, or private tab is
       visible.
@@ -18,8 +18,13 @@
       invent an overlap.
 - [ ] The room-making plan shortens `Go to the gym` by `30 min`, leaves
       `5:00–6:00 PM` open, and reports `18 allowed combinations`.
-- [ ] The video does not call snapshot import a live Google Calendar
+- [ ] The video does not call snapshot import a live calendar-account
       integration.
+- [ ] The collaboration clip shows only local Markdown and local git history;
+      no hosting-service page, third-party logo, remote URL, or branded window
+      chrome is visible.
+- [ ] Avoidable third-party names are absent from narration and captions;
+      submission-required GPT-5.6 and Codex references remain.
 - [ ] The video does not imply that AI runs in the app, reads event titles,
       edits a calendar, provides medical advice, or certifies accessibility.
 

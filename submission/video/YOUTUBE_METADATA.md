@@ -17,7 +17,7 @@ Live app: https://yo4e.github.io/maybe-tomorrow/
 Source, specifications, and build record: https://github.com/yo4e/maybe-tomorrow
 Build Week project: {{DEVPOST_URL}}
 
-The application uses no runtime AI, backend, account, analytics, or external API. Optional ICS and Google Calendar export ZIP snapshots are processed only in the current browser tab. No AI reads or classifies event titles, and the app never edits a source calendar.
+The application uses no runtime AI, backend, account, analytics, or external API. Optional ICS and calendar export ZIP snapshots are processed only in the current browser tab. No AI reads or classifies event titles, and the app never edits a source calendar.
 
 License: MIT for project code and documentation. Third-party components remain under their respective licenses; see the repository notices.
 ```
@@ -28,7 +28,7 @@ submission, add the public Devpost URL and save the YouTube description.
 ## Optional tags
 
 ```text
-OpenAI Build Week, Codex, GPT-5.6, anti-productivity, local-first, React, accessibility, calendar privacy
+OpenAI Build Week, Codex, GPT-5.6, anti-productivity, local-first, accessibility, calendar privacy
 ```
 
 Tags are optional and should not delay publication.

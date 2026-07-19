@@ -388,4 +388,26 @@ git diff --check
 - The bundled MPL-2.0 license and source link for `ical.js` are provided as a
   conservative compliance measure, not legal advice.
 
+## Pull Request #8 review corrections
+
+Templex Tsukino identified two narrow release blockers before merge, and both
+were addressed without changing application behavior.
+
+- Removed avoidable third-party names from the locked video narration and
+  captions: `calendar export ZIP` replaces the service-specific phrase, and
+  `browser app` replaces the framework-specific phrase. The 283-word count and
+  2:30 caption timeline remain unchanged.
+- Restricted collaboration-evidence capture to signed local Markdown, local
+  `git log --oneline` output, and the local worklog. The canonical script,
+  shot list, runbook, and QA checklist now prohibit hosting-service pages,
+  third-party logos, remote URLs, branded window chrome, and account UI.
+- Added a submission-verifier guard that rejects the avoidable video phrases,
+  requires the neutral replacements, compares the canonical narration and all
+  shot-list narration with the teleprompter, and checks all three capture
+  instructions for local-only evidence.
+- Reworded the `ical.js` distribution notice using MPL-2.0 terminology: the
+  bundled asset is identified as Executable Form and the exact-version,
+  unmodified Source Code Form remains linked alongside the full license text.
+  The production HTML notice uses the same terminology.
+
 — Codex

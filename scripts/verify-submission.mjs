@@ -74,6 +74,20 @@ const approvedTokenFiles = new Set([
   'submission/video/QA_CHECKLIST.md',
 ]);
 
+const lockedVideoFiles = [
+  'submission/DEMO_VIDEO_SCRIPT.md',
+  'submission/video/TELEPROMPTER.txt',
+  'submission/video/CAPTIONS.srt',
+  'submission/video/SHOT_LIST.md',
+  'submission/video/RECORDING_RUNBOOK.md',
+];
+
+const avoidableVideoBrandPhrases = [
+  'Google Calendar',
+  'React app',
+  'GitHub',
+];
+
 const ignoredDirectories = new Set([
   '.git',
   'coverage',
@@ -397,6 +411,79 @@ async function verifyCaptions() {
   }
 }
 
+async function verifyVideoTrademarkGuardrail() {
+  const sources = new Map();
+
+  for (const relativeFile of lockedVideoFiles) {
+    if (!(await isNonEmptyFile(relativeFile))) {
+      continue;
+    }
+
+    const source = await readFile(path.join(repositoryRoot, relativeFile), 'utf8');
+    sources.set(relativeFile, source);
+    for (const phrase of avoidableVideoBrandPhrases) {
+      if (source.includes(phrase)) {
+        fail(`Avoidable third-party video phrase ${JSON.stringify(phrase)} appears in ${relativeFile}`);
+      }
+    }
+  }
+
+  const teleprompter = sources.get('submission/video/TELEPROMPTER.txt') ?? '';
+  if (!teleprompter.includes('calendar export ZIP')) {
+    fail('TELEPROMPTER.txt must use the neutral phrase "calendar export ZIP"');
+  }
+  if (!teleprompter.includes('browser app')) {
+    fail('TELEPROMPTER.txt must use the neutral phrase "browser app"');
+  }
+
+  const canonicalScript = sources.get('submission/DEMO_VIDEO_SCRIPT.md') ?? '';
+  const canonicalNarration = canonicalScript
+    .split(/\r?\n/)
+    .filter((line) => line.startsWith('>'))
+    .map((line) => line.replace(/^>\s?/, ''))
+    .join(' ');
+  if (normalizeNarration(canonicalNarration) !== normalizeNarration(teleprompter)) {
+    fail('Canonical DEMO_VIDEO_SCRIPT.md narration does not match TELEPROMPTER.txt');
+  }
+
+  const shotList = normalizeNarration(sources.get('submission/video/SHOT_LIST.md') ?? '');
+  const narrationParagraphs = teleprompter
+    .replace(/^\uFEFF/, '')
+    .trim()
+    .split(/\r?\n\s*\r?\n/)
+    .map(normalizeNarration)
+    .filter(Boolean);
+  for (const paragraph of narrationParagraphs) {
+    if (!shotList.includes(paragraph)) {
+      fail('SHOT_LIST.md does not contain every locked narration paragraph');
+      break;
+    }
+  }
+
+  const evidenceInstructions = [
+    canonicalScript,
+    sources.get('submission/video/SHOT_LIST.md') ?? '',
+    sources.get('submission/video/RECORDING_RUNBOOK.md') ?? '',
+  ];
+  if (evidenceInstructions.some((source) => (
+    !source.includes('local Markdown')
+    || (!source.includes('local git') && !source.includes('git log'))
+  ))) {
+    fail('Every collaboration-capture instruction must require local Markdown and local git history');
+  }
+
+  const videoErrors = errors.filter((error) => (
+    error.includes('third-party video phrase')
+    || error.includes('TELEPROMPTER.txt must use')
+    || error.includes('DEMO_VIDEO_SCRIPT.md narration')
+    || error.includes('SHOT_LIST.md does not contain')
+    || error.includes('collaboration-capture instruction')
+  ));
+  if (videoErrors.length === 0 && sources.size === lockedVideoFiles.length) {
+    pass(`Video trademark and synchronization guardrail (${sources.size} locked files)`);
+  }
+}
+
 function readPngDimensions(buffer) {
   const pngSignature = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]);
   if (buffer.length < 24 || !buffer.subarray(0, 8).equals(pngSignature)) {
@@ -495,6 +582,7 @@ console.log('Maybe Tomorrow. submission verification\n');
 
 await verifyRequiredFiles();
 await verifyMarkdownLinks();
+await verifyVideoTrademarkGuardrail();
 await verifyCaptions();
 await verifyPngDimensions();
 await verifyPlaceholders();

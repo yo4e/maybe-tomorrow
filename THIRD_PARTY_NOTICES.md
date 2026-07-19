@@ -16,8 +16,8 @@ remains subject to its own license.
 
 ## ical.js source availability
 
-The production JavaScript bundle contains unmodified ical.js 2.2.1 code. The
-corresponding Source Code Form is available from the exact
+The production JavaScript bundle includes ical.js 2.2.1 in Executable Form.
+The corresponding unmodified Source Code Form is available from the exact
 [ical.js v2.2.1 source tag](https://github.com/kewisch/ical.js/tree/v2.2.1),
 and the complete unmodified Mozilla Public License 2.0 text is included in
 [licenses/ical.js.txt](licenses/ical.js.txt).
