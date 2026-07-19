@@ -410,4 +410,24 @@ were addressed without changing application behavior.
   unmodified Source Code Form remains linked alongside the full license text.
   The production HTML notice uses the same terminology.
 
+## Post-merge timezone hotfix
+
+After Pull Request #8 was approved and merged, the Pages workflow exposed a
+timezone-dependent sample-day test. The fixed `Asia/Tokyo` instants in the
+fictional calendar were being compared with browser-local planning windows.
+That produced the intended 30-minute longest opening in Japan, but a 9-hour
+opening in the workflow's UTC environment—and would also shift the fictional
+demo for overseas judges.
+
+- Changed only the bundled fictional sample to RFC 5545 floating times, so its
+  7:30 AM–9:00 PM story stays identical in each viewer's local timezone.
+- Preserved real timezone semantics for every user-imported calendar.
+- Updated the demo regression to create a local one-day window and verify that
+  the first event remains at 7:30 AM local time.
+- Corrected `createLocalCalendarWindow`'s TypeScript parameter annotation from
+  an accidentally inferred literal `7` to the implemented `number` range.
+- Re-ran all 71 tests under `Asia/Tokyo`, `UTC`, and
+  `America/Los_Angeles`, then reran the strict build, submission verifier, and
+  whitespace check.
+
 — Codex
