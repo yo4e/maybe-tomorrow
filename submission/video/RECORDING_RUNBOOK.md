@@ -137,8 +137,8 @@ personal browser history, or unrelated repository.
 
 1. Open [`TELEPROMPTER.txt`](./TELEPROMPTER.txt).
 2. Generate the English voice locally with Kokoro-82M's `af_heart` voice under
-   Apache-2.0. Yoshie approved the sample, but must listen to and approve the
-   complete regenerated narration. Do not imitate or clone a third party.
+   Apache-2.0. Yoshie approved both the sample and complete regenerated
+   narration. Do not imitate or clone a third party.
 3. Exclude the rejected Apple System Voice version from every publishable
    export.
 4. Prepare the seven paragraphs as separate audio takes.

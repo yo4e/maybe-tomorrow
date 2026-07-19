@@ -11,10 +11,10 @@ procedure, answer key, teleprompter, and caption file.
 - **Narration:** 283 words, beginning at `0:10` and ending before `2:30`
 - **Platform:** public YouTube video
 - **Audio:** English narration generated locally with Kokoro-82M's `af_heart`
-  voice under Apache-2.0, directed by Yoshie Yamada and subject to her final
-  listening approval; plus original music credited to Templex Tsukino / KazeX
-  Records and used with the rights holder's permission. The rejected Apple
-  System Voice test must not be published.
+  voice under Apache-2.0, directed by Yoshie Yamada and approved after her
+  complete-file playback on July 20, 2026; plus original music credited to
+  Templex Tsukino / KazeX Records and used with the rights holder's permission.
+  The rejected Apple System Voice test must not be published.
 - **Captions:** burned-in English from [`CAPTIONS.srt`](./video/CAPTIONS.srt).
   [`CAPTIONS.ja.srt`](./video/CAPTIONS.ja.srt) is retained only for a possible
   post-submission companion and is not required for the Build Week entry.

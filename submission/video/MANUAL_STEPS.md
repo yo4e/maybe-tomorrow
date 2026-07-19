@@ -17,31 +17,26 @@ guess or publish these values.
 - Codex rendered the complete Kokoro-narrated English candidate and passed its
   technical, timing, loudness, clipping, stream, metadata, and visual-stream
   identity checks.
+- Yoshie listened to and watched the complete English master and approved its
+  pronunciation, clarity, pace, meaning, music balance, caption sync, and
+  final visual/rights pass.
+- Templex reviewed Pull Request #10 and reported no remaining
+  repository-visible blocker once Yoshie's playback approval was complete.
 
 ## Before publication
 
-1. Listen to and approve the regenerated English narration from beginning to
-   end,
-   including pronunciation, pace, and Japanese meaning.
-2. Review the final English master after the narration replacement and confirm
-   that no avoidable third-party mark, copyrighted book cover, private screen,
-   identifying label, or unapproved prominent likeness is visible.
-3. Confirm <https://yo4e.github.io/maybe-tomorrow/> still loads and shows the
+1. Confirm <https://yo4e.github.io/maybe-tomorrow/> still loads and shows the
    new favicon.
 
-## Record and publish the video
+## Publish the approved video
 
-1. Follow [`RECORDING_RUNBOOK.md`](./RECORDING_RUNBOOK.md).
-2. Approve the final Kokoro English narration from
-   [`TELEPROMPTER.txt`](./TELEPROMPTER.txt), including pronunciation and pace.
-3. Add the prepared Kokoro synthetic-voice disclosure and answer YouTube's
+1. Use the approved English master whose SHA-256 is
+   `8b57a622f018422852589d13cb673e377685d122d58c716b4ea0bb2e0f6d2332`.
+2. Add the prepared Kokoro synthetic-voice disclosure and answer YouTube's
    synthetic-content upload question truthfully.
-4. Review the complete edit with headphones and request any corrections.
-5. Export the English-only submission master and complete
-   [`QA_CHECKLIST.md`](./QA_CHECKLIST.md).
-6. Upload with [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
-7. Set the video to **Public**, then confirm signed-out playback.
-8. Copy the final URL as `{{YOUTUBE_URL}}`.
+3. Upload with [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
+4. Set the video to **Public**, then confirm signed-out playback to the end.
+5. Copy the final URL as `{{YOUTUBE_URL}}`.
 
 An optional Japanese-captioned companion may be made after submission if time
 and resources remain. It is not required for the Build Week entry.

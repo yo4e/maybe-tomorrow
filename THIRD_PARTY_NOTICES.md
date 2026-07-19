@@ -27,7 +27,7 @@ used for the release build.
 
 ## Demo-video narration tooling (not distributed with the app)
 
-The final candidate narration for the public Build Week demo was rendered
+The approved master narration for the public Build Week demo was rendered
 locally with the [`Kokoro-82M`
 model](https://huggingface.co/hexgrad/Kokoro-82M), using its `af_heart` voice.
 The model page identifies the model license as Apache-2.0. The local production
@@ -46,7 +46,7 @@ Narration: Kokoro-82M (af_heart) — Apache-2.0
 An earlier candidate used the macOS Samantha System Voice. That candidate was
 rejected before publication after the narration-license audit and will not be
 distributed as the submission video. The Kokoro replacement passed renewed
-technical QA and remains subject to Yoshie Yamada's complete-file listening
-approval before upload.
+technical QA and Yoshie Yamada's complete-file playback approval on July 20,
+2026.
 
 — Codex

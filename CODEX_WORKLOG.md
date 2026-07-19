@@ -377,7 +377,9 @@ git diff --check
 
 ### Remaining human-only work and risks
 
-- Yoshie Yamada and Templex Tsukino must review this branch before merge.
+- At this audit stage, Yoshie Yamada and Templex Tsukino still needed to review
+  the branch before merge; that review was completed during the final video
+  production pass recorded below.
 - A human should run the short VoiceOver spot-check in the accessibility audit;
   broader platform screen-reader validation remains desirable but is not a
   blocker falsely represented as complete.
@@ -560,16 +562,19 @@ Superseded candidate and rights-cleared master verification:
   metadata. Its SHA-256 is
   `8b57a622f018422852589d13cb673e377685d122d58c716b4ea0bb2e0f6d2332`.
 - Exact generated text preserves the locked narration; phonetic source hints
-  are limited to names and initialisms. Yoshie's complete-file listening check
-  remains the final audio and caption-synchronization gate.
+  are limited to names and initialisms. Yoshie watched and listened to the
+  complete master on July 20, 2026 and approved pronunciation, clarity, pacing,
+  music balance, caption synchronization, and the final visual/rights pass.
+- Templex reviewed Pull Request #10 and reported no remaining
+  repository-visible blocker, subject only to Yoshie's full-playback approval;
+  Yoshie's approval completed that release gate.
 - `npm test -- --run`: 10 files and all 71 tests passed.
 - `npm run build`, `npm run verify:submission`, and `git diff --check` passed.
 
-The English-only replacement is the technically verified publication
-candidate, not yet a publicly released master. Remaining work is Yoshie's
-complete-file listening approval, public YouTube upload and signed-out playback
-check, `/feedback`, and the account-only Devpost submission steps. A
-Japanese-captioned companion may be produced after submission if time and
-credits remain.
+The English-only replacement is now the technically verified and human-approved
+submission master, but it is not yet publicly released. Remaining work is the
+public YouTube upload and signed-out playback check, `/feedback`, and the
+account-only Devpost submission steps. A Japanese-captioned companion may be
+produced after submission if time and credits remain.
 
 — Codex

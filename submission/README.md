@@ -103,7 +103,8 @@ FAQ](https://openai.devpost.com/details/faqs) on July 19, 2026.
       check, targeted focus/error fixes, and seven accessibility regressions.
 - [ ] Yoshie performs a short keyboard/VoiceOver spot-check, or leaves the
       pending matrix explicitly unclaimed.
-- [ ] Yoshie or Templex reviews and approves the final submission PR.
+- [x] Templex reviewed the final submission PR and approved it subject only to
+      Yoshie's complete-file playback gate.
 - [x] Yoshie's two silent B-roll shots were recorded and incorporated into
       sanitized local working copies.
 - [x] Yoshie approved the revised visual edit, personal-media crops, original
@@ -112,9 +113,10 @@ FAQ](https://openai.devpost.com/details/faqs) on July 19, 2026.
 - [x] Codex replaced the rejected macOS Samantha System Voice candidate with
       Kokoro-82M `af_heart` and repeated technical, frame-identity, audio,
       timing, clipping, and metadata QA on the English-only submission master.
-- [ ] Yoshie re-approves the replacement narration and complete English edit
-      with headphones. The Japanese-captioned edition is optional work after
-      submission, not a submission dependency.
+- [x] Yoshie watched and listened to the complete rights-cleared English
+      master, approving the replacement narration, clarity, pacing, music
+      balance, captions, and final visual/rights pass. The Japanese-captioned
+      edition remains optional work after submission.
 - [ ] Yoshie uploads the video as **Public** and verifies signed-out playback.
 - [ ] Yoshie runs `/feedback` in the primary Codex build task.
 - [ ] Yoshie joins Devpost, confirms eligibility and rights, fills any
@@ -159,8 +161,8 @@ See [`assets/storyboard.html`](./assets/storyboard.html) for the sequence.
   certification.
 - The prior macOS Samantha System Voice render was rejected during the license
   audit and will not be published. The rights-cleared replacement uses
-  Kokoro-82M's `af_heart` voice under Apache-2.0. Renewed technical QA passed;
-  Yoshie's complete-file listening approval remains the publication gate.
+  Kokoro-82M's `af_heart` voice under Apache-2.0. Renewed technical QA and
+  Yoshie's complete-file playback approval passed on July 20, 2026.
 - Kokoro, Misaki, and the Kokoro-82M model are local video-production tools;
   they are not part of the application, production JavaScript bundle, or
   browser runtime. See [`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md)
@@ -170,12 +172,12 @@ See [`assets/storyboard.html`](./assets/storyboard.html) for the sequence.
 
 ## Final pre-submit verification
 
-1. Merge only after Yoshie or Templex reviews the submission PR.
+1. Merge the reviewed submission PR.
 2. Confirm the post-merge GitHub Pages deployment.
 3. Open the public app in a clean browser session and run both exact demo paths.
-4. Complete [`video/QA_CHECKLIST.md`](./video/QA_CHECKLIST.md) again for the
-   Kokoro-narrated English master; do not carry forward pass results from the
-   rejected System Voice candidate.
+4. Preserve the completed English-master results in
+   [`video/QA_CHECKLIST.md`](./video/QA_CHECKLIST.md); none were carried forward
+   from the rejected System Voice candidate.
 5. Confirm YouTube Studio says **Public** and the video plays while signed out.
 6. Confirm the repository remains public with `LICENSE` and
    `THIRD_PARTY_NOTICES.md`.

@@ -63,14 +63,14 @@ in the ignored local production workspace and are not repository assets.
 | Yoshie's hospital, internet-cafe, gym, desk, and festival media | Revised crops and visual edit approved by Yoshie | Work only from sanitized copies; source audio is not used; no medical claim is made |
 | Festival segment | Approved by Yoshie | Yoshie checked the selected frames and confirmed that no disallowed trademark logo appears |
 | Original music | Approved in the visual edit | Yoshie controls the rights; on-screen credit: `Music: Templex Tsukino / KazeX Records` |
-| English synthetic narration | Rights-cleared replacement rendered; technical QA passed; complete-file listening approval pending | Kokoro-82M `af_heart`; the model page identifies Apache-2.0; credit and tooling details are recorded in [`THIRD_PARTY_NOTICES.md`](../../THIRD_PARTY_NOTICES.md) |
+| English synthetic narration | Rights-cleared replacement rendered; technical QA and Yoshie's complete-file playback approval passed | Kokoro-82M `af_heart`; the model page identifies Apache-2.0; credit and tooling details are recorded in [`THIRD_PARTY_NOTICES.md`](../../THIRD_PARTY_NOTICES.md) |
 | Japanese captions | Timing-matched SRT prepared | Optional post-submission edition; the submission master is English only |
 
 The earlier macOS Samantha System Voice candidate was rejected before
 publication after the license audit. Its technical or editorial QA results do
-did not clear the Kokoro replacement. The replacement has now passed renewed
+not clear the Kokoro replacement. The replacement has now passed renewed
 technical, timing, loudness, clipping, stream, metadata, and visual-stream
-identity checks; it still needs Yoshie's complete-file listening approval
-before upload.
+identity checks, plus Yoshie's complete-file playback approval on July 20,
+2026. It is the approved English submission master awaiting upload.
 
 — Codex

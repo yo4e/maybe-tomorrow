@@ -27,7 +27,7 @@
       regenerated Kokoro narration.
 - [x] No caption covers a control or important metric.
 - [x] The product and local text evidence remain legible at normal playback.
-- [ ] The only music is the approved original song, the voice remains clear,
+- [x] The only music is the approved original song, the voice remains clear,
       and `Music: Templex Tsukino / KazeX Records` is readable on screen.
 - [x] Hospital footage establishes personal context only and does not imply a
       medical outcome or recommendation.
@@ -40,7 +40,7 @@
       H.264 with AAC `48 kHz` stereo.
 - [x] The submission MP4 contains no GPS, device information, cover art, lyrics,
       source-tool comments, or other inherited metadata.
-- [ ] The final Kokoro narration uses the approved `af_heart` voice, does not
+- [x] The final Kokoro narration uses the approved `af_heart` voice, does not
       imitate a third party, and has been re-listened to and approved by Yoshie.
 - [x] Templex Tsukino's AI-generated persona is labeled on screen, remains
       clear of the English captions, and is disclosed in the description.
@@ -74,6 +74,15 @@ Visual stream: byte-identical to Yoshie's approved review edit
 Metadata: only ordinary MP4 container/stream handler tags; no location, device, author, date, artwork, lyric, or source comment
 ```
 
+Human release evidence recorded on July 20, 2026:
+
+- Yoshie Yamada watched and listened to the complete English master and
+  approved the narration, clarity, pacing, music balance, caption sync, and
+  final visual/rights pass.
+- Templex Tsukino reviewed Pull Request #10 and reported no remaining
+  repository-visible blocker, subject to Yoshie's full-playback approval.
+  Yoshie's approval completed that release gate.
+
 ## Public YouTube upload
 
 - [ ] YouTube Studio shows visibility **Public**, not Unlisted or Private.
@@ -91,7 +100,7 @@ Japanese video is required for this checklist.
 
 ## Repository and live product
 
-- [ ] The final submission PR received Yoshie or Templex review before merge.
+- [x] The final submission PR received Yoshie and Templex review before merge.
 - [ ] GitHub Pages deployment succeeded after merge.
 - [x] Live home, core Quick Check, sample Today Map, and room-making path work.
 - [ ] A keyboard/VoiceOver spot-check is recorded, or remaining assistive-

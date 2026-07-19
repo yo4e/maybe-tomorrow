@@ -11,9 +11,9 @@ editing, not reconstruction of the product story.
 - Narration: `283` words, approximately `2:28` at 115 words per minute
 - Video visibility: **Public** on YouTube, not Private or Unlisted
 - Audio: English voiceover generated locally with Kokoro-82M's `af_heart`
-  voice under Apache-2.0, directed by Yoshie Yamada, technically verified, and
-  pending complete-file listening approval; with an approved original song by
-  Templex Tsukino / KazeX Records
+  voice under Apache-2.0, directed and approved by Yoshie Yamada after
+  complete-file playback; with an approved original song by Templex Tsukino /
+  KazeX Records
 - Submission master: one English-captioned MP4; the rejected Apple System
   Voice test is not publishable
 - Data: bundled fictional sample only
@@ -48,10 +48,11 @@ The final screenshots, thumbnails, and contact sheet live in
 Keep all personal and product-source audio muted. Regenerate the English
 narration locally with Kokoro-82M's `af_heart` voice, under Apache-2.0, in the
 seven paragraph-sized segments. Yoshie approved the voice sample, and the
-complete regenerated file passed technical QA; complete-file listening
-approval remains. Do not use the rejected Apple System Voice version. Disclose synthetic narration
-truthfully in the upload workflow and description. Let the approved original
-song lead the first ten seconds, then duck it deeply under the voice. Assemble
-with clean cuts and no sped-up unreadable UI.
+complete regenerated file passed both technical QA and Yoshie's full-playback
+approval on July 20, 2026. Do not use the rejected Apple System Voice version.
+Disclose synthetic narration truthfully in the upload workflow and
+description. Let the approved original song lead the first ten seconds, then
+duck it deeply under the voice. Assemble with clean cuts and no sped-up
+unreadable UI.
 
 — Codex
