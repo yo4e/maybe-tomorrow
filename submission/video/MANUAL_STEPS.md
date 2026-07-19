@@ -4,20 +4,21 @@ Everything below requires Yoshie Yamada's likeness, account, legal
 confirmation, rights confirmation, or final product authority. Codex must not
 guess or publish these values.
 
-## Before recording
+## Before publication
 
 1. Review the final revised English narration and its Japanese meaning guide.
 2. Confirm that the hospital images may be shown publicly and that no visible
    companion or bystander is included without permission.
-3. Record the two silent B-roll clips in
-   [`RECORDING_RUNBOOK.md`](./RECORDING_RUNBOOK.md). No English performance is
-   required on camera.
+3. Approve the two captured silent B-roll clips and their crops in
+   [`RECORDING_RUNBOOK.md`](./RECORDING_RUNBOOK.md).
 4. Review the sanitized internet-cafe, gym, hospital, and festival derivatives
    before they enter the final edit. Confirm that third-party marks,
    copyrighted book covers, private screens, labels, and unapproved likenesses
    are absent.
 5. Confirm <https://yo4e.github.io/maybe-tomorrow/> still loads and shows the
    new favicon.
+6. Confirm the original song may be used in a public competition video and on
+   YouTube, and that the `Templex Tsukino / KazeX Records` credit is accurate.
 
 ## Record and publish the video
 
@@ -28,10 +29,13 @@ guess or publish these values.
    prepared description disclosure, and answer YouTube's synthetic-content
    upload question truthfully.
 4. Review the complete edit with headphones and request any corrections.
-5. Export and complete [`QA_CHECKLIST.md`](./QA_CHECKLIST.md).
-6. Upload with [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
-7. Set the video to **Public**, then confirm signed-out playback.
-8. Copy the final URL as `{{YOUTUBE_URL}}`.
+5. Review the Japanese-captioned companion against
+   [`CAPTIONS.ja.srt`](./CAPTIONS.ja.srt); its picture and English audio must
+   otherwise match the English-captioned edition.
+6. Export and complete [`QA_CHECKLIST.md`](./QA_CHECKLIST.md).
+7. Upload with [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
+8. Set the video to **Public**, then confirm signed-out playback.
+9. Copy the final URL as `{{YOUTUBE_URL}}`.
 
 ## Recommended accessibility spot-check
 

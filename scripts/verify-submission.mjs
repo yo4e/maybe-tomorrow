@@ -27,6 +27,7 @@ const requiredFiles = [
   'submission/video/RESET_AND_FALLBACK.md',
   'submission/video/TELEPROMPTER.txt',
   'submission/video/CAPTIONS.srt',
+  'submission/video/CAPTIONS.ja.srt',
   'submission/video/YOUTUBE_METADATA.md',
   'submission/video/DEVPOST_FINAL.md',
   'submission/video/MANUAL_STEPS.md',
@@ -411,6 +412,53 @@ async function verifyCaptions() {
   }
 }
 
+async function verifyJapaneseCaptions() {
+  const englishPath = 'submission/video/CAPTIONS.srt';
+  const japanesePath = 'submission/video/CAPTIONS.ja.srt';
+
+  if (!(await isNonEmptyFile(englishPath)) || !(await isNonEmptyFile(japanesePath))) {
+    info('Japanese caption checks skipped until both English and Japanese SRT files are present');
+    return;
+  }
+
+  const [englishSource, japaneseSource] = await Promise.all([
+    readFile(path.join(repositoryRoot, englishPath), 'utf8'),
+    readFile(path.join(repositoryRoot, japanesePath), 'utf8'),
+  ]);
+  const englishCues = parseSrt(englishSource);
+  const japaneseCues = parseSrt(japaneseSource);
+
+  if (japaneseCues.length !== englishCues.length) {
+    fail(`CAPTIONS.ja.srt has ${japaneseCues.length} cues; expected ${englishCues.length} to match CAPTIONS.srt`);
+    return;
+  }
+
+  for (let index = 0; index < englishCues.length; index += 1) {
+    const englishCue = englishCues[index];
+    const japaneseCue = japaneseCues[index];
+    const expectedSequence = index + 1;
+
+    if (!japaneseCue.timingValid || japaneseCue.start === null || japaneseCue.end === null) {
+      fail(`CAPTIONS.ja.srt cue ${expectedSequence} has an invalid timestamp line`);
+      continue;
+    }
+    if (japaneseCue.sequence !== englishCue.sequence) {
+      fail(`CAPTIONS.ja.srt cue ${expectedSequence} does not match the English sequence number`);
+    }
+    if (japaneseCue.start !== englishCue.start || japaneseCue.end !== englishCue.end) {
+      fail(`CAPTIONS.ja.srt cue ${expectedSequence} does not match the English cue timing`);
+    }
+    if (japaneseCue.text.length === 0) {
+      fail(`CAPTIONS.ja.srt cue ${expectedSequence} has no caption text`);
+    }
+  }
+
+  const japaneseErrors = errors.filter((error) => error.startsWith('CAPTIONS.ja.srt'));
+  if (japaneseErrors.length === 0) {
+    pass(`Japanese captions match the English timeline (${japaneseCues.length} cues)`);
+  }
+}
+
 async function verifyVideoTrademarkGuardrail() {
   const sources = new Map();
 
@@ -584,6 +632,7 @@ await verifyRequiredFiles();
 await verifyMarkdownLinks();
 await verifyVideoTrademarkGuardrail();
 await verifyCaptions();
+await verifyJapaneseCaptions();
 await verifyPngDimensions();
 await verifyPlaceholders();
 

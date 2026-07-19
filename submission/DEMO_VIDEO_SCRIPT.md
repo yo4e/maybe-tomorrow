@@ -8,11 +8,14 @@ procedure, answer key, teleprompter, and caption file.
 
 - **Target runtime:** 2:30
 - **Hard limit:** shorter than 3:00
-- **Narration:** 283 words, approximately 2:28 at 115 words per minute
+- **Narration:** 283 words, beginning at `0:10` and ending before `2:30`
 - **Platform:** public YouTube video
-- **Audio:** English narration directed and approved by Yoshie Yamada; no
-  music required
-- **Captions:** burned-in or uploaded from [`CAPTIONS.srt`](./video/CAPTIONS.srt)
+- **Audio:** English narration directed and approved by Yoshie Yamada, plus
+  original music credited to Templex Tsukino / KazeX Records and used with the
+  rights holder's permission
+- **Captions:** burned-in English from [`CAPTIONS.srt`](./video/CAPTIONS.srt),
+  with a Japanese-captioned companion export from
+  [`CAPTIONS.ja.srt`](./video/CAPTIONS.ja.srt)
 - **Capture:** deployed product plus local repository evidence; no browser
   developer tools and no personal calendar data
 
@@ -26,12 +29,20 @@ Codex made this particular build possible.
 
 ## Timed story
 
-### 0:00–0:19 — The problem and its origin
+### 0:00–0:10 — Music, title, and creator
 
-**Screen:** Begin with a silent shot of Yoshie at her computer, then use a
-brief hospital portrait and hospital-room still before opening the deployed
-home screen. The hospital footage establishes lived context only; it must not
-imply a medical benefit.
+**Screen:** Use Yoshie's silent computer footage in gentle slow motion. Keep
+`Maybe Tomorrow.` and the product descriptor readable without covering Yoshie
+or the product. Show the small credit `Music: Templex Tsukino / KazeX Records`.
+
+**Audio:** Let the original song establish the opening. Narration begins at
+`0:10`; after that point the song remains deeply ducked beneath the voice.
+
+### 0:10–0:28 — The problem and its origin
+
+**Screen:** Use a brief hospital portrait and a sanitized hospital-workspace
+still before opening the clean product home screen. The hospital footage
+establishes lived context only; it must not imply a medical benefit.
 
 **Narration:**
 
@@ -39,7 +50,7 @@ imply a medical benefit.
 > Yoshie Yamada, a novelist and freelance writer. I can turn even a hospital
 > room into a workspace. So I needed a brake: Maybe Tomorrow.
 
-### 0:19–0:38 — Quick Check
+### 0:28–0:44 — Quick Check
 
 **Screen:** Enter `Start another side project`, select **Check one thing**, and
 complete all eight answers from [`ANSWER_KEYS.md`](./video/ANSWER_KEYS.md).
@@ -52,7 +63,7 @@ readable.
 > about making it smaller. The rules are fixed and transparent, with three
 > verdicts—no generated advice or hidden confidence score.
 
-### 0:38–0:56 — Verdict and Cost of Yes
+### 0:44–1:02 — Verdict and Cost of Yes
 
 **Screen:** Hold on **Maybe tomorrow.**, then open **What would need to
 change?** and show the nearest alternative facts and `78,125 combinations`.
@@ -63,7 +74,7 @@ change?** and show the nearest alternative facts and `78,125 combinations`.
 > checks all 78,125 scored answer combinations and shows the smallest changes
 > needed for another result, while leaving my original answers untouched.
 
-### 0:56–1:20 — Optional calendar context
+### 1:02–1:26 — Optional calendar context
 
 **Screen:** Return home, select **Try the sample day**, then **View this day**.
 Show the fictional event labels and Today Map. Point to the four factual
@@ -76,7 +87,7 @@ metrics; do not claim that the sample contains overlaps.
 > uses event times, but only I decide what must stay, what can move or shrink,
 > what takes energy, and what protects recovery.
 
-### 1:20–1:39 — One honest trade-off
+### 1:26–1:44 — One honest trade-off
 
 **Screen:** Select **Check one thing**, enter `Draft another short story`,
 choose `1 hr`, and complete the sample answers. On the result, show the
@@ -91,14 +102,14 @@ combinations.
 > commitments and recovery stay protected, and the source calendar is never
 > edited.
 
-### 1:39–2:01 — How GPT-5.6 and Codex were used
+### 1:44–2:07 — How GPT-5.6 and Codex were used
 
-**Screen:** Begin with a silent over-shoulder shot of Yoshie reviewing the
-finished product. Cut to tightly cropped local text evidence only:
-signed local Markdown specifications, local `git log --oneline` history, and
-the final `CODEX_WORKLOG.md` verification. Use a neutral local text renderer or
-terminal and crop all window chrome. Do not record a hosting-service page,
-logo, remote URL, or account interface.
+**Screen:** Begin with Yoshie's silent close review of the finished product.
+Show Templex Tsukino's disclosed AI-generated persona, tightly cropped signed
+local Markdown evidence, a brief Codex visual, local git history, and the
+local verification summary. Do not show a hosting-service page, remote URL, account interface, or
+unrelated project data. Keep `AI-generated persona` visible during Templex's
+appearance.
 
 **Narration:**
 
@@ -107,7 +118,7 @@ logo, remote URL, or account interface.
 > signed specifications, rules, privacy boundaries, and review criteria. Codex
 > implemented, tested, documented, and deployed the browser app.
 
-### 2:01–2:30 — The life the product protects
+### 2:07–2:30 — The life the product protects
 
 **Screen:** Use short, sanitized cuts from the real build context: internet
 cafe, gym with a computer, and Yoshie at a local summer festival. Every crop
@@ -142,6 +153,9 @@ the product for the final privacy statement.
 - Real-life footage must be used only with Yoshie's approval and after removing
   every avoidable third-party mark, copyrighted work, private screen, and
   unapproved likeness.
+- The original song may be used only under Yoshie's confirmed rights. The
+  final file must carry the on-screen music credit and must not inherit cover
+  art, lyrics, location, device, or source-tool metadata.
 - Do not claim a medical benefit, accessibility certification, autonomous AI
   agency, or one-prompt creation.
 
@@ -152,6 +166,7 @@ the product for the final privacy statement.
 - [`video/ANSWER_KEYS.md`](./video/ANSWER_KEYS.md)
 - [`video/TELEPROMPTER.txt`](./video/TELEPROMPTER.txt)
 - [`video/CAPTIONS.srt`](./video/CAPTIONS.srt)
+- [`video/CAPTIONS.ja.srt`](./video/CAPTIONS.ja.srt)
 - [`video/RESET_AND_FALLBACK.md`](./video/RESET_AND_FALLBACK.md)
 - [`video/YOUTUBE_METADATA.md`](./video/YOUTUBE_METADATA.md)
 - [`assets/storyboard.html`](./assets/storyboard.html)

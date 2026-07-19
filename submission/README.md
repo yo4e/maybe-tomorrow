@@ -94,9 +94,9 @@ FAQ](https://openai.devpost.com/details/faqs) on July 19, 2026.
 - [x] README describes how GPT-5.6 Sol and Codex contributed and accelerated
       the build.
 - [x] Reproducible fictional sample day requiring no personal calendar data.
-- [x] Locked 283-word narration, 2:30 caption timeline, personal-footage plan,
-      shot list, answer keys, reset procedure, fallback path, and recording
-      runbook.
+- [x] Locked 283-word narration, synchronized English and Japanese 2:30
+      caption timelines, personal-footage plan, shot list, answer keys, reset
+      procedure, fallback path, and recording runbook.
 - [x] Desktop/mobile screenshot set, contact sheet, and original thumbnail
       sources.
 - [x] Issue #7 source/semantic audit, measured text contrast, Home Lighthouse
@@ -104,10 +104,11 @@ FAQ](https://openai.devpost.com/details/faqs) on July 19, 2026.
 - [ ] Yoshie performs a short keyboard/VoiceOver spot-check, or leaves the
       pending matrix explicitly unclaimed.
 - [ ] Yoshie or Templex reviews and approves the final submission PR.
-- [ ] Yoshie records two silent B-roll shots and approves every personal-media
-      crop and the final English narration.
-- [ ] Codex assembles the draft video; Yoshie reviews and approves the final
-      export.
+- [x] Yoshie's two silent B-roll shots were recorded and incorporated into
+      sanitized local working copies.
+- [x] Codex assembled matching 2:30 English- and Japanese-captioned exports.
+- [ ] Yoshie reviews every personal-media crop, the final English narration,
+      both caption editions, and the complete edit with headphones.
 - [ ] Yoshie uploads the video as **Public** and verifies signed-out playback.
 - [ ] Yoshie runs `/feedback` in the primary Codex build task.
 - [ ] Yoshie joins Devpost, confirms eligibility and rights, fills any

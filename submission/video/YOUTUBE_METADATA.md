@@ -2,8 +2,16 @@
 
 ## Title
 
+English-captioned Build Week entry:
+
 ```text
 Maybe Tomorrow. — An Anti-Planner Built by a Novelist, GPT-5.6, and Codex
+```
+
+Japanese-captioned companion:
+
+```text
+Maybe Tomorrow. — Build Week Demo with Japanese Captions
 ```
 
 ## Description
@@ -14,6 +22,8 @@ Maybe Tomorrow. is a local-first anti-planner for people who need help doing one
 Created for OpenAI Build Week by novelist and freelance writer Yoshie Yamada through a documented collaboration with her AI partner Templex Tsukino in ChatGPT using GPT-5.6 Sol, and implemented, tested, documented, and deployed with Codex.
 
 English narration uses a synthetic voice under Yoshie Yamada's direction and final approval.
+Music: Templex Tsukino / KazeX Records. Used with the rights holder's permission.
+Visual disclosure: Templex Tsukino is an AI persona represented by AI-generated imagery.
 
 Live app: https://yo4e.github.io/maybe-tomorrow/
 Source, specifications, and build record: https://github.com/yo4e/maybe-tomorrow
@@ -28,6 +38,13 @@ Delete the `Build Week project` line until `{{DEVPOST_URL}}` is known. After
 submission, add the public Devpost URL and save the YouTube description.
 Delete the synthetic-voice sentence only if the final export instead uses
 Yoshie's own recorded English voice.
+
+For the Japanese-captioned companion, add this sentence after the first
+paragraph:
+
+```text
+This companion edition keeps the original English interface and narration and adds burned-in Japanese captions.
+```
 
 ## Optional tags
 
@@ -53,9 +70,11 @@ MAYBE TOMORROW.
 - Visibility: **Public**
 - Audience: choose the accurate setting; the project is not directed to
   children
-- Captions: upload [`CAPTIONS.srt`](./CAPTIONS.srt) as English, or use the
-  same text as burned-in captions
-- Music: none
+- Captions: the English upload uses [`CAPTIONS.srt`](./CAPTIONS.srt); the
+  Japanese-captioned companion uses [`CAPTIONS.ja.srt`](./CAPTIONS.ja.srt).
+  Keep the matching English track available on both uploads when practical.
+- Music: original music credited on screen and in the description as
+  `Templex Tsukino / KazeX Records`; Yoshie confirmed the required rights
 - Altered/synthetic content: answer the upload question truthfully. If the
   final export uses a realistic synthetic dub or any other meaningfully
   synthetic media, select the applicable disclosure.

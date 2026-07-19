@@ -3,23 +3,33 @@
 ## Local video export
 
 - [ ] Duration is shorter than `3:00`; target is `2:30`.
-- [ ] English narration is audible from beginning to end.
+- [ ] English narration begins at `0:10` and remains audible through the final
+      paragraph.
 - [ ] The narration explicitly says `GPT-5.6 Sol` and `Codex`.
 - [ ] The narration states that Yoshie did not write or edit application code.
 - [ ] Yoshie's creator and product-authority role remains clear; her silent
       review footage does not imply that she wrote code.
-- [ ] Captions match [`TELEPROMPTER.txt`](./TELEPROMPTER.txt).
+- [ ] English captions match [`TELEPROMPTER.txt`](./TELEPROMPTER.txt), and the
+      Japanese edition changes only the burned-in caption text.
 - [ ] No caption covers a control or important metric.
 - [ ] The product and local text evidence remain legible at normal playback.
-- [ ] There is no copyrighted music.
+- [ ] The only music is the approved original song, the voice remains clear,
+      and `Music: Templex Tsukino / KazeX Records` is readable on screen.
 - [ ] Hospital footage establishes personal context only and does not imply a
       medical outcome or recommendation.
 - [ ] Every personal-footage derivative is approved by Yoshie and contains no
       avoidable third-party mark, copyrighted book cover, private screen,
       identifying label, QR code, or unapproved likeness.
 - [ ] Internet-cafe, gym, and festival source audio is fully muted.
+- [ ] Both MP4s are `1920 × 1080`, SDR Rec.709, constant `30 fps`, H.264 with
+      AAC `48 kHz` stereo, and exactly the same duration, picture timing, and
+      audio content.
+- [ ] Neither MP4 contains GPS, device information, cover art, lyrics,
+      source-tool comments, or other inherited metadata.
 - [ ] If a synthetic English voice is used, its use is permitted, it does not
       imitate a third party, and the upload disclosure is accurate.
+- [ ] Templex Tsukino's AI-generated persona is labeled on screen, remains
+      clear of both caption languages, and is disclosed in the description.
 - [ ] No personal calendar, notification, account detail, or private tab is
       visible.
 - [ ] The sample reports `0 min` overlapping time; the narration does not
@@ -45,6 +55,8 @@
       narration disclosure accurately describe the final audio and visuals.
 - [ ] Live app and repository links are clickable in the description.
 - [ ] English captions are available and synchronized.
+- [ ] The Japanese-captioned companion has been checked by Yoshie, and its
+      app screen and English audio are unchanged.
 - [ ] Thumbnail is clear at small size.
 
 ## Repository and live product

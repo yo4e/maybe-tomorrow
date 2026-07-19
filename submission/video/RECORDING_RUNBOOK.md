@@ -24,35 +24,23 @@ editor.
 9. Keep all raw personal footage outside the tracked repository. Work only
    from copies, and preserve the untouched originals.
 
-## 2. Record Yoshie's two silent B-roll clips
+## 2. Prepare Yoshie's two captured silent B-roll clips
 
-Both clips must be horizontal `16:9`, ideally `4K / 30 fps`. Use a tripod or
-stable surface, the rear `1x` camera, eye-level framing, and light from in front
-of or beside Yoshie rather than a bright window behind her. Record no speech;
-visible Japanese lip movement under English narration will look like a failed
-dub.
+Both clips were captured horizontally at `4K / 60 fps` in HLG HDR. Convert
+working derivatives to SDR Rec.709 and constant `30 fps`, mute source audio,
+apply rotation, and strip location, device, and source metadata before use.
 
 ### Clip A — Introduction
 
-Record `12–15` seconds with Yoshie framed from the chest up and the edge of a
-computer visible:
-
-1. hold still for two seconds;
-2. look at the computer for three seconds;
-3. look into the camera for three seconds;
-4. make a small natural smile; and
-5. return attention to the computer.
+Use the strongest five seconds: Yoshie works at the computer, then looks toward
+the camera and gives a small natural smile. Remove the brief soft-focus middle
+and play the two clean moments at half speed across `0:00–0:10`.
 
 ### Clip B — Product review
 
-Record `15–20` seconds from roughly 45 degrees behind Yoshie's shoulder, with
-her profile and the finished app visible:
-
-1. hold still for three seconds;
-2. make one slow trackpad scroll using only fictional data;
-3. read the screen;
-4. give one small nod; and
-5. hold still again.
+Crop the captured review clip approximately `1.5×` around the laptop and right
+hand. Slow its usable `2.84` seconds to fill `1:44–1:48`, and obscure the thin
+browser-chrome strip at the top of the laptop screen.
 
 Do not type. The shot should communicate product review, not manual coding.
 
@@ -146,9 +134,8 @@ personal browser history, or unrelated repository.
 2. Use either Yoshie's recorded English voice or a properly licensed synthetic
    English voice that Yoshie directs and approves. Do not imitate or clone a
    third party.
-3. If Yoshie records a Japanese timing guide, use it only as an editing scratch
-   track. It is not the final English submission audio and does not need to be
-   filmed.
+3. The Japanese edition keeps this same English audio and changes only the
+   burned-in captions.
 4. Prepare the seven paragraphs as separate audio takes.
 5. Deliver them conversationally, not as an advertisement.
 6. Aim for the caption segment lengths in [`SHOT_LIST.md`](./SHOT_LIST.md).
@@ -159,8 +146,8 @@ personal browser history, or unrelated repository.
 9. Keep natural breaths between sentences, then remove only distracting dead
    air.
 
-The locked script is `283` words. At 115 words per minute it is approximately
-`2:28`, leaving more than 30 seconds below the official three-minute maximum.
+The locked script is `283` words. The final timing voice starts at `0:10`; the
+seven paragraph slots end by `2:30`, leaving the first ten seconds to the song.
 
 ## 6. Assemble to the locked timeline
 
@@ -171,24 +158,28 @@ The locked script is `283` words. At 115 words per minute it is approximately
 5. Use the personal footage only at the exact ranges in
    [`SHOT_LIST.md`](./SHOT_LIST.md); the product remains the majority of the
    runtime.
-6. Add [`CAPTIONS.srt`](./CAPTIONS.srt) as burned-in captions or as the YouTube
-   caption track. If burned in, keep two lines maximum and avoid covering
-   controls.
-7. Use no music. Product and source-footage silence under narration is
-   intentional.
+6. Burn [`CAPTIONS.srt`](./CAPTIONS.srt) into the English edition and
+   [`CAPTIONS.ja.srt`](./CAPTIONS.ja.srt) into the Japanese edition. The visual
+   edit and audio must otherwise remain identical.
+7. Start the approved original song at `0:00`, let it lead the first ten
+   seconds, then duck it deeply beneath narration. Show
+   `Music: Templex Tsukino / KazeX Records` during the opening.
 8. End by `2:30`; never add an outro that pushes the export to `3:00` or more.
 
 ## 7. Export and verify
 
-1. Export MP4 using H.264 video and AAC audio at `1920 × 1080`.
-2. Play the complete local export with headphones.
-3. Complete every item in [`QA_CHECKLIST.md`](./QA_CHECKLIST.md).
-4. Upload to YouTube using [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
-5. Set visibility to **Public** in YouTube Studio.
-6. If a realistic synthetic dub or other meaningfully synthetic media is used,
+1. Export MP4 using H.264 video and AAC audio at `1920 × 1080`, SDR Rec.709,
+   constant `30 fps`, and `48 kHz` stereo.
+2. Strip inherited metadata and confirm that no GPS, device name, attached
+   cover art, lyrics, or source-tool comment remains.
+3. Play both complete local exports with headphones.
+4. Complete every item in [`QA_CHECKLIST.md`](./QA_CHECKLIST.md).
+5. Upload to YouTube using [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
+6. Set visibility to **Public** in YouTube Studio.
+7. If a realistic synthetic dub or other meaningfully synthetic media is used,
    answer the YouTube altered/synthetic-content question truthfully and include
    the prepared narration disclosure in the description.
-7. Open the final URL in a signed-out/private browser window and play from
+8. Open the final URL in a signed-out/private browser window and play from
    beginning to end.
 
 — Codex

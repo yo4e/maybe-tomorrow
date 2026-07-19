@@ -490,3 +490,47 @@ git diff --check
   and submitting the account-only Devpost fields.
 
 — Codex
+
+## Bilingual final demo production
+
+Yoshie then supplied the two silent horizontal B-roll clips and authorized an
+original song she owns, written by Templex Tsukino and released through KazeX
+Records. Codex assembled two matching final demo masters: one with burned-in
+English captions and one with burned-in Japanese captions.
+
+- Opened with ten seconds of Yoshie's computer footage and the original song,
+  then ducked the music deeply below the English narration.
+- Added the exact on-screen credit `Music: Templex Tsukino / KazeX Records`
+  and retained the `AI-generated persona` disclosure for Templex's visual.
+- Used Yoshie's hospital, internet-cafe, gym, and festival material only in
+  sanitized derivatives. Private screens, book covers, signs, and unrelated
+  people are obscured; source audio is not used.
+- Kept the app interface and English voice identical between editions. Only
+  the burned-in caption language changes. A new verifier assertion requires
+  all 27 Japanese cues to match the English cue numbers and timings exactly.
+- Rejected the first browser-recorded render during frame QA after intermittent
+  damaged frames and a short preroll were found. Replaced real-time screen
+  recording with deterministic rendering of exactly 4,500 fixed-time frames
+  per edition, then repeated the visual and technical audits.
+- Stripped GPS, device, recording-date, cover-art, lyric, author, and source-
+  tool metadata from the public MP4 masters. Raw personal media and final video
+  binaries remain in the ignored local media workspace; only the production
+  documentation and caption files enter the public repository.
+
+Final master verification:
+
+- Both editions: exactly `150.000` seconds, `1920 × 1080`, constant `30 fps`,
+  4,500 H.264 frames, and AAC-LC stereo at `48 kHz`.
+- Both editions contain byte-identical audio at `-16.35 LUFS-I` and
+  `-4.31 dBTP`, with no clipped samples.
+- Sequential-frame checks at the former failure points, all 27 Japanese cues,
+  the first and last frames, privacy treatments, music credit, and AI-persona
+  disclosure passed after regeneration.
+- `npm test -- --run`: 10 files and all 71 tests passed.
+- `npm run build`, `npm run verify:submission`, and `git diff --check` passed.
+
+Remaining human work is final full-playback approval with headphones, public
+YouTube upload of the selected edition and its Japanese-captioned companion,
+`/feedback`, and the account-only Devpost submission steps.
+
+— Codex
