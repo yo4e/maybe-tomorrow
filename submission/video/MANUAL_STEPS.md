@@ -1,99 +1,70 @@
-# Human-Only Submission Steps
+# Human-Only Submission Record
 
-Everything below requires Yoshie Yamada's likeness, account, legal
-confirmation, rights confirmation, or final product authority. Codex must not
-guess or publish these values.
+Status: completed by Yoshie Yamada on July 20, 2026.
 
-## Already confirmed by Yoshie
+This file records the submission actions that required Yoshie's likeness,
+accounts, legal and rights confirmations, or final product authority. Codex did
+not guess or publish any private value.
 
-- The complete visual edit and personal-footage crops are approved.
-- The selected festival-stall segment has been checked for trademark logos and
-  does not need a generic blur.
-- The original song may be used in the public competition video and on
-  YouTube, with the credit `Templex Tsukino / KazeX Records`.
-- The Kokoro-82M `af_heart` voice sample is approved for the final local
-  regeneration under Apache-2.0.
-- The Apple System Voice test is rejected and must not be published.
-- Codex rendered the complete Kokoro-narrated English candidate and passed its
-  technical, timing, loudness, clipping, stream, metadata, and visual-stream
-  identity checks.
-- Yoshie listened to and watched the complete English master and approved its
-  pronunciation, clarity, pace, meaning, music balance, caption sync, and
-  final visual/rights pass.
-- Templex reviewed Pull Request #10 and reported no remaining
-  repository-visible blocker once Yoshie's playback approval was complete.
+## Completed approvals and publication
 
-## Before publication
+- Yoshie approved the complete visual edit, personal-footage crops, English
+  narration, original music treatment, caption synchronization, and final
+  visual and rights pass.
+- The selected festival-stall segment was manually checked for trademark logos.
+- The rejected Apple System Voice candidate was not published. The approved
+  narration uses Kokoro-82M `af_heart` under Apache-2.0 with a truthful public
+  disclosure.
+- The final English master with SHA-256
+  `8b57a622f018422852589d13cb673e377685d122d58c716b4ea0bb2e0f6d2332`
+  was uploaded to YouTube and set to **Public**.
+- Signed-out playback, the thumbnail, burned-in English captions, and public
+  application and repository links were checked.
+- `/feedback` was completed in the primary Codex build task. Its Session ID was
+  pasted only into Devpost and is not stored in this repository.
+- Yoshie completed the account-only eligibility and rights statements,
+  previewed the project, and submitted it to OpenAI Build Week.
+- A separate Japanese-captioned video was considered and is not planned for
+  this release.
 
-1. Confirm <https://yo4e.github.io/maybe-tomorrow/> still loads and shows the
-   new favicon.
+## Public release
 
-## Publish the approved video
+- Live app: <https://yo4e.github.io/maybe-tomorrow/>
+- Repository: <https://github.com/yo4e/maybe-tomorrow>
+- OpenAI Build Week: <https://openai.devpost.com/>
+- Public YouTube demo: <https://www.youtube.com/watch?v=l8Zu30-sUvQ>
+- Public Devpost entry:
+  <https://devpost.com/software/maybe-tomorrow-6oau91>
 
-1. Use the approved English master whose SHA-256 is
-   `8b57a622f018422852589d13cb673e377685d122d58c716b4ea0bb2e0f6d2332`.
-2. Add the prepared Kokoro synthetic-voice disclosure and answer YouTube's
-   synthetic-content upload question truthfully.
-3. Upload with [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
-4. Set the video to **Public**, then confirm signed-out playback to the end.
-5. Copy the final URL as `{{YOUTUBE_URL}}`.
+## Optional post-submission cross-link
 
-An optional Japanese-captioned companion may be made after submission if time
-and resources remain. It is not required for the Build Week entry.
+The public YouTube description is clean and complete except for a link back to
+the now-public Devpost entry. In YouTube Studio, add the `Build Week project`
+line from [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md), save, and verify the
+link while signed out. This edit does not change the submitted video.
 
-## Recommended accessibility spot-check
+## Private field boundary
 
-Automated evidence is recorded in
-[`../../docs/ACCESSIBILITY_AUDIT.md`](../../docs/ACCESSIBILITY_AUDIT.md), but it
-is not a screen-reader test or certification. Before submission, if practical:
+The repository intentionally retains only this placeholder:
 
-1. use the keyboard alone to complete the core Quick Check;
-2. turn on macOS VoiceOver and confirm the question legend, selected answer,
-   verdict, Today Map text order, and room-making option are understandable;
-3. save and delete one fictional decision and confirm focus does not disappear;
-4. record the browser, VoiceOver version, and result in the audit matrix; and
-5. leave every untested platform marked **Pending** rather than generalizing
-   from one device.
+```text
+Codex /feedback Session ID: {{FEEDBACK_SESSION_ID}}
+```
 
-This spot-check is recommended product QA, not a reason to claim WCAG
-certification in Devpost.
+Do not replace it with the real value in a commit, issue, pull request, public
+video description, or other public artifact.
 
-## Obtain the Codex Session ID
+## Accessibility disclosure
 
-1. Return to the primary Codex task where most of the application's core
-   functionality was built—this task, not a new one.
-2. Enter `/feedback` and complete the feedback flow.
-3. Copy the Session ID shown by Codex.
-4. Paste it directly into the Devpost form as `{{FEEDBACK_SESSION_ID}}`.
-5. Do **not** commit the real Session ID to this public repository, a GitHub
-   issue, a pull request, or the YouTube description.
-
-## Complete Devpost
-
-1. Join the challenge at <https://openai.devpost.com/> with Yoshie's account.
-2. Confirm personal eligibility, team/participant details, rights to the
-   submitted materials, and acceptance of the official rules. These are human
-   legal statements.
-3. Select the **Apps for Your Life** track.
-4. Paste the matching sections from [`DEVPOST_FINAL.md`](./DEVPOST_FINAL.md).
-5. Add:
-   - live app: <https://yo4e.github.io/maybe-tomorrow/>;
-   - repository: <https://github.com/yo4e/maybe-tomorrow>;
-   - public YouTube video: `{{YOUTUBE_URL}}`; and
-   - Codex feedback Session ID: `{{FEEDBACK_SESSION_ID}}`.
-6. Upload the prepared assets from [`../assets/`](../assets/).
-7. Inspect the live form for any required field that is only visible after
-   joining. The public rules do not expose every account-specific form field.
-8. Preview the submission and remove every unresolved placeholder.
-9. Submit before **July 21, 2026 at 5:00 PM PDT**, which is **July 22, 2026 at
-   9:00 AM JST**.
-10. Copy the public project URL as `{{DEVPOST_URL}}` and add it to the YouTube
-    description after submission.
+Automated and keyboard evidence is recorded in
+[`../../docs/ACCESSIBILITY_AUDIT.md`](../../docs/ACCESSIBILITY_AUDIT.md).
+Untested screen-reader and platform combinations remain explicitly **Pending**;
+the submission does not claim accessibility certification.
 
 ## Keep available for judging
 
-Keep the app, public repository, and public video free and accessible through
-the judging and winner-announcement period. Do not rename or delete their URLs
-while judging is active.
+Keep the app, public repository, public video, and Devpost entry free and
+accessible through the judging and winner-announcement period. Do not rename or
+delete their URLs while judging is active.
 
 — Codex

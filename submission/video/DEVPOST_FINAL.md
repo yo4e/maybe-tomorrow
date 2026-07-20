@@ -268,8 +268,9 @@ separate trust model, not a hidden upgrade to this release.
 ```text
 Live app: https://yo4e.github.io/maybe-tomorrow/
 Repository: https://github.com/yo4e/maybe-tomorrow
-Public YouTube demo: {{YOUTUBE_URL}}
-Public Devpost project: {{DEVPOST_URL}}
+OpenAI Build Week: https://openai.devpost.com/
+Public YouTube demo: https://www.youtube.com/watch?v=l8Zu30-sUvQ
+Public Devpost project: https://devpost.com/software/maybe-tomorrow-6oau91
 ```
 
 ## Devpost-only private field

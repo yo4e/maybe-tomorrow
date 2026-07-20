@@ -601,3 +601,70 @@ produced after submission if time and credits remain.
   represented as certification.
 
 — Codex
+
+## Public submission completion and repository cleanup — July 20, 2026
+
+Yoshie completed every account-bound release step and submitted **Maybe
+Tomorrow.** to OpenAI Build Week in the **Apps for Your Life** category.
+
+- Published the approved 2:30 English master at
+  <https://www.youtube.com/watch?v=l8Zu30-sUvQ>, confirmed YouTube Studio
+  visibility was **Public**, and verified signed-out playback.
+- Completed `/feedback` in the primary Codex build task and pasted the Session
+  ID only into Devpost. The private value is deliberately absent from the
+  repository, issues, pull requests, and public descriptions.
+- Completed and previewed every required Devpost field, then submitted the
+  public entry at
+  <https://devpost.com/software/maybe-tomorrow-6oau91>.
+- Checked the public Devpost profile and project page while signed out. The
+  project name, tagline, story, Build With tags, ten-item media carousel,
+  embedded video, captions, Created By statement, live-app link, and repository
+  link were present.
+- Recorded the decision not to produce a separate Japanese-captioned video for
+  this release. The timing-matched Japanese SRT remains an archival production
+  artifact; the English master is canonical.
+- Replaced public URL placeholders throughout the submission archive and kept
+  only the private `/feedback` Session ID placeholder in designated files.
+  Updated the submission verifier to enforce that smaller boundary.
+- Audited the complete Git history and current index for audiovisual media. No
+  MP4, MOV, WebM, MP3, WAV, AAC, CAF, M4A, personal photo, source audio,
+  soundtrack source, narration output, or rendered video master is tracked or
+  has appeared in repository history. Added `/動画素材/` to the committed
+  `.gitignore` so future clones preserve the same boundary that had previously
+  existed only in the local repository exclude file.
+- Kept the root MIT license unchanged because the finished video and private
+  production media are not distributed in the repository. Public fictional
+  screenshots, original thumbnail artwork, captions, scripts, and production
+  documentation remain repository artifacts.
+- Added a repository-only post-hackathon roadmap covering an installable PWA
+  path and a separately specified, opt-in, read-only calendar connection. Both
+  are possible directions rather than promises; Quick Check, deterministic
+  explanations, local snapshot import, and the current privacy model remain
+  release gates.
+- Audited the public YouTube metadata directly. The published title matches the
+  prepared metadata, and the clean description matches except for the final
+  Devpost cross-link. The repository records that optional external edit for
+  Yoshie; the submitted video is unaffected.
+
+Public release map:
+
+- app: <https://yo4e.github.io/maybe-tomorrow/>;
+- repository: <https://github.com/yo4e/maybe-tomorrow>;
+- demo: <https://www.youtube.com/watch?v=l8Zu30-sUvQ>;
+- Devpost: <https://devpost.com/software/maybe-tomorrow-6oau91>; and
+- hackathon: <https://openai.devpost.com/>.
+
+The optional screen-reader platform matrix remains explicitly **Pending** and
+no accessibility certification is claimed.
+
+Cleanup verification:
+
+- `npm test -- --run`: 10 files and all 71 tests passed.
+- `npm run build`: TypeScript and the Vite production build passed.
+- `npm run verify:submission`: all manifest, link, video guardrail, caption,
+  asset, and placeholder checks passed.
+- `git diff --check`: passed.
+- The live app, Devpost entry, public YouTube page, hackathon page, and public
+  repository each returned HTTP 200.
+
+— Codex

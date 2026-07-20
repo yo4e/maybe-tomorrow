@@ -213,6 +213,9 @@ The collaboration story and the product thesis converge in one line:
 - Human feedback and refinement review: [Issue #5](https://github.com/yo4e/maybe-tomorrow/issues/5)
 - Review branch and merged implementation: [Pull Request #4](https://github.com/yo4e/maybe-tomorrow/pull/4)
 - Deployed application: https://yo4e.github.io/maybe-tomorrow/
+- Public demo: https://www.youtube.com/watch?v=l8Zu30-sUvQ
+- Devpost entry: https://devpost.com/software/maybe-tomorrow-6oau91
+- OpenAI Build Week: https://openai.devpost.com/
 
 ## Claims to use carefully
 

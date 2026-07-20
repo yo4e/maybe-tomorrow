@@ -2,3 +2,6 @@ node_modules/
 dist/
 *.tsbuildinfo
 .DS_Store
+
+# Local video-production workspace: personal media, audio, and rendered masters.
+/動画素材/

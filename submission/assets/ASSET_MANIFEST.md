@@ -1,10 +1,10 @@
 # Submission Asset Manifest
 
-All product screenshots were captured from this branch's local Vite release
-candidate on July 19, 2026 with the bundled fictional sample calendar. They
-should be spot-checked against GitHub Pages after the reviewed branch is merged.
-No personal calendar, account data, notification, or local journal entry
-appears in the set.
+All product screenshots were captured from the local Vite release candidate on
+July 19, 2026 with the bundled fictional sample calendar, then checked against
+the deployed GitHub Pages release and published with the Devpost entry. No
+personal calendar, account data, notification, or local journal entry appears
+in the set.
 
 ## Product screenshots
 
@@ -64,13 +64,14 @@ in the ignored local production workspace and are not repository assets.
 | Festival segment | Approved by Yoshie | Yoshie checked the selected frames and confirmed that no disallowed trademark logo appears |
 | Original music | Approved in the visual edit | Yoshie controls the rights; on-screen credit: `Music: Templex Tsukino / KazeX Records` |
 | English synthetic narration | Rights-cleared replacement rendered; technical QA and Yoshie's complete-file playback approval passed | Kokoro-82M `af_heart`; the model page identifies Apache-2.0; credit and tooling details are recorded in [`THIRD_PARTY_NOTICES.md`](../../THIRD_PARTY_NOTICES.md) |
-| Japanese captions | Timing-matched SRT prepared | Optional post-submission edition; the submission master is English only |
+| Japanese captions | Timing-matched SRT retained | Archival translation only; a separate companion is not planned for this release |
 
 The earlier macOS Samantha System Voice candidate was rejected before
 publication after the license audit. Its technical or editorial QA results do
 not clear the Kokoro replacement. The replacement has now passed renewed
 technical, timing, loudness, clipping, stream, metadata, and visual-stream
 identity checks, plus Yoshie's complete-file playback approval on July 20,
-2026. It is the approved English submission master awaiting upload.
+2026. It is the published English submission master at
+<https://www.youtube.com/watch?v=l8Zu30-sUvQ>.
 
 — Codex

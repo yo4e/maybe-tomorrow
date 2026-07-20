@@ -15,6 +15,17 @@ The app has no account, backend, analytics, external API, calendar connection,
 or runtime AI. A calendar snapshot can be deliberately imported from an `.ics`
 file or a ZIP export, but every byte is parsed in the current browser tab.
 
+## OpenAI Build Week entry
+
+Maybe Tomorrow. was submitted to [OpenAI Build
+Week](https://openai.devpost.com/) in the **Apps for Your Life** category on
+July 20, 2026.
+
+- [Try the live application](https://yo4e.github.io/maybe-tomorrow/)
+- [View the Devpost entry](https://devpost.com/software/maybe-tomorrow-6oau91)
+- [Watch the 2:30 demo](https://www.youtube.com/watch?v=l8Zu30-sUvQ)
+- [Browse the public repository](https://github.com/yo4e/maybe-tomorrow)
+
 ## What makes it an anti-planner
 
 Most productivity tools help users fit more into a day. Maybe Tomorrow. asks a
@@ -111,6 +122,7 @@ definition are skipped rather than guessed.
 - [`docs/DESIGN_SYSTEM.md`](./docs/DESIGN_SYSTEM.md) — original visual foundation
 - [`docs/DEMO_SCENARIOS.md`](./docs/DEMO_SCENARIOS.md) — reproducible Quick Check and anti-planner demos
 - [`docs/ACCESSIBILITY_AUDIT.md`](./docs/ACCESSIBILITY_AUDIT.md) — measured contrast, semantic review, automated evidence, and pending human screen-reader matrix
+- [`docs/POST_HACKATHON_ROADMAP.md`](./docs/POST_HACKATHON_ROADMAP.md) — possible directions after the submitted Build Week release
 - [`CODEX_WORKLOG.md`](./CODEX_WORKLOG.md) — implementation record and verification
 - [Issue #3](../../issues/3) — expansion proposal, Templex review, and authorization
 - [Issue #5](../../issues/5) — Yoshie feedback, Quick Check hierarchy, and editorial-identity refinement
@@ -151,6 +163,11 @@ components remain under their respective licenses and are not relicensed under
 MIT; exact versions, sources, and included license texts are recorded in
 [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md).
 
+The finished demo video, personal footage, raw audio, soundtrack sources,
+narration outputs, and other local production files are not distributed in
+this repository and are outside the repository license. The local
+`動画素材/` production workspace is explicitly ignored by Git.
+
 ## Demo paths
 
 ### Core decision first
@@ -171,11 +188,15 @@ MIT; exact versions, sources, and included license texts are recorded in
 ## Status
 
 The approved local-first Anti-Planner, Issue #5 hierarchy refinement, final
-US-English copy pass, and paper-tone polish are merged into `main` and deployed.
+US-English copy pass, and paper-tone polish are merged into `main`, deployed,
+and submitted to OpenAI Build Week.
 
-Public application:
+Public release:
 
-> https://yo4e.github.io/maybe-tomorrow/
+- Application: <https://yo4e.github.io/maybe-tomorrow/>
+- Devpost: <https://devpost.com/software/maybe-tomorrow-6oau91>
+- Demo video: <https://www.youtube.com/watch?v=l8Zu30-sUvQ>
+- Hackathon: <https://openai.devpost.com/>
 
 Final recorded verification:
 
