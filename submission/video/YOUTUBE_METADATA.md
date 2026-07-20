@@ -30,9 +30,8 @@ License: MIT for project code and documentation. Third-party components remain u
 ```
 
 The public description was verified without a template placeholder or
-production instructions. Its only remaining post-submission edit is to add the
-final Devpost URL shown above. Do not upload or describe the rejected Apple
-System Voice test as a final narration source.
+production instructions, and the final Devpost URL is present. Do not upload or
+describe the rejected Apple System Voice test as a final narration source.
 
 A Japanese-captioned companion was considered and is not planned for this
 release. The timing-matched Japanese SRT remains an archival production file.

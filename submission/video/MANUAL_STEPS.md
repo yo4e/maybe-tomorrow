@@ -36,12 +36,11 @@ not guess or publish any private value.
 - Public Devpost entry:
   <https://devpost.com/software/maybe-tomorrow-6oau91>
 
-## Optional post-submission cross-link
+## Completed post-submission cross-link
 
-The public YouTube description is clean and complete except for a link back to
-the now-public Devpost entry. In YouTube Studio, add the `Build Week project`
-line from [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md), save, and verify the
-link while signed out. This edit does not change the submitted video.
+Yoshie added the public Devpost entry to the YouTube description. The final URL
+was verified on the signed-out public page; no template placeholder or
+production instruction is visible.
 
 ## Private field boundary
 

@@ -126,9 +126,8 @@ FAQ](https://openai.devpost.com/details/faqs) on July 19, 2026.
       and submitted.
 - [x] The optional Japanese-captioned companion was considered and is not
       planned for this release.
-- [ ] Optional post-submission cross-link: add the final Devpost URL from
-      [`video/YOUTUBE_METADATA.md`](./video/YOUTUBE_METADATA.md) to the public
-      YouTube description. The submitted video and Devpost entry are complete.
+- [x] The final Devpost URL was added to the public YouTube description and
+      verified while signed out.
 
 ## Final public values and private placeholder
 

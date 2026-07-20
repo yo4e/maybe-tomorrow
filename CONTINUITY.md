@@ -14,11 +14,8 @@ Public release:
 - demo video: <https://www.youtube.com/watch?v=l8Zu30-sUvQ>; and
 - hackathon: <https://openai.devpost.com/>.
 
-No required submission work remains. One optional public-metadata cross-link is
-recorded in [`submission/video/QA_CHECKLIST.md`](./submission/video/QA_CHECKLIST.md):
-add the final Devpost URL to the otherwise clean YouTube description. The Build
-Week release should otherwise stay stable through judging. Possible later
-product work belongs in
+No submission or public-metadata work remains. The Build Week release should
+stay stable through judging. Possible later product work belongs in
 [`docs/POST_HACKATHON_ROADMAP.md`](./docs/POST_HACKATHON_ROADMAP.md) and must
 begin with a new approved issue rather than silently changing the shipped trust
 model.

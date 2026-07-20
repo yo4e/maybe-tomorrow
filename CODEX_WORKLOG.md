@@ -642,9 +642,8 @@ Tomorrow.** to OpenAI Build Week in the **Apps for Your Life** category.
   explanations, local snapshot import, and the current privacy model remain
   release gates.
 - Audited the public YouTube metadata directly. The published title matches the
-  prepared metadata, and the clean description matches except for the final
-  Devpost cross-link. The repository records that optional external edit for
-  Yoshie; the submitted video is unaffected.
+  prepared metadata, the description is clean, and Yoshie added the final
+  Devpost cross-link. The completed description was verified while signed out.
 
 Public release map:
 

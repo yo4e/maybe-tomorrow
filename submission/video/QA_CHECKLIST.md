@@ -90,9 +90,8 @@ Human release evidence recorded on July 20, 2026:
       browser.
 - [x] The title matches the published title in
       [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
-- [ ] Add the final Devpost URL from
-      [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md) to the otherwise clean
-      public description, then verify the link while signed out.
+- [x] The final Devpost URL is present in the otherwise clean public
+      description and was verified while signed out.
 - [x] The public description discloses the Kokoro narration and Templex
       Tsukino's AI-generated persona. Account-only upload declarations remain
       Yoshie's statement and are not independently reproduced here.
