@@ -1,14 +1,24 @@
 # CONTINUITY
 
-Last updated: 2026-07-18
+Last updated: 2026-07-20
 
 ## Current state
 
-Maybe Tomorrow. has moved from idea selection into a frozen implementation specification.
+Maybe Tomorrow. is implemented, tested, deployed, documented, and submitted to
+OpenAI Build Week in the **Apps for Your Life** category.
 
-The repository contains the product story, scope, scoring algorithm, complete UX copy, design system, implementation plan, reproducible demo scenarios, and hackathon submission narrative. No application code has been written yet.
+Public release:
 
-The next action is not further ideation. The next action is implementation.
+- application: <https://yo4e.github.io/maybe-tomorrow/>;
+- Devpost entry: <https://devpost.com/software/maybe-tomorrow-6oau91>;
+- demo video: <https://www.youtube.com/watch?v=l8Zu30-sUvQ>; and
+- hackathon: <https://openai.devpost.com/>.
+
+No submission or public-metadata work remains. The Build Week release should
+stay stable through judging. Possible later product work belongs in
+[`docs/POST_HACKATHON_ROADMAP.md`](./docs/POST_HACKATHON_ROADMAP.md) and must
+begin with a new approved issue rather than silently changing the shipped trust
+model.
 
 ## Core identity
 
@@ -54,6 +64,12 @@ The app must remain deterministic, private, local, fast, and gently funny.
 9. `docs/SUBMISSION_NOTES.md`
 
 ## Next entry
+
+> **Historical handoff, now completed.** This section preserves the original
+> pre-implementation instruction. The current state and any real next action
+> are recorded at the top of this file and in the post-hackathon roadmap.
+>
+> — Codex
 
 Implement the MVP end-to-end from Issue #1.
 
@@ -132,8 +148,30 @@ paper, midnight ink, cobalt hierarchy, small citron markers, and sparing coral.
 Google account synchronization remains repository-only roadmap material and is
 not promised inside the application.
 
-The refinement is implemented on `codex/anti-planner-expansion` as a follow-up
-to PR #4. Do not merge or deploy it until Yoshie has reviewed the first
-viewport, copy, import guide, and visual identity in the browser.
+The refinement was implemented, reviewed in the browser by Yoshie, and merged
+through PR #4 after she approved the first viewport, copy, import guide, and
+visual identity.
+
+— Codex
+
+## Submission completion — 2026-07-20
+
+Yoshie approved the deployed application and the complete English demo, made
+the YouTube video public, completed `/feedback` without placing its private
+Session ID in the repository, and submitted the final Devpost entry. The
+public profile, project story, media gallery, video embed, technology tags,
+application link, and repository link were checked while signed out.
+
+The Japanese-captioned companion was considered and deliberately not produced;
+the submitted English master remains the canonical demo. Personal footage,
+audio, narration outputs, soundtrack sources, and rendered video masters remain
+outside Git. The video-related public repository artifacts are limited to
+documentation, captions, fictional product screenshots, and original thumbnail
+artwork.
+
+The Build Week release is complete. Future installability or calendar-account
+work is optional, post-hackathon scope governed by the repository-only roadmap.
+
+**The brake shipped.**
 
 — Codex

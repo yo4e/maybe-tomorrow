@@ -85,18 +85,22 @@ Human release evidence recorded on July 20, 2026:
 
 ## Public YouTube upload
 
-- [ ] YouTube Studio shows visibility **Public**, not Unlisted or Private.
-- [ ] `{{YOUTUBE_URL}}` plays to the end in a signed-out/private browser.
-- [ ] Title and description match [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
-- [ ] If applicable, YouTube's altered/synthetic-content setting and the
-      Kokoro narration disclosure accurately describe the final audio and
-      visuals.
-- [ ] Live app and repository links are clickable in the description.
-- [ ] English captions are available and synchronized.
-- [ ] Thumbnail is clear at small size.
+- [x] YouTube Studio shows visibility **Public**, not Unlisted or Private.
+- [x] <https://www.youtube.com/watch?v=l8Zu30-sUvQ> plays in a signed-out
+      browser.
+- [x] The title matches the published title in
+      [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md).
+- [x] The final Devpost URL is present in the otherwise clean public
+      description and was verified while signed out.
+- [x] The public description discloses the Kokoro narration and Templex
+      Tsukino's AI-generated persona. Account-only upload declarations remain
+      Yoshie's statement and are not independently reproduced here.
+- [x] Live app and repository links are clickable in the description.
+- [x] Burned-in English captions are visible and synchronized.
+- [x] Thumbnail is clear at small size.
 
-The Japanese SRT is retained for a possible post-submission companion only; no
-Japanese video is required for this checklist.
+The Japanese SRT is retained as an archival timing-matched translation. A
+separate Japanese companion is not planned for this release.
 
 ## Repository and live product
 
@@ -104,9 +108,8 @@ Japanese video is required for this checklist.
 - [x] GitHub Pages deployment succeeded for merge commit `d42c36a` in Actions
       run `29708164385`, and the deployed home and favicon returned HTTP 200.
 - [x] Live home, core Quick Check, sample Today Map, and room-making path work.
-- [ ] A keyboard/VoiceOver spot-check is recorded, or remaining assistive-
-      technology coverage is left explicitly Pending without a certification
-      claim.
+- [x] Remaining untested assistive-technology coverage is explicitly marked
+      **Pending** without a certification claim.
 - [x] Repository is public.
 - [x] Root `LICENSE` is MIT with Yoshie Yamada's 2026 copyright notice.
 - [x] `THIRD_PARTY_NOTICES.md` is present and does not relicense dependencies.
@@ -116,24 +119,25 @@ Japanese video is required for this checklist.
 
 ## Devpost form
 
-- [ ] Yoshie has joined the challenge and confirmed eligibility and rights.
-- [ ] Track is **Apps for Your Life**.
-- [ ] Project copy comes from [`DEVPOST_FINAL.md`](./DEVPOST_FINAL.md).
-- [ ] Public video URL is pasted in the correct field.
-- [ ] `/feedback` was run in the primary Codex build task.
-- [ ] `{{FEEDBACK_SESSION_ID}}` is pasted only into Devpost, not the repository.
-- [ ] App, repository, screenshot, and thumbnail links/files are present.
-- [ ] No unresolved placeholder remains in the submitted form.
-- [ ] Preview has been checked before pressing Submit.
-- [ ] Submission is complete before July 21, 2026 at 5:00 PM PDT / July 22,
+- [x] Yoshie joined the challenge and confirmed eligibility and rights.
+- [x] Track is **Apps for Your Life**.
+- [x] Project copy comes from [`DEVPOST_FINAL.md`](./DEVPOST_FINAL.md).
+- [x] Public video URL is pasted in the correct field.
+- [x] `/feedback` was run in the primary Codex build task.
+- [x] `{{FEEDBACK_SESSION_ID}}` was pasted only into Devpost, not the
+      repository.
+- [x] App, repository, screenshots, thumbnail, captions, and links are present.
+- [x] No unresolved placeholder remained in the submitted form.
+- [x] The public project page was reviewed before pressing Submit.
+- [x] Submission was completed before July 21, 2026 at 5:00 PM PDT / July 22,
       2026 at 9:00 AM JST.
 
 Final values for the human's private checklist:
 
 ```text
-Public YouTube demo: {{YOUTUBE_URL}}
+Public YouTube demo: https://www.youtube.com/watch?v=l8Zu30-sUvQ
 Codex feedback Session ID: {{FEEDBACK_SESSION_ID}}
-Public Devpost project: {{DEVPOST_URL}}
+Public Devpost project: https://devpost.com/software/maybe-tomorrow-6oau91
 ```
 
 Do not replace the Session ID placeholder in this public repository.

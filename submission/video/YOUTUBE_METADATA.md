@@ -1,14 +1,15 @@
 # YouTube Metadata
 
-## Title
-
-Build Week entry:
+## Published title
 
 ```text
-Maybe Tomorrow. — An Anti-Planner Built by a Novelist, GPT-5.6, and Codex
+OpenAI Build Week: Maybe Tomorrow. — An Anti-Planner Built by a Novelist, GPT-5.6, and Codex
 ```
 
-## Description
+## Description to publish
+
+Paste **only** the contents of the following code block into YouTube Studio.
+Do not include this heading, the code fence, or any instructions below it.
 
 ```text
 Maybe Tomorrow. is a local-first anti-planner for people who need help doing one less thing.
@@ -21,22 +22,19 @@ Visual disclosure: Templex Tsukino is an AI persona represented by AI-generated 
 
 Live app: https://yo4e.github.io/maybe-tomorrow/
 Source, specifications, and build record: https://github.com/yo4e/maybe-tomorrow
-Build Week project: {{DEVPOST_URL}}
+Build Week project: https://devpost.com/software/maybe-tomorrow-6oau91
 
 The application uses no runtime AI, backend, account, analytics, or external API. Optional ICS and calendar export ZIP snapshots are processed only in the current browser tab. No AI reads or classifies event titles, and the app never edits a source calendar.
 
 License: MIT for project code and documentation. Third-party components remain under their respective licenses; see the repository notices.
 ```
 
-Delete the `Build Week project` line until `{{DEVPOST_URL}}` is known. After
-submission, add the public Devpost URL and save the YouTube description.
-Do not upload or describe the rejected Apple System Voice test as a final
-narration source.
+The public description was verified without a template placeholder or
+production instructions, and the final Devpost URL is present. Do not upload or
+describe the rejected Apple System Voice test as a final narration source.
 
-If an optional Japanese-captioned companion is made after submission, add this
-sentence after the first paragraph: `This companion edition keeps the original
-English interface and narration and adds burned-in Japanese captions.` This
-companion is not required for the Build Week submission.
+A Japanese-captioned companion was considered and is not planned for this
+release. The timing-matched Japanese SRT remains an archival production file.
 
 ## Optional tags
 
@@ -62,9 +60,10 @@ MAYBE TOMORROW.
 - Visibility: **Public**
 - Audience: choose the accurate setting; the project is not directed to
   children
-- Captions: the submission upload uses [`CAPTIONS.srt`](./CAPTIONS.srt).
-  [`CAPTIONS.ja.srt`](./CAPTIONS.ja.srt) is reserved for a possible
-  post-submission companion.
+- Captions: synchronized English captions are burned into the published video;
+  [`CAPTIONS.srt`](./CAPTIONS.srt) is the source timeline.
+  [`CAPTIONS.ja.srt`](./CAPTIONS.ja.srt) is retained only as an archival
+  timing-matched translation.
 - Music: original music credited on screen and in the description as
   `Templex Tsukino / KazeX Records`; Yoshie confirmed the required rights
 - Altered/synthetic content: answer the upload question truthfully. If the
@@ -74,14 +73,13 @@ MAYBE TOMORROW.
 - License: YouTube Standard License is acceptable for the video; this does not
   change the repository's MIT license
 
-After upload, verify both YouTube Studio's visibility label and playback in a
-signed-out/private browser. A signed-out video that does not play is not ready
-for Devpost.
+YouTube Studio visibility and signed-out playback were verified before the
+Devpost submission.
 
 Final public video URL:
 
 ```text
-{{YOUTUBE_URL}}
+https://www.youtube.com/watch?v=l8Zu30-sUvQ
 ```
 
 — Codex

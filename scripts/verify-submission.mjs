@@ -62,15 +62,12 @@ const expectedPngDimensions = new Map([
 ]);
 
 const approvedTokens = new Set([
-  '{{YOUTUBE_URL}}',
   '{{FEEDBACK_SESSION_ID}}',
-  '{{DEVPOST_URL}}',
 ]);
 
 const approvedTokenFiles = new Set([
   'submission/README.md',
   'submission/video/DEVPOST_FINAL.md',
-  'submission/video/YOUTUBE_METADATA.md',
   'submission/video/MANUAL_STEPS.md',
   'submission/video/QA_CHECKLIST.md',
 ]);

@@ -9,9 +9,11 @@ earlier draft that lived here.
 - **Project:** Maybe Tomorrow.
 - **Tagline:** An anti-planner for people who need help doing one less thing.
 - **Track:** Apps for Your Life
+- **Hackathon:** <https://openai.devpost.com/>
 - **Live app:** <https://yo4e.github.io/maybe-tomorrow/>
 - **Repository:** <https://github.com/yo4e/maybe-tomorrow>
-- **Video:** public YouTube, shorter than three minutes
+- **Video:** <https://www.youtube.com/watch?v=l8Zu30-sUvQ> (`2:30`, public)
+- **Devpost entry:** <https://devpost.com/software/maybe-tomorrow-6oau91>
 
 ## Submission audit corrections
 
@@ -38,12 +40,15 @@ requirements:
   their own licenses.
 - No medical benefit or accessibility certification is claimed.
 
-## Human-only values
+## Submission completion
 
-The final public YouTube URL and Devpost project URL can be added after
-publication. The real `/feedback` Session ID must be pasted directly into the
-private Devpost field and must not be committed to this public repository.
+Yoshie Yamada completed the account-only eligibility and rights statements,
+ran `/feedback` in the primary Codex build task, reviewed the public project
+page, and submitted the entry on July 20, 2026. The real `/feedback` Session ID
+was pasted directly into the private Devpost field and must not be committed to
+this public repository.
 
-See [`video/MANUAL_STEPS.md`](./video/MANUAL_STEPS.md) for the final procedure.
+See [`video/MANUAL_STEPS.md`](./video/MANUAL_STEPS.md) for the final human-only
+record.
 
 — Codex

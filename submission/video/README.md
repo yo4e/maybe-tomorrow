@@ -1,8 +1,12 @@
 # Video Production Kit
 
-This directory contains the locked OpenAI Build Week demo package for
-**Maybe Tomorrow.** It is designed so the remaining work is performance and
-editing, not reconstruction of the product story.
+This directory archives the completed OpenAI Build Week demo package for
+**Maybe Tomorrow.** The public English master's link and technical record,
+production decisions, source captions, metadata, and QA evidence are preserved
+here; the rendered video itself is not stored in Git.
+
+- Public video: <https://www.youtube.com/watch?v=l8Zu30-sUvQ>
+- Devpost entry: <https://devpost.com/software/maybe-tomorrow-6oau91>
 
 ## Locked output
 
@@ -28,17 +32,17 @@ editing, not reconstruction of the product story.
    to the locked timeline.
 4. [`TELEPROMPTER.txt`](./TELEPROMPTER.txt) — record only this narration.
 5. [`CAPTIONS.srt`](./CAPTIONS.srt) — burn in the required English captions.
-   [`CAPTIONS.ja.srt`](./CAPTIONS.ja.srt) remains available only for an
-   optional post-submission companion.
+   [`CAPTIONS.ja.srt`](./CAPTIONS.ja.srt) remains as an archival timing-matched
+   translation; no separate companion is planned for this release.
 6. [`RESET_AND_FALLBACK.md`](./RESET_AND_FALLBACK.md) — recover without using
    personal data if a take fails.
 7. [`YOUTUBE_METADATA.md`](./YOUTUBE_METADATA.md) — paste the final title and
    description.
 8. [`DEVPOST_FINAL.md`](./DEVPOST_FINAL.md) — paste the project submission copy.
-9. [`MANUAL_STEPS.md`](./MANUAL_STEPS.md) — complete only the human-required
-   actions.
-10. [`QA_CHECKLIST.md`](./QA_CHECKLIST.md) — verify the export and public links
-    before submitting.
+9. [`MANUAL_STEPS.md`](./MANUAL_STEPS.md) — record the completed human-required
+   actions without exposing private values.
+10. [`QA_CHECKLIST.md`](./QA_CHECKLIST.md) — preserve export, publication, and
+    submission verification.
 
 The final screenshots, thumbnails, and contact sheet live in
 [`../assets/`](../assets/).
